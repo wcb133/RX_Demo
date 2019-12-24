@@ -19,7 +19,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //        let vc = SubjectsVC()
 //        let vc = KVOVC()
 //        let vc = TransformingVC()
-        let vc = DriverVC()
+//        let vc = DriverVC()
+//        let vc = ShareReplayVC()
+//        let vc = CollectionViewVC()
+        let vc = UINavigationController(rootViewController: TableViewVC())
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.backgroundColor = .white
         window?.rootViewController = vc

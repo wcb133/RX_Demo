@@ -12,6 +12,9 @@
 		0B0A33FD237E792200C1C7F3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B0A33FB237E792200C1C7F3 /* Main.storyboard */; };
 		0B0A33FF237E792300C1C7F3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0B0A33FE237E792300C1C7F3 /* Assets.xcassets */; };
 		0B0A3402237E792300C1C7F3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B0A3400237E792300C1C7F3 /* LaunchScreen.storyboard */; };
+		0B2FC1D423B054A600BDF76E /* CollectionViewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B2FC1D323B054A600BDF76E /* CollectionViewVC.swift */; };
+		0B2FC1D623B0A5BF00BDF76E /* TableViewVC(自带的SectionModel).swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B2FC1D523B0A5BF00BDF76E /* TableViewVC(自带的SectionModel).swift */; };
+		0B39115423AC7F1D006DB334 /* ShareReplayVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B39115323AC7F1D006DB334 /* ShareReplayVC.swift */; };
 		0B99AE5923A77EFD00B18546 /* SubjectsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B99AE5823A77EFD00B18546 /* SubjectsVC.swift */; };
 		0B99AE5B23A8863500B18546 /* KVOVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B99AE5A23A8863500B18546 /* KVOVC.swift */; };
 		0B99AE5D23A8ADFD00B18546 /* TransformingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B99AE5C23A8ADFD00B18546 /* TransformingVC.swift */; };
@@ -27,6 +30,9 @@
 		0B0A33FE237E792300C1C7F3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0B0A3401237E792300C1C7F3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0B0A3403237E792300C1C7F3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0B2FC1D323B054A600BDF76E /* CollectionViewVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewVC.swift; sourceTree = "<group>"; };
+		0B2FC1D523B0A5BF00BDF76E /* TableViewVC(自带的SectionModel).swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TableViewVC(自带的SectionModel).swift"; sourceTree = "<group>"; };
+		0B39115323AC7F1D006DB334 /* ShareReplayVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareReplayVC.swift; sourceTree = "<group>"; };
 		0B99AE5823A77EFD00B18546 /* SubjectsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubjectsVC.swift; sourceTree = "<group>"; };
 		0B99AE5A23A8863500B18546 /* KVOVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KVOVC.swift; sourceTree = "<group>"; };
 		0B99AE5C23A8ADFD00B18546 /* TransformingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransformingVC.swift; sourceTree = "<group>"; };
@@ -75,6 +81,9 @@
 				0B99AE5A23A8863500B18546 /* KVOVC.swift */,
 				0B99AE5C23A8ADFD00B18546 /* TransformingVC.swift */,
 				0B99AE5E23A8C26D00B18546 /* DriverVC.swift */,
+				0B39115323AC7F1D006DB334 /* ShareReplayVC.swift */,
+				0B2FC1D323B054A600BDF76E /* CollectionViewVC.swift */,
+				0B2FC1D523B0A5BF00BDF76E /* TableViewVC(自带的SectionModel).swift */,
 				0B0A33FB237E792200C1C7F3 /* Main.storyboard */,
 				0B0A33FE237E792300C1C7F3 /* Assets.xcassets */,
 				0B0A3400237E792300C1C7F3 /* LaunchScreen.storyboard */,
@@ -216,9 +225,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				0B99AE5923A77EFD00B18546 /* SubjectsVC.swift in Sources */,
+				0B2FC1D423B054A600BDF76E /* CollectionViewVC.swift in Sources */,
 				0B99AE5D23A8ADFD00B18546 /* TransformingVC.swift in Sources */,
+				0B39115423AC7F1D006DB334 /* ShareReplayVC.swift in Sources */,
 				0B0A33FA237E792200C1C7F3 /* ViewController.swift in Sources */,
 				0B0A33F6237E792200C1C7F3 /* AppDelegate.swift in Sources */,
+				0B2FC1D623B0A5BF00BDF76E /* TableViewVC(自带的SectionModel).swift in Sources */,
 				0B99AE5F23A8C26D00B18546 /* DriverVC.swift in Sources */,
 				0B99AE5B23A8863500B18546 /* KVOVC.swift in Sources */,
 			);

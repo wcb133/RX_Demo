@@ -10,6 +10,42 @@ import UIKit
 import RxSwift
 import RxCocoa
 import RxDataSources
+
+//单元格类
+class MyTableCell: UITableViewCell {
+     
+    var button:UIButton!
+    var disposeBag = DisposeBag()
+    //单元格重用时调用
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        disposeBag = DisposeBag()
+    }
+     
+    //初始化
+    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
+        super.init(style: style, reuseIdentifier: reuseIdentifier)
+         
+        //添加按钮
+        button = UIButton(frame:CGRect(x:0, y:0, width:40, height:25))
+        button.setTitle("点击", for:.normal) //普通状态下的文字
+        button.backgroundColor = UIColor.orange
+        button.layer.cornerRadius = 5
+        button.titleLabel?.font = UIFont.systemFont(ofSize: 13)
+        self.addSubview(button)
+    }
+     
+    //布局
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        button.center = CGPoint(x: bounds.size.width - 35, y: bounds.midY)
+    }
+ 
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+}
+
  
 class TableViewVC: UIViewController {
     
@@ -28,7 +64,7 @@ class TableViewVC: UIViewController {
         //创建表格视图
         self.tableView = UITableView(frame: self.view.frame, style:.plain)
         //创建一个重用的单元格
-        self.tableView!.register(UITableViewCell.self,
+        self.tableView.register(MyTableCell.self,
                                  forCellReuseIdentifier: "Cell")
         self.view.addSubview(self.tableView!)
          
@@ -48,8 +84,12 @@ class TableViewVC: UIViewController {
         let dataSource = RxTableViewSectionedReloadDataSource
             <SectionModel<String, Int>>(configureCell: {
                 (dataSource, tv, indexPath, element) in
-                let cell = tv.dequeueReusableCell(withIdentifier: "Cell")!
+                let cell = tv.dequeueReusableCell(withIdentifier: "Cell") as! MyTableCell
                 cell.textLabel?.text = "条目\(indexPath.row)：\(element)"
+                //下面的闭包需要弱引用self,注意这里的disposed是由cell里面的disposeBag控制
+                cell.button.rx.tap.subscribe(onNext: { () in
+                    print(" ======== 点击了按钮\(indexPath.row)")
+                }).disposed(by: cell.disposeBag)
                 return cell
             })
          

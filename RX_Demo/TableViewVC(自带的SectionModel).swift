@@ -21,11 +21,11 @@ class MyTableCell: UITableViewCell {
         super.prepareForReuse()
         disposeBag = DisposeBag()
     }
-     
+
     //初始化
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
-         
+
         //添加按钮
         button = UIButton(frame:CGRect(x:0, y:0, width:40, height:25))
         button.setTitle("点击", for:.normal) //普通状态下的文字
@@ -39,6 +39,7 @@ class MyTableCell: UITableViewCell {
     override func layoutSubviews() {
         super.layoutSubviews()
         button.center = CGPoint(x: bounds.size.width - 35, y: bounds.midY)
+        
     }
  
     required init?(coder aDecoder: NSCoder) {

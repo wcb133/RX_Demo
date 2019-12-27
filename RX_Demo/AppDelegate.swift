@@ -15,14 +15,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-//        let vc = ViewController()
+        let vc = ViewController()
 //        let vc = SubjectsVC()
 //        let vc = KVOVC()
 //        let vc = TransformingVC()
 //        let vc = DriverVC()
 //        let vc = ShareReplayVC()
 //        let vc = CollectionViewVC()
-        let vc = UINavigationController(rootViewController: TableViewVC())
+//        let vc = UINavigationController(rootViewController: TableViewVC())
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.backgroundColor = .white
         window?.rootViewController = vc

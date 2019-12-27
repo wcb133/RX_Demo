@@ -14,6 +14,32 @@ class ViewController: UIViewController {
 
        let disposeBag = DisposeBag()
        override func viewDidLoad() {
+        let source = PublishSubject<String>()
+        let notifier = PublishSubject<String>()
+        
+        let source2 = PublishSubject<String>()
+        
+        
+        source2.flatMap { (text) -> Observable<String> in
+            return source.takeUntil(notifier)
+            }.share(replay: 1).subscribe(onNext: { print($0) })
+            .disposed(by: disposeBag)
+         
+        source.onNext("a")
+        source.onNext("b")
+        source.onNext("c")
+        source.onNext("d")
+         
+        //停止接收消息
+        notifier.onNext("z")
+         
+        source.onNext("e")
+        source.onNext("f")
+        source.onNext("g")
+        
+        
+        
+        
        view.backgroundColor = .white
        let lab = UILabel()
         view.addSubview(lab)

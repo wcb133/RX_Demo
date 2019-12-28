@@ -14,39 +14,15 @@ class ViewController: UIViewController {
 
        let disposeBag = DisposeBag()
        override func viewDidLoad() {
-        let source = PublishSubject<String>()
-        let notifier = PublishSubject<String>()
-        
-        let source2 = PublishSubject<String>()
-        
-        
-        source2.flatMap { (text) -> Observable<String> in
-            return source.takeUntil(notifier)
-            }.share(replay: 1).subscribe(onNext: { print($0) })
-            .disposed(by: disposeBag)
-         
-        source.onNext("a")
-        source.onNext("b")
-        source.onNext("c")
-        source.onNext("d")
-         
-        //停止接收消息
-        notifier.onNext("z")
-         
-        source.onNext("e")
-        source.onNext("f")
-        source.onNext("g")
-        
-        
-        
-        
+
        view.backgroundColor = .white
        let lab = UILabel()
         view.addSubview(lab)
         lab.textColor = .red
         lab.frame = CGRect(x: 0, y: 100, width: 200, height: 20)
         
-        
+        //测试takeUntil
+//        takeUntilTest()
         
 //           //Observable序列（每隔1秒钟发出一个索引数）
 //        let observableTi = Observable<Int>.interval(1, scheduler: MainScheduler.instance)
@@ -98,6 +74,39 @@ class ViewController: UIViewController {
         //自定义可绑属性，其实RxSwift已经写有，label.rx.fontSize
         observableTi.map { CGFloat($0) }.bind(to: lab.fontSize).disposed(by: disposeBag)
        }
+    
+    
+    func takeUntilTest() {
+        let source = Observable<String>.create { (ob) -> Disposable in
+            Observable<Int>.interval(RxTimeInterval.seconds(5), scheduler: MainScheduler.instance).subscribe(onNext: { (ti) in
+                ob.onNext("数据")
+            }).disposed(by: self.disposeBag)
+            return Disposables.create()
+        }
+        let notifier = PublishSubject<String>()
+        
+        let source2 = PublishSubject<String>()
+        
+        
+        let source3 = source.flatMap({
+            ob(text: $0).takeUntil(notifier)
+            }).share(replay: 1)
+        
+        source3.subscribe(onNext: { (text) in
+            print("=========== \(text)")
+            }).disposed(by: disposeBag)
+        
+        
+        func ob(text:String)->Observable<Int> {
+            return Observable.of(123)
+        }
+
+         
+        //停止接收消息
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 10) {
+            notifier.onNext("z")
+        }
+    }
 }
 
 //通过对 UILabel 进行扩展，增加了一个fontSize 可绑定属性。

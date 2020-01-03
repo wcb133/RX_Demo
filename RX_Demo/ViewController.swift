@@ -72,7 +72,7 @@ class ViewController: UIViewController {
         observableTi.map { "计算\($0)"}.bind(to: binderObserver).disposed(by: disposeBag)
         
         //自定义可绑属性，其实RxSwift已经写有，label.rx.fontSize
-        observableTi.map { CGFloat($0) }.bind(to: lab.fontSize).disposed(by: disposeBag)
+//        observableTi.map { CGFloat($0) }.bind(to: lab.fontSize).disposed(by: disposeBag)
        }
     
     
@@ -87,10 +87,13 @@ class ViewController: UIViewController {
         
         let source2 = PublishSubject<String>()
         
-        
+        //效果应该是和flatMapLatest一样的
         let source3 = source.flatMap({
             ob(text: $0).takeUntil(notifier)
             }).share(replay: 1)
+//        let source3 = source.flatMapLatest {
+//            ob(text: $0)
+//        }.share(replay: 1)
         
         source3.subscribe(onNext: { (text) in
             print("=========== \(text)")

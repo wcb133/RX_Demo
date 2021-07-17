@@ -16,8 +16,8 @@ class SubjectsVC: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = .white
 //        subject()
-//        behaviorSubject()
-        behaviorRelay()
+        behaviorSubject()
+//        behaviorRelay()
     }
     
     func subject()  {
@@ -71,6 +71,9 @@ class SubjectsVC: UIViewController {
         subject.subscribe { event in
             print("第1次订阅：", event)
         }.disposed(by: disposeBag)
+//        subject.subscribe { event in
+//            print("第x次订阅：", event)
+//        }.disposed(by: disposeBag)
         //发送next事件
         subject.onNext("222")
         //发送error事件

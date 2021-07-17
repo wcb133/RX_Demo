@@ -17,10 +17,10 @@ class TransformingVC: UIViewController {
 //        buferf()
 //        window()
 //        map()
-//        flatmap()
+        flatmap()
 //        flatMapLatest()
 //        scan()
-        groupBy()
+//        groupBy()
     }
     //序列分离
     func groupBy() {

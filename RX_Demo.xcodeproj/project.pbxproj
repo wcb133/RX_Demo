@@ -19,7 +19,7 @@
 		0B99AE5B23A8863500B18546 /* KVOVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B99AE5A23A8863500B18546 /* KVOVC.swift */; };
 		0B99AE5D23A8ADFD00B18546 /* TransformingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B99AE5C23A8ADFD00B18546 /* TransformingVC.swift */; };
 		0B99AE5F23A8C26D00B18546 /* DriverVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B99AE5E23A8C26D00B18546 /* DriverVC.swift */; };
-		9757C82A4DCC9A2B480E9BFC /* libPods-RX_Demo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 107F4035D4D71CC0E8B034E8 /* libPods-RX_Demo.a */; };
+		144A2750B053E4DC7A1BC78E /* Pods_RX_Demo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5A9D09FB9F085FC0974332C /* Pods_RX_Demo.framework */; };
 		E575FEFD26EF797A0074F460 /* ReactorVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E575FEFC26EF797A0074F460 /* ReactorVC.swift */; };
 		E575FEFF26EF7B7B0074F460 /* ReactorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E575FEFE26EF7B7B0074F460 /* ReactorCell.swift */; };
 		E575FF0126EF7BA70074F460 /* MainReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E575FF0026EF7BA70074F460 /* MainReactor.swift */; };
@@ -47,8 +47,8 @@
 		0B99AE5A23A8863500B18546 /* KVOVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KVOVC.swift; sourceTree = "<group>"; };
 		0B99AE5C23A8ADFD00B18546 /* TransformingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransformingVC.swift; sourceTree = "<group>"; };
 		0B99AE5E23A8C26D00B18546 /* DriverVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriverVC.swift; sourceTree = "<group>"; };
-		107F4035D4D71CC0E8B034E8 /* libPods-RX_Demo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RX_Demo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AAD806AC6B34BB6BC652321 /* Pods-RX_Demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RX_Demo.debug.xcconfig"; path = "Target Support Files/Pods-RX_Demo/Pods-RX_Demo.debug.xcconfig"; sourceTree = "<group>"; };
+		A5A9D09FB9F085FC0974332C /* Pods_RX_Demo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RX_Demo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E575FEF726EF78BA0074F460 /* RX_Demo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RX_Demo-Bridging-Header.h"; sourceTree = "<group>"; };
 		E575FEFC26EF797A0074F460 /* ReactorVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReactorVC.swift; sourceTree = "<group>"; };
 		E575FEFE26EF7B7B0074F460 /* ReactorCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReactorCell.swift; sourceTree = "<group>"; };
@@ -68,7 +68,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9757C82A4DCC9A2B480E9BFC /* libPods-RX_Demo.a in Frameworks */,
+				144A2750B053E4DC7A1BC78E /* Pods_RX_Demo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -168,7 +168,7 @@
 		F7587AF2630710672850323E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				107F4035D4D71CC0E8B034E8 /* libPods-RX_Demo.a */,
+				A5A9D09FB9F085FC0974332C /* Pods_RX_Demo.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -185,6 +185,7 @@
 				0B0A33EF237E792200C1C7F3 /* Frameworks */,
 				0B0A33F0237E792200C1C7F3 /* Resources */,
 				E59BE798268FF0EE0086D1F5 /* ShellScript */,
+				0D7E883FD977876A8DA155D7 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -244,6 +245,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		0D7E883FD977876A8DA155D7 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RX_Demo/Pods-RX_Demo-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RX_Demo/Pods-RX_Demo-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-RX_Demo/Pods-RX_Demo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		BBF8CAB6F3248D44C0E3AAB4 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;

@@ -17,6 +17,7 @@ class DelegateProxyVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.view.backgroundColor = .white
         
         my.start()
         my.rx.nums.subscribe(onNext: { (num) in

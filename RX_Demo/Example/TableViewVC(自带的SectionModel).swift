@@ -86,13 +86,15 @@ class TableViewVC: UIViewController {
             <SectionModel<String, Int>>(configureCell: {
                 (dataSource, tv, indexPath, element) in
                 let cell = tv.dequeueReusableCell(withIdentifier: "Cell") as! MyTableCell
-                cell.textLabel?.text = "条目\(indexPath.row)：\(element)"
+            cell.textLabel?.text = "条目\(indexPath.row)：\(element)"
                 //下面的闭包需要弱引用self,注意这里的disposed是由cell里面的disposeBag控制
                 cell.button.rx.tap.subscribe(onNext: { () in
                     print(" ======== 点击了按钮\(indexPath.row)")
                 }).disposed(by: cell.disposeBag)
                 return cell
-            })
+        }) { data, section in
+            return data[section].model
+        }
          
         //绑定单元格数据
         randomResult

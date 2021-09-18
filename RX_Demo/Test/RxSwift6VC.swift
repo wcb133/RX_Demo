@@ -10,11 +10,13 @@ import UIKit
 import RxSwift
 import RxCocoa
 
-class TestVC: UIViewController {
+class RxSwift6VC: UIViewController {
     @IBOutlet weak var inputText: UITextField!
     @IBOutlet weak var ob1Btn: UIButton!
     @IBOutlet weak var ob2Btn: UIButton!
     @IBOutlet weak var ob3Btn: UIButton!
+    
+    var buidBag = DisposeBag()
     
     let bag = DisposeBag()
     
@@ -26,12 +28,37 @@ class TestVC: UIViewController {
            return self.request()
         }).subscribe(onNext: {text in
             print(" C======== \(text)")
-        }, onError: nil, onCompleted: nil, onDisposed: nil).disposed(by: self.bag)
+        }).disposed(by: self.bag)
+        
+//        ob2Btn.rx.tap.subscribeNext(weak: self) { ob in
+//           let tx = ob.inputText.text
+//            print(" ======= \(ob)")
+//        }
+        
+        buidBag = DisposeBag {
+            ob2Btn.rx.tap.withUnretained(self).subscribe(onNext: { weakSelf,_ in
+                print(" ======= \(weakSelf)")
+            }, onError: nil, onCompleted: nil, onDisposed: nil)
+            
+            ob3Btn.rx.tap.withUnretained(self).subscribe(onNext: { weakSelf,_ in
+                print(" ======= \(weakSelf)")
+            }, onError: nil, onCompleted: nil, onDisposed: nil)
+            
+            
+
+        }
+        
+        
+        
+       
+    }
+    
+    deinit {
+        print(" ====== ")
     }
     
     
     func request() ->Observable<String> {
-        
         return Observable.create {[unowned self] (ob) -> Disposable in
             self.inputText.rx.text.orEmpty.subscribe(onNext: { text in
                 ob.onNext(text)

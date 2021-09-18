@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 50;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -19,10 +19,17 @@
 		0B99AE5B23A8863500B18546 /* KVOVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B99AE5A23A8863500B18546 /* KVOVC.swift */; };
 		0B99AE5D23A8ADFD00B18546 /* TransformingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B99AE5C23A8ADFD00B18546 /* TransformingVC.swift */; };
 		0B99AE5F23A8C26D00B18546 /* DriverVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B99AE5E23A8C26D00B18546 /* DriverVC.swift */; };
-		E5C75C2026A2AF880032F11E /* TestVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5C75C1E26A2AF880032F11E /* TestVC.swift */; };
-		E5C75C2126A2AF880032F11E /* TestVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = E5C75C1F26A2AF880032F11E /* TestVC.xib */; };
+		9757C82A4DCC9A2B480E9BFC /* libPods-RX_Demo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 107F4035D4D71CC0E8B034E8 /* libPods-RX_Demo.a */; };
+		E575FEFD26EF797A0074F460 /* ReactorVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E575FEFC26EF797A0074F460 /* ReactorVC.swift */; };
+		E575FEFF26EF7B7B0074F460 /* ReactorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E575FEFE26EF7B7B0074F460 /* ReactorCell.swift */; };
+		E575FF0126EF7BA70074F460 /* MainReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E575FF0026EF7BA70074F460 /* MainReactor.swift */; };
+		E5A9F0F126F0F359004FA7A4 /* DelegateProxyVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5A9F0F026F0F359004FA7A4 /* DelegateProxyVC.swift */; };
+		E5A9F0F326F0F3EE004FA7A4 /* RxMyDelegateProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5A9F0F226F0F3EE004FA7A4 /* RxMyDelegateProxy.swift */; };
+		E5A9F0F526F0F5B4004FA7A4 /* MyClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5A9F0F426F0F5B4004FA7A4 /* MyClass.swift */; };
+		E5A9F0F726F0F5D7004FA7A4 /* MyClass+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5A9F0F626F0F5D7004FA7A4 /* MyClass+Rx.swift */; };
+		E5C75C2026A2AF880032F11E /* RxSwift6VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5C75C1E26A2AF880032F11E /* RxSwift6VC.swift */; };
+		E5C75C2126A2AF880032F11E /* RxSwift6VC.xib in Resources */ = {isa = PBXBuildFile; fileRef = E5C75C1F26A2AF880032F11E /* RxSwift6VC.xib */; };
 		E5C75C8226A2FD500032F11E /* RootVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5C75C8126A2FD500032F11E /* RootVC.swift */; };
-		E94DFEBC1FFF9F26AA8BBB42 /* Pods_RX_Demo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99E1E1B70A172360BA7CC160 /* Pods_RX_Demo.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,10 +47,18 @@
 		0B99AE5A23A8863500B18546 /* KVOVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KVOVC.swift; sourceTree = "<group>"; };
 		0B99AE5C23A8ADFD00B18546 /* TransformingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransformingVC.swift; sourceTree = "<group>"; };
 		0B99AE5E23A8C26D00B18546 /* DriverVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriverVC.swift; sourceTree = "<group>"; };
-		99E1E1B70A172360BA7CC160 /* Pods_RX_Demo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RX_Demo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		107F4035D4D71CC0E8B034E8 /* libPods-RX_Demo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RX_Demo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AAD806AC6B34BB6BC652321 /* Pods-RX_Demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RX_Demo.debug.xcconfig"; path = "Target Support Files/Pods-RX_Demo/Pods-RX_Demo.debug.xcconfig"; sourceTree = "<group>"; };
-		E5C75C1E26A2AF880032F11E /* TestVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestVC.swift; sourceTree = "<group>"; };
-		E5C75C1F26A2AF880032F11E /* TestVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TestVC.xib; sourceTree = "<group>"; };
+		E575FEF726EF78BA0074F460 /* RX_Demo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RX_Demo-Bridging-Header.h"; sourceTree = "<group>"; };
+		E575FEFC26EF797A0074F460 /* ReactorVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReactorVC.swift; sourceTree = "<group>"; };
+		E575FEFE26EF7B7B0074F460 /* ReactorCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReactorCell.swift; sourceTree = "<group>"; };
+		E575FF0026EF7BA70074F460 /* MainReactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainReactor.swift; sourceTree = "<group>"; };
+		E5A9F0F026F0F359004FA7A4 /* DelegateProxyVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DelegateProxyVC.swift; sourceTree = "<group>"; };
+		E5A9F0F226F0F3EE004FA7A4 /* RxMyDelegateProxy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxMyDelegateProxy.swift; sourceTree = "<group>"; };
+		E5A9F0F426F0F5B4004FA7A4 /* MyClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyClass.swift; sourceTree = "<group>"; };
+		E5A9F0F626F0F5D7004FA7A4 /* MyClass+Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MyClass+Rx.swift"; sourceTree = "<group>"; };
+		E5C75C1E26A2AF880032F11E /* RxSwift6VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxSwift6VC.swift; sourceTree = "<group>"; };
+		E5C75C1F26A2AF880032F11E /* RxSwift6VC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RxSwift6VC.xib; sourceTree = "<group>"; };
 		E5C75C8126A2FD500032F11E /* RootVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootVC.swift; sourceTree = "<group>"; };
 		EC0142A58305E67AD9AC244A /* Pods-RX_Demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RX_Demo.release.xcconfig"; path = "Target Support Files/Pods-RX_Demo/Pods-RX_Demo.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -53,7 +68,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E94DFEBC1FFF9F26AA8BBB42 /* Pods_RX_Demo.framework in Frameworks */,
+				9757C82A4DCC9A2B480E9BFC /* libPods-RX_Demo.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +96,8 @@
 		0B0A33F4237E792200C1C7F3 /* RX_Demo */ = {
 			isa = PBXGroup;
 			children = (
+				E5A9F0EF26F0F336004FA7A4 /* DelegateProxy */,
+				E575FEFB26EF79610074F460 /* ReactorVC */,
 				E5C75C1626A2AF0A0032F11E /* Test */,
 				E5C75C1426A2AEC60032F11E /* Example */,
 				0B0A33F5237E792200C1C7F3 /* AppDelegate.swift */,
@@ -89,6 +106,7 @@
 				0B0A3400237E792300C1C7F3 /* LaunchScreen.storyboard */,
 				0B0A3403237E792300C1C7F3 /* Info.plist */,
 				E5C75C8126A2FD500032F11E /* RootVC.swift */,
+				E575FEF726EF78BA0074F460 /* RX_Demo-Bridging-Header.h */,
 			);
 			path = RX_Demo;
 			sourceTree = "<group>";
@@ -100,6 +118,27 @@
 				EC0142A58305E67AD9AC244A /* Pods-RX_Demo.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		E575FEFB26EF79610074F460 /* ReactorVC */ = {
+			isa = PBXGroup;
+			children = (
+				E575FEFC26EF797A0074F460 /* ReactorVC.swift */,
+				E575FF0026EF7BA70074F460 /* MainReactor.swift */,
+				E575FEFE26EF7B7B0074F460 /* ReactorCell.swift */,
+			);
+			path = ReactorVC;
+			sourceTree = "<group>";
+		};
+		E5A9F0EF26F0F336004FA7A4 /* DelegateProxy */ = {
+			isa = PBXGroup;
+			children = (
+				E5A9F0F026F0F359004FA7A4 /* DelegateProxyVC.swift */,
+				E5A9F0F226F0F3EE004FA7A4 /* RxMyDelegateProxy.swift */,
+				E5A9F0F426F0F5B4004FA7A4 /* MyClass.swift */,
+				E5A9F0F626F0F5D7004FA7A4 /* MyClass+Rx.swift */,
+			);
+			path = DelegateProxy;
 			sourceTree = "<group>";
 		};
 		E5C75C1426A2AEC60032F11E /* Example */ = {
@@ -120,8 +159,8 @@
 		E5C75C1626A2AF0A0032F11E /* Test */ = {
 			isa = PBXGroup;
 			children = (
-				E5C75C1E26A2AF880032F11E /* TestVC.swift */,
-				E5C75C1F26A2AF880032F11E /* TestVC.xib */,
+				E5C75C1E26A2AF880032F11E /* RxSwift6VC.swift */,
+				E5C75C1F26A2AF880032F11E /* RxSwift6VC.xib */,
 			);
 			path = Test;
 			sourceTree = "<group>";
@@ -129,7 +168,7 @@
 		F7587AF2630710672850323E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				99E1E1B70A172360BA7CC160 /* Pods_RX_Demo.framework */,
+				107F4035D4D71CC0E8B034E8 /* libPods-RX_Demo.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -145,7 +184,6 @@
 				0B0A33EE237E792200C1C7F3 /* Sources */,
 				0B0A33EF237E792200C1C7F3 /* Frameworks */,
 				0B0A33F0237E792200C1C7F3 /* Resources */,
-				143908DE4A5EB28C1C055E5F /* [CP] Embed Pods Frameworks */,
 				E59BE798268FF0EE0086D1F5 /* ShellScript */,
 			);
 			buildRules = (
@@ -169,6 +207,7 @@
 				TargetAttributes = {
 					0B0A33F1237E792200C1C7F3 = {
 						CreatedOnToolsVersion = 11.2;
+						LastSwiftMigration = 1250;
 					};
 				};
 			};
@@ -195,7 +234,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E5C75C2126A2AF880032F11E /* TestVC.xib in Resources */,
+				E5C75C2126A2AF880032F11E /* RxSwift6VC.xib in Resources */,
 				0B0A3402237E792300C1C7F3 /* LaunchScreen.storyboard in Resources */,
 				0B0A33FF237E792300C1C7F3 /* Assets.xcassets in Resources */,
 				0B0A33FD237E792200C1C7F3 /* Main.storyboard in Resources */,
@@ -205,23 +244,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		143908DE4A5EB28C1C055E5F /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-RX_Demo/Pods-RX_Demo-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-RX_Demo/Pods-RX_Demo-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-RX_Demo/Pods-RX_Demo-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		BBF8CAB6F3248D44C0E3AAB4 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -268,17 +290,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E5C75C2026A2AF880032F11E /* TestVC.swift in Sources */,
+				E575FEFF26EF7B7B0074F460 /* ReactorCell.swift in Sources */,
+				E5A9F0F126F0F359004FA7A4 /* DelegateProxyVC.swift in Sources */,
+				E5C75C2026A2AF880032F11E /* RxSwift6VC.swift in Sources */,
 				0B99AE5923A77EFD00B18546 /* SubjectsVC.swift in Sources */,
 				0B2FC1D423B054A600BDF76E /* CollectionViewVC.swift in Sources */,
 				0B99AE5D23A8ADFD00B18546 /* TransformingVC.swift in Sources */,
 				0B39115423AC7F1D006DB334 /* ShareReplayVC.swift in Sources */,
 				0B0A33FA237E792200C1C7F3 /* ViewController.swift in Sources */,
 				0B0A33F6237E792200C1C7F3 /* AppDelegate.swift in Sources */,
+				E575FEFD26EF797A0074F460 /* ReactorVC.swift in Sources */,
 				E5C75C8226A2FD500032F11E /* RootVC.swift in Sources */,
 				0B2FC1D623B0A5BF00BDF76E /* TableViewVC(自带的SectionModel).swift in Sources */,
+				E575FF0126EF7BA70074F460 /* MainReactor.swift in Sources */,
 				0B99AE5F23A8C26D00B18546 /* DriverVC.swift in Sources */,
+				E5A9F0F526F0F5B4004FA7A4 /* MyClass.swift in Sources */,
 				0B99AE5B23A8863500B18546 /* KVOVC.swift in Sources */,
+				E5A9F0F726F0F5D7004FA7A4 /* MyClass+Rx.swift in Sources */,
+				E5A9F0F326F0F3EE004FA7A4 /* RxMyDelegateProxy.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -423,6 +452,7 @@
 			baseConfigurationReference = 9AAD806AC6B34BB6BC652321 /* Pods-RX_Demo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = RX_Demo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -431,6 +461,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "-.RX-Demo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "RX_Demo/RX_Demo-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -441,6 +473,7 @@
 			baseConfigurationReference = EC0142A58305E67AD9AC244A /* Pods-RX_Demo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = RX_Demo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -449,6 +482,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "-.RX-Demo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "RX_Demo/RX_Demo-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

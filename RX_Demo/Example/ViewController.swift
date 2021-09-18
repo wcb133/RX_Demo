@@ -9,11 +9,20 @@
 import UIKit
 import RxSwift
 import RxCocoa
+import RxSwiftExt
+
+class Person {
+    var name = ""
+}
 
 class ViewController: UIViewController {
 
        let disposeBag = DisposeBag()
        override func viewDidLoad() {
+        
+        self.rx.methodInvoked(#selector(ViewController.viewWillAppear(_:))).subscribe(onNext:{ animate in
+            print("数据 ========= \(animate)")
+        }).disposed(by: disposeBag)
 
        view.backgroundColor = .white
        let lab = UILabel()
@@ -29,12 +38,39 @@ class ViewController: UIViewController {
 //       let observableMap = observable.map { "当前索引数：\($0 )" }
 //        observableMap.bind { print("当前索引数：\($0  )") }.disposed(by: disposeBag)
         
-        let observable = Observable.of("A", "B", "C")
+        let ob1:Observable<String> = Observable.just("")
+        let ob2 = Observable.just("")
+        
+        let observable2 = Observable.of(ob1,ob2)
+        
+//        observable.composeMa
         //订阅1
-        observable.subscribe { event in
-            print("======= \(event)")
-            print("数据======= \(event.element)")
+//        observable2.subscribe { event in
+//            print("======= \(event)")
+//            print("数据======= \(event.element)")
+//
+//        }.disposed(by: disposeBag)
+        
+        let p = Person()
+        
+//        Observable.from([p]).mapAt(\.name).subscribe(onNext: { name in
+//            print("数组 ======== \(name)")
+//        }, onError: nil, onCompleted: nil, onDisposed: nil)
+        
+        
+        observable2.subscribe { ob in
+            
+        } onError: { error in
+            print("数据======= onError")
+        } onCompleted: {
+            print("数据======= onCompleted")
+        } onDisposed: {
+            print("数据======= onDisposed")
         }.disposed(by: disposeBag)
+
+        
+        
+        let observable = Observable.of("","")
         
         //订阅2
        observable.subscribe(onNext: { (text) in

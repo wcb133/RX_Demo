@@ -7,32 +7,70 @@
 //
 
 import UIKit
+import RxSwift
+import RxDataSources
 
+
+struct TBSectionModel {
+    var title:String
+    var items: [String]
+}
+
+extension TBSectionModel:SectionModelType {
+    
+    typealias Item = String
+    
+    init(original: TBSectionModel, items: [String]) {
+        self.items = items
+        self.title = original.title
+    }
+    
+}
+
+let demoCellID = "demoCellID"
 class RootVC: UIViewController {
+    
+    lazy var tab = UITableView(frame: .zero, style: .plain).then { tab in
+        tab.register(UITableViewCell.self, forCellReuseIdentifier: demoCellID)
+        tab.rowHeight = 50
+        self.view.addSubview(tab)
+        tab.snp.makeConstraints { m in
+            m.edges.equalTo(0)
+        }
+    }
+    
+    let bag = DisposeBag()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        let lab = UILabel()
-        lab.text = "点击空白处进入"
-        lab.textColor = .red
-        lab.frame = CGRect(x: 50, y: 100, width: 200, height: 80)
-        view.addSubview(lab)
+        let rxDs = RxTableViewSectionedReloadDataSource<TBSectionModel> { ds, tab, indexPath, content in
+            let cell = tab.dequeueReusableCell(withIdentifier: demoCellID, for: indexPath)
+            cell.textLabel?.text = content
+            cell.accessoryType = .disclosureIndicator
+            return cell
+        }titleForHeaderInSection: { ds, section in
+            return ds[section].title
+        }
+        
+        //设置代理
+//         tab.rx.setDelegate(self)
+//             .disposed(by: bag)
+        let vcs:[UIViewController.Type] = [ReactorVC.self,RxSwift6VC.self,ViewController.self,
+                                          SubjectsVC.self,KVOVC.self,TransformingVC.self,
+                                          DriverVC.self,ShareReplayVC.self,CollectionViewVC.self,
+                                          TableViewVC.self,DelegateProxyVC.self]
+        
+        
+        let items:[String] = vcs.map {"\($0)" }
+        let sectionModel = TBSectionModel(title: "Demo", items: items)
+        Observable.just([sectionModel]).bind(to: self.tab.rx.items(dataSource: rxDs)).disposed(by: bag)
+        
+        self.tab.rx.itemSelected.subscribe(onNext:{ indexPath in
+            self.tab.deselectRow(at: indexPath, animated: true)
+            let vc = vcs[indexPath.row]
+            self.navigationController?.pushViewController(vc.init(), animated: true)
+        }).disposed(by: bag)
+        
         
     }
-    
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        
-          let vc = TestVC()
-//        let vc = ViewController()
-//        let vc = SubjectsVC()
-//        let vc = KVOVC()
-//        let vc = TransformingVC()
-//        let vc = DriverVC()
-//        let vc = ShareReplayVC()
-//        let vc = CollectionViewVC()
-//        let vc = TableViewVC()
-        
-        self.navigationController?.pushViewController(vc, animated: true)
-    }
-
 }

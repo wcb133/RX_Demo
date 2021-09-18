@@ -58,7 +58,7 @@ class RootVC: UIViewController {
         let vcs:[UIViewController.Type] = [ReactorVC.self,RxSwift6VC.self,ViewController.self,
                                           SubjectsVC.self,KVOVC.self,TransformingVC.self,
                                           DriverVC.self,ShareReplayVC.self,CollectionViewVC.self,
-                                          TableViewVC.self,DelegateProxyVC.self]
+                                          TableViewVC.self,DelegateProxyVC.self,TestVC.self]
         
         
         let items:[String] = vcs.map {"\($0)" }

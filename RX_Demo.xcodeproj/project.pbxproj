@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -20,6 +20,8 @@
 		0B99AE5D23A8ADFD00B18546 /* TransformingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B99AE5C23A8ADFD00B18546 /* TransformingVC.swift */; };
 		0B99AE5F23A8C26D00B18546 /* DriverVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B99AE5E23A8C26D00B18546 /* DriverVC.swift */; };
 		144A2750B053E4DC7A1BC78E /* Pods_RX_Demo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5A9D09FB9F085FC0974332C /* Pods_RX_Demo.framework */; };
+		E565CFCF26F6188A00ED6B2C /* TestVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E565CFCD26F6188A00ED6B2C /* TestVC.swift */; };
+		E565CFD026F6188A00ED6B2C /* TestVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = E565CFCE26F6188A00ED6B2C /* TestVC.xib */; };
 		E575FEFD26EF797A0074F460 /* ReactorVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E575FEFC26EF797A0074F460 /* ReactorVC.swift */; };
 		E575FEFF26EF7B7B0074F460 /* ReactorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E575FEFE26EF7B7B0074F460 /* ReactorCell.swift */; };
 		E575FF0126EF7BA70074F460 /* MainReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E575FF0026EF7BA70074F460 /* MainReactor.swift */; };
@@ -49,6 +51,8 @@
 		0B99AE5E23A8C26D00B18546 /* DriverVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriverVC.swift; sourceTree = "<group>"; };
 		9AAD806AC6B34BB6BC652321 /* Pods-RX_Demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RX_Demo.debug.xcconfig"; path = "Target Support Files/Pods-RX_Demo/Pods-RX_Demo.debug.xcconfig"; sourceTree = "<group>"; };
 		A5A9D09FB9F085FC0974332C /* Pods_RX_Demo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RX_Demo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E565CFCD26F6188A00ED6B2C /* TestVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestVC.swift; sourceTree = "<group>"; };
+		E565CFCE26F6188A00ED6B2C /* TestVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TestVC.xib; sourceTree = "<group>"; };
 		E575FEF726EF78BA0074F460 /* RX_Demo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RX_Demo-Bridging-Header.h"; sourceTree = "<group>"; };
 		E575FEFC26EF797A0074F460 /* ReactorVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReactorVC.swift; sourceTree = "<group>"; };
 		E575FEFE26EF7B7B0074F460 /* ReactorCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReactorCell.swift; sourceTree = "<group>"; };
@@ -96,9 +100,10 @@
 		0B0A33F4237E792200C1C7F3 /* RX_Demo */ = {
 			isa = PBXGroup;
 			children = (
+				E565CFCC26F6188000ED6B2C /* RetryVC */,
 				E5A9F0EF26F0F336004FA7A4 /* DelegateProxy */,
 				E575FEFB26EF79610074F460 /* ReactorVC */,
-				E5C75C1626A2AF0A0032F11E /* Test */,
+				E5C75C1626A2AF0A0032F11E /* RxSwift6VC */,
 				E5C75C1426A2AEC60032F11E /* Example */,
 				0B0A33F5237E792200C1C7F3 /* AppDelegate.swift */,
 				0B0A33FB237E792200C1C7F3 /* Main.storyboard */,
@@ -118,6 +123,15 @@
 				EC0142A58305E67AD9AC244A /* Pods-RX_Demo.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		E565CFCC26F6188000ED6B2C /* RetryVC */ = {
+			isa = PBXGroup;
+			children = (
+				E565CFCD26F6188A00ED6B2C /* TestVC.swift */,
+				E565CFCE26F6188A00ED6B2C /* TestVC.xib */,
+			);
+			path = RetryVC;
 			sourceTree = "<group>";
 		};
 		E575FEFB26EF79610074F460 /* ReactorVC */ = {
@@ -156,13 +170,13 @@
 			path = Example;
 			sourceTree = "<group>";
 		};
-		E5C75C1626A2AF0A0032F11E /* Test */ = {
+		E5C75C1626A2AF0A0032F11E /* RxSwift6VC */ = {
 			isa = PBXGroup;
 			children = (
 				E5C75C1E26A2AF880032F11E /* RxSwift6VC.swift */,
 				E5C75C1F26A2AF880032F11E /* RxSwift6VC.xib */,
 			);
-			path = Test;
+			path = RxSwift6VC;
 			sourceTree = "<group>";
 		};
 		F7587AF2630710672850323E /* Frameworks */ = {
@@ -237,6 +251,7 @@
 			files = (
 				E5C75C2126A2AF880032F11E /* RxSwift6VC.xib in Resources */,
 				0B0A3402237E792300C1C7F3 /* LaunchScreen.storyboard in Resources */,
+				E565CFD026F6188A00ED6B2C /* TestVC.xib in Resources */,
 				0B0A33FF237E792300C1C7F3 /* Assets.xcassets in Resources */,
 				0B0A33FD237E792200C1C7F3 /* Main.storyboard in Resources */,
 			);
@@ -313,6 +328,7 @@
 				E5C75C2026A2AF880032F11E /* RxSwift6VC.swift in Sources */,
 				0B99AE5923A77EFD00B18546 /* SubjectsVC.swift in Sources */,
 				0B2FC1D423B054A600BDF76E /* CollectionViewVC.swift in Sources */,
+				E565CFCF26F6188A00ED6B2C /* TestVC.swift in Sources */,
 				0B99AE5D23A8ADFD00B18546 /* TransformingVC.swift in Sources */,
 				0B39115423AC7F1D006DB334 /* ShareReplayVC.swift in Sources */,
 				0B0A33FA237E792200C1C7F3 /* ViewController.swift in Sources */,

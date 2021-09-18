@@ -10,10 +10,12 @@ import UIKit
 import RxSwift
 import RxCocoa
 
+
 class ShareReplayVC: UIViewController {
     let disposeBag = DisposeBag()
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.view.backgroundColor = .white
         //share减少map的操作次数
         let sequenceOfInts = PublishSubject<Int>()
         let a = sequenceOfInts.map{ i -> Int in

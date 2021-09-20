@@ -13,26 +13,26 @@ enum RetryError: Error {
     case errorNumber
 }
 
-class TestVC: UIViewController {
+class RetryVC: UIViewController {
 
     @IBOutlet weak var btn: UIButton!
     let bag = DisposeBag()
     
     var count:Int = 0
     
-    private static let bag = DisposeBag()
-    private static var retryCount = 1           // 当前重试次数
-    private static let maxRetryCount = 5        // 最多重试次数
-    private static let retryDelay: Int = 3   // 多少秒重试一次
+    private var retryCount = 1           // 当前重试次数
+    private let maxRetryCount = 5        // 最多重试次数
+    private let retryDelay: Int = 3   // 多少秒重试一次
     
-    static func test() {
-        let get5 = Single<Bool>.create(subscribe: { single in
-            if retryCount == maxRetryCount {
-                retryCount = 1
+    func test() {
+        let get5 = Single<Bool>.create(subscribe: {[weak self] single in
+            guard let self = self else { return Disposables.create() }
+            if self.retryCount == self.maxRetryCount {
+                self.retryCount = 1
                 single(.success(true))
             } else {
-                print("当前重试次数: ", retryCount)
-                retryCount += 1
+                print("当前重试次数: ", self.retryCount)
+                self.retryCount += 1
                 single(.failure(RetryError.errorNumber))
             }
             return Disposables.create()
@@ -40,12 +40,13 @@ class TestVC: UIViewController {
         
         get5.asObservable()
             .observe(on: MainScheduler.asyncInstance)
-            .retry { (error) -> Observable<Int> in
-                return error.flatMap({ (er) -> Observable<Int> in
-                    guard retryCount < maxRetryCount+1 else {
+            .retry {[weak self] (error) -> Observable<Int> in//这里不加weak self，会循环引用
+                return error.flatMap( { (er) -> Observable<Int> in
+                    guard let self = self else { return Observable.error(er) }
+                    guard self.retryCount < self.maxRetryCount+1 else {
                         return Observable.error(er)
                     }
-                    return Observable.timer(.seconds(retryDelay), scheduler: MainScheduler.asyncInstance)
+                    return Observable.timer(.seconds(self.retryDelay), scheduler: MainScheduler.asyncInstance)
                 })
             }
             .subscribe(onNext: { bool in
@@ -64,19 +65,12 @@ class TestVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        Observable<Int>.timer(.seconds(0), period: .seconds(1), scheduler: MainScheduler.asyncInstance).groupBy(keySelector: {
-            seconds in
-            return seconds < 100
-        }).subscribe(onNext: {
-            [unowned self] event in
-            print(" ============== \(event)")
-            if event.key {
-                
-            } else {
-                
-            }
-        }).disposed(by: bag)
+         test()
+//        testRetry()
+    }
+    
+    deinit {
+        print(" ====== deinit")
     }
     
     

@@ -9,11 +9,11 @@
 import UIKit
 
 class ReactorCell: ASCellNode {
-    let textNode = ASTextNode()
+    let textNode = ASButtonNode()
     init(title:String) {
         super.init()
         self.addSubnode(textNode)
-        textNode.attributedText = NSAttributedString(string: title, attributes: [.foregroundColor:UIColor.red])
+        textNode.setTitle(title, with: .systemFont(ofSize: 15), with: .green, for: .normal)
     }
     
     override func layoutSpecThatFits(_ constrainedSize: ASSizeRange) -> ASLayoutSpec {

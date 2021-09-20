@@ -9,6 +9,7 @@
 import UIKit
 import RxSwift
 import RxDataSources
+import ReactorKit
 
 
 struct TBSectionModel {
@@ -28,7 +29,7 @@ extension TBSectionModel:SectionModelType {
 }
 
 let demoCellID = "demoCellID"
-class RootVC: UIViewController {
+class RootVC: UIViewController,View {
     
     lazy var tab = UITableView(frame: .zero, style: .plain).then { tab in
         tab.register(UITableViewCell.self, forCellReuseIdentifier: demoCellID)
@@ -39,10 +40,27 @@ class RootVC: UIViewController {
         }
     }
     
-    let bag = DisposeBag()
+    var disposeBag: DisposeBag = DisposeBag()
+    typealias Reactor = RootReactor
+    
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.reactor = RootReactor()
+        
+        //设置代理
+//         tab.rx.setDelegate(self)
+//             .disposed(by: bag)
+    
+    }
+    
+    func bind(reactor: RootReactor) {
+        Observable.just(1).map { k in
+            RootReactor.Action.addExample
+        }.bind(to: reactor.action).disposed(by: disposeBag)
+        
+        //表格
         let rxDs = RxTableViewSectionedReloadDataSource<TBSectionModel> { ds, tab, indexPath, content in
             let cell = tab.dequeueReusableCell(withIdentifier: demoCellID, for: indexPath)
             cell.textLabel?.text = content
@@ -52,24 +70,15 @@ class RootVC: UIViewController {
             return ds[section].title
         }
         
-        //设置代理
-//         tab.rx.setDelegate(self)
-//             .disposed(by: bag)
-        let vcs:[UIViewController.Type] = [ReactorVC.self,RxSwift6VC.self,ViewController.self,
-                                          SubjectsVC.self,KVOVC.self,TransformingVC.self,
-                                          DriverVC.self,ShareReplayVC.self,CollectionViewVC.self,
-                                          TableViewVC.self,DelegateProxyVC.self,TestVC.self]
-        
-        
-        let items:[String] = vcs.map {"\($0)" }
-        let sectionModel = TBSectionModel(title: "Demo", items: items)
-        Observable.just([sectionModel]).bind(to: self.tab.rx.items(dataSource: rxDs)).disposed(by: bag)
+        reactor.state.map { state in
+            return state.tableData
+        }.asDriver(onErrorJustReturn: []).drive(self.tab.rx.items(dataSource: rxDs)).disposed(by: disposeBag)
         
         self.tab.rx.itemSelected.subscribe(onNext:{ indexPath in
             self.tab.deselectRow(at: indexPath, animated: true)
-            let vc = vcs[indexPath.row]
+            let vc = self.reactor!.currentState.vcs[indexPath.row]
             self.navigationController?.pushViewController(vc.init(), animated: true)
-        }).disposed(by: bag)
+        }).disposed(by: disposeBag)
         
         
     }

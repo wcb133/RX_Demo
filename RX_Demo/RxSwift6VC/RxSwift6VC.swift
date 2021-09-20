@@ -43,14 +43,7 @@ class RxSwift6VC: UIViewController {
             ob3Btn.rx.tap.withUnretained(self).subscribe(onNext: { weakSelf,_ in
                 print(" ======= \(weakSelf)")
             }, onError: nil, onCompleted: nil, onDisposed: nil)
-            
-            
-
         }
-        
-        
-        
-       
     }
     
     deinit {

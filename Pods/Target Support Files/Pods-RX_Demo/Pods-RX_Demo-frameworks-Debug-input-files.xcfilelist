@@ -1,5 +1,6 @@
 ${PODS_ROOT}/Target Support Files/Pods-RX_Demo/Pods-RX_Demo-frameworks.sh
 ${BUILT_PRODUCTS_DIR}/Differentiator/Differentiator.framework
+${BUILT_PRODUCTS_DIR}/Foil/Foil.framework
 ${BUILT_PRODUCTS_DIR}/PINCache/PINCache.framework
 ${BUILT_PRODUCTS_DIR}/PINOperation/PINOperation.framework
 ${BUILT_PRODUCTS_DIR}/PINRemoteImage/PINRemoteImage.framework
@@ -13,3 +14,5 @@ ${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework
 ${BUILT_PRODUCTS_DIR}/Texture/AsyncDisplayKit.framework
 ${BUILT_PRODUCTS_DIR}/Then/Then.framework
 ${BUILT_PRODUCTS_DIR}/WeakMapTable/WeakMapTable.framework
+${BUILT_PRODUCTS_DIR}/Yoga/yoga.framework
+${BUILT_PRODUCTS_DIR}/YogaKit/YogaKit.framework

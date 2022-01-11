@@ -25,5 +25,6 @@ pod 'Then'
 pod 'ReactorKit', '~> 3.1.0'
 pod 'YogaKit', '~> 1.18'
 pod 'Foil', '~> 2.0.0'
+pod 'NSObject+Rx' #提供rx_disposeBag
 
 end

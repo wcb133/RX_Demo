@@ -20,9 +20,11 @@
 		0B99AE5D23A8ADFD00B18546 /* TransformingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B99AE5C23A8ADFD00B18546 /* TransformingVC.swift */; };
 		0B99AE5F23A8C26D00B18546 /* DriverVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B99AE5E23A8C26D00B18546 /* DriverVC.swift */; };
 		144A2750B053E4DC7A1BC78E /* Pods_RX_Demo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5A9D09FB9F085FC0974332C /* Pods_RX_Demo.framework */; };
+		E55D9BCD2786810D0037DA45 /* ScheduleVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E55D9BCC2786810D0037DA45 /* ScheduleVC.swift */; };
 		E5622F222783E24400C2E781 /* YogaTestVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5622F212783E24400C2E781 /* YogaTestVC.swift */; };
 		E5622F242783EFC900C2E781 /* Reactor_PulseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5622F232783EFC900C2E781 /* Reactor_PulseVC.swift */; };
 		E5622F262783FA2900C2E781 /* FoilVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5622F252783FA2900C2E781 /* FoilVC.swift */; };
+		E5622F282783FFA000C2E781 /* KeyPathVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5622F272783FFA000C2E781 /* KeyPathVC.swift */; };
 		E565CFCF26F6188A00ED6B2C /* RetryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E565CFCD26F6188A00ED6B2C /* RetryVC.swift */; };
 		E565CFD026F6188A00ED6B2C /* RetryVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = E565CFCE26F6188A00ED6B2C /* RetryVC.xib */; };
 		E575FEFD26EF797A0074F460 /* ReactorVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E575FEFC26EF797A0074F460 /* ReactorVC.swift */; };
@@ -58,9 +60,11 @@
 		0B99AE5E23A8C26D00B18546 /* DriverVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriverVC.swift; sourceTree = "<group>"; };
 		9AAD806AC6B34BB6BC652321 /* Pods-RX_Demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RX_Demo.debug.xcconfig"; path = "Target Support Files/Pods-RX_Demo/Pods-RX_Demo.debug.xcconfig"; sourceTree = "<group>"; };
 		A5A9D09FB9F085FC0974332C /* Pods_RX_Demo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RX_Demo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E55D9BCC2786810D0037DA45 /* ScheduleVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleVC.swift; sourceTree = "<group>"; };
 		E5622F212783E24400C2E781 /* YogaTestVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YogaTestVC.swift; sourceTree = "<group>"; };
 		E5622F232783EFC900C2E781 /* Reactor_PulseVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reactor_PulseVC.swift; sourceTree = "<group>"; };
 		E5622F252783FA2900C2E781 /* FoilVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoilVC.swift; sourceTree = "<group>"; };
+		E5622F272783FFA000C2E781 /* KeyPathVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyPathVC.swift; sourceTree = "<group>"; };
 		E565CFCD26F6188A00ED6B2C /* RetryVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RetryVC.swift; sourceTree = "<group>"; };
 		E565CFCE26F6188A00ED6B2C /* RetryVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RetryVC.xib; sourceTree = "<group>"; };
 		E575FEF726EF78BA0074F460 /* RX_Demo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RX_Demo-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -203,6 +207,8 @@
 				E5622F212783E24400C2E781 /* YogaTestVC.swift */,
 				E5622F232783EFC900C2E781 /* Reactor_PulseVC.swift */,
 				E5622F252783FA2900C2E781 /* FoilVC.swift */,
+				E5622F272783FFA000C2E781 /* KeyPathVC.swift */,
+				E55D9BCC2786810D0037DA45 /* ScheduleVC.swift */,
 			);
 			path = Example;
 			sourceTree = "<group>";
@@ -368,12 +374,14 @@
 				E565CFCF26F6188A00ED6B2C /* RetryVC.swift in Sources */,
 				E5622F242783EFC900C2E781 /* Reactor_PulseVC.swift in Sources */,
 				0B99AE5D23A8ADFD00B18546 /* TransformingVC.swift in Sources */,
+				E5622F282783FFA000C2E781 /* KeyPathVC.swift in Sources */,
 				0B39115423AC7F1D006DB334 /* ShareReplayVC.swift in Sources */,
 				0B0A33FA237E792200C1C7F3 /* ViewController.swift in Sources */,
 				0B0A33F6237E792200C1C7F3 /* AppDelegate.swift in Sources */,
 				E575FEFD26EF797A0074F460 /* ReactorVC.swift in Sources */,
 				E576669F26F843CD00571D7A /* TableViewOneSectionVC(简单基本使用).swift in Sources */,
 				E5622F222783E24400C2E781 /* YogaTestVC.swift in Sources */,
+				E55D9BCD2786810D0037DA45 /* ScheduleVC.swift in Sources */,
 				E57666A226F8696900571D7A /* Reusable.swift in Sources */,
 				E5C75C8226A2FD500032F11E /* RootVC.swift in Sources */,
 				E5622F262783FA2900C2E781 /* FoilVC.swift in Sources */,

@@ -10,6 +10,10 @@ import UIKit
 import RxSwift
 import RxCocoa
 
+class RxTestView:UIView {
+    var title = ""
+}
+
 class RxSwift6VC: UIViewController {
     @IBOutlet weak var inputText: UITextField!
     @IBOutlet weak var ob1Btn: UIButton!
@@ -35,7 +39,10 @@ class RxSwift6VC: UIViewController {
 //            print(" ======= \(ob)")
 //        }
         
+        let testView = RxTestView()
+        // DisposeBag(builder: <#T##() -> [Disposable]#>)
         buidBag = DisposeBag {
+            // withUnretained(self)
             ob2Btn.rx.tap.withUnretained(self).subscribe(onNext: { weakSelf,_ in
                 print(" ======= \(weakSelf)")
             }, onError: nil, onCompleted: nil, onDisposed: nil)
@@ -43,11 +50,12 @@ class RxSwift6VC: UIViewController {
             ob3Btn.rx.tap.withUnretained(self).subscribe(onNext: { weakSelf,_ in
                 print(" ======= \(weakSelf)")
             }, onError: nil, onCompleted: nil, onDisposed: nil)
+            
+            // distinctUntilChange(at:)、dynamicMemberLookup和keyPath
+            Observable.just(CBPerson(name: "标题", age: 18)).distinctUntilChanged(at: \.age).map(\.name).bind(to: testView.rx.title)
         }
-    }
-    
-    deinit {
-        print(" ====== ")
+        
+        print(" ========= \(testView.title)")
     }
     
     
@@ -58,5 +66,9 @@ class RxSwift6VC: UIViewController {
             }, onError: nil, onCompleted: nil, onDisposed: nil).disposed(by: self.bag)
             return Disposables.create()
         }
+    }
+    
+    deinit {
+        print(" ======== 释放")
     }
 }

@@ -1,6 +1,8 @@
 PODS:
   - Differentiator (5.0.0)
   - Foil (2.0.0)
+  - "NSObject+Rx (5.2.2)":
+    - RxSwift (~> 6.2)
   - PINCache (3.0.3):
     - PINCache/Arc-exception-safe (= 3.0.3)
     - PINCache/Core (= 3.0.3)
@@ -66,6 +68,7 @@ PODS:
 
 DEPENDENCIES:
   - Foil (~> 2.0.0)
+  - "NSObject+Rx"
   - ReactorKit (~> 3.1.0)
   - RxCocoa (~> 6)
   - RxDataSources
@@ -80,6 +83,7 @@ SPEC REPOS:
   "git@gitee.com:mirrors/CocoaPods-Specs.git":
     - Differentiator
     - Foil
+    - "NSObject+Rx"
     - PINCache
     - PINOperation
     - PINRemoteImage
@@ -99,6 +103,7 @@ SPEC REPOS:
 SPEC CHECKSUMS:
   Differentiator: e8497ceab83c1b10ca233716d547b9af21b9344d
   Foil: bf7e166dfcf589f3b29d01f87080fd5ea3e5d98f
+  "NSObject+Rx": 61cf1f7306a73dcef8b36649198af0813ec18dfd
   PINCache: 7a8fc1a691173d21dbddbf86cd515de6efa55086
   PINOperation: 00c935935f1e8cf0d1e2d6b542e75b88fc3e5e20
   PINRemoteImage: f1295b29f8c5e640e25335a1b2bd9d805171bd01
@@ -115,6 +120,6 @@ SPEC CHECKSUMS:
   Yoga: cff67a400f6b74dc38eb0bad4f156673d9aa980c
   YogaKit: f782866e155069a2cca2517aafea43200b01fd5a
 
-PODFILE CHECKSUM: 52a1ebcbbd5f5cc46fbb338330aaeb69cf310b1a
+PODFILE CHECKSUM: 5ac5632e31f435b2f6cf1c689cf68bbb87fa10f3
 
 COCOAPODS: 1.11.2

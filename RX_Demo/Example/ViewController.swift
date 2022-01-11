@@ -31,23 +31,33 @@ class ViewController: UIViewController {
     
     weak var weakPerson: Person?
     
-    var testArray = ["12","23"]
+    var testArray:[Person] = []
     
-    var textArr:[String] {
-        set{
-            self.testArray = newValue
-        }
-        get {
-            return self.testArray
-        }
-    }
+//    var textArr:[String] {
+//        set{
+//            self.testArray = newValue
+//        }
+//        get {
+//            return self.testArray
+//        }
+//    }
+    
+    
     
     override func viewDidLoad() {
         view.backgroundColor = .white
         
-        print(String(format: " ======= %p", textArr))
-        testArray.append("9")
-        print(String(format: " ======= %p", textArr))
+        let p1 = Person()
+        let p2 = Person()
+        let p3 = Person()
+        let array1 = [p1, p2]
+        let array2 = [p1, p3]
+        
+        testArray = []
+                
+        print(" ======= \(array1 == array2)")
+//        testArray.append("9")
+//        print(String(format: " ======= %p", textArr))
     
 //           let weakP = Person()
 //           weakPerson = weakP

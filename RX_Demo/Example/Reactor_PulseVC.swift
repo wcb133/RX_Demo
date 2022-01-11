@@ -52,14 +52,23 @@ class Reactor_PulseVC: UIViewController {
 
     override func viewDidLoad() {
         let reactor = MyReactor()
-        // pulse:解决自定义模型需要自己实现Equatable协议，才能使用distinctUntilChanged的问题
-        reactor.pulse { state in
-            state.$messages
-        }
+        // pulse:解决自定义数据类型时需要自己实现Equatable协议，才能使用distinctUntilChanged过滤的问题
+        /*
+         写法一
+         reactor.pulse({ state in
+         state.$messages
+         })
+         .subscribe(onNext: { messages in
+             print("文字信息 ======= \(messages)")
+         })
+         .disposed(by: disposeBag)
+         */
+        reactor.pulse(\.$messages)
         .subscribe(onNext: { messages in
             print("文字信息 ======= \(messages)")
         })
         .disposed(by: disposeBag)
+        
         // Cases
         reactor.action.onNext(.alert("Hello")) // showAlert() is called with `Hello`
 

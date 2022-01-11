@@ -35,6 +35,8 @@ class RxMyDelegateProxy: DelegateProxy<MyClass,MyDelegate>,DelegateProxyType,MyD
         super.setForwardToDelegate(delegate, retainDelegate: true)
     }
     
+    
+    //必须实现的协议可用这种方式
     internal lazy var nums = PublishSubject<Int>()
 
     func printNum(num: Int) {

@@ -27,7 +27,7 @@ class RootReactor: Reactor {
         let vcs:[UIViewController.Type] = [ReactorVC.self,RxSwift6VC.self,ViewController.self,
                                           SubjectsVC.self,KVOVC.self,TransformingVC.self,
                                           DriverVC.self,ShareReplayVC.self,CollectionViewVC.self,
-                                           TableViewVC.self,DelegateProxyVC.self,RetryVC.self,TableViewOneSectionVC.self,YogaTestVC.self,FoilVC.self]
+                                           TableViewVC.self,DelegateProxyVC.self,RetryVC.self,TableViewOneSectionVC.self,YogaTestVC.self,FoilVC.self,KeyPathVC.self,ScheduleVC.self]
         
         var tableData:[TBSectionModel] = []
     }
@@ -48,7 +48,7 @@ class RootReactor: Reactor {
         var state = state
         switch mutation {
         case .addExample:
-            let items:[String] = state.vcs.map {"\($0)" }
+            let items:[String] = state.vcs.map {"\($0)".replacingOccurrences(of: "VC", with: "") }
             let sectionModel = TBSectionModel(title: "Demo", items: items)
             state.tableData = [sectionModel]
         case .test:

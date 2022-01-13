@@ -41,6 +41,7 @@
 		E5C75C2026A2AF880032F11E /* RxSwift6VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5C75C1E26A2AF880032F11E /* RxSwift6VC.swift */; };
 		E5C75C2126A2AF880032F11E /* RxSwift6VC.xib in Resources */ = {isa = PBXBuildFile; fileRef = E5C75C1F26A2AF880032F11E /* RxSwift6VC.xib */; };
 		E5C75C8226A2FD500032F11E /* RootVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5C75C8126A2FD500032F11E /* RootVC.swift */; };
+		E5DC182C2790505C006CBE58 /* SwiftTipsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5DC182B2790505C006CBE58 /* SwiftTipsVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -82,6 +83,7 @@
 		E5C75C1E26A2AF880032F11E /* RxSwift6VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxSwift6VC.swift; sourceTree = "<group>"; };
 		E5C75C1F26A2AF880032F11E /* RxSwift6VC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RxSwift6VC.xib; sourceTree = "<group>"; };
 		E5C75C8126A2FD500032F11E /* RootVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootVC.swift; sourceTree = "<group>"; };
+		E5DC182B2790505C006CBE58 /* SwiftTipsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftTipsVC.swift; sourceTree = "<group>"; };
 		EC0142A58305E67AD9AC244A /* Pods-RX_Demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RX_Demo.release.xcconfig"; path = "Target Support Files/Pods-RX_Demo/Pods-RX_Demo.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -118,6 +120,7 @@
 		0B0A33F4237E792200C1C7F3 /* RX_Demo */ = {
 			isa = PBXGroup;
 			children = (
+				E5DC182D27905062006CBE58 /* SwiftTipsVC */,
 				E576669B26F81C5C00571D7A /* RootVC */,
 				E565CFCC26F6188000ED6B2C /* RetryVC */,
 				E5A9F0EF26F0F336004FA7A4 /* DelegateProxy */,
@@ -220,6 +223,14 @@
 				E5C75C1F26A2AF880032F11E /* RxSwift6VC.xib */,
 			);
 			path = RxSwift6VC;
+			sourceTree = "<group>";
+		};
+		E5DC182D27905062006CBE58 /* SwiftTipsVC */ = {
+			isa = PBXGroup;
+			children = (
+				E5DC182B2790505C006CBE58 /* SwiftTipsVC.swift */,
+			);
+			path = SwiftTipsVC;
 			sourceTree = "<group>";
 		};
 		F7587AF2630710672850323E /* Frameworks */ = {
@@ -382,6 +393,7 @@
 				E576669F26F843CD00571D7A /* TableViewOneSectionVC(简单基本使用).swift in Sources */,
 				E5622F222783E24400C2E781 /* YogaTestVC.swift in Sources */,
 				E55D9BCD2786810D0037DA45 /* ScheduleVC.swift in Sources */,
+				E5DC182C2790505C006CBE58 /* SwiftTipsVC.swift in Sources */,
 				E57666A226F8696900571D7A /* Reusable.swift in Sources */,
 				E5C75C8226A2FD500032F11E /* RootVC.swift in Sources */,
 				E5622F262783FA2900C2E781 /* FoilVC.swift in Sources */,

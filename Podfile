@@ -27,4 +27,7 @@ pod 'YogaKit', '~> 1.18'
 pod 'Foil', '~> 2.0.0'
 pod 'NSObject+Rx' #提供rx_disposeBag
 
+# 代码格式化
+pod 'SwiftFormat/CLI', '0.49.1', :configurations => ['Debug']
+
 end

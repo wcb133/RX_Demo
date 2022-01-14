@@ -6,9 +6,8 @@
 //  Copyright © 2021 fst. All rights reserved.
 //
 
-
 protocol Reusable {
-    static var reuseID: String {get}
+    static var reuseID: String { get }
 }
 
 extension Reusable {

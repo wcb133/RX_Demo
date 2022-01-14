@@ -8,17 +8,17 @@
 import RxSwift
 import RxCocoa
 
-extension Reactive where Base: MyClass{
-    var delegate: DelegateProxy<MyClass,MyDelegate>{
+extension Reactive where Base: MyClass {
+    var delegate: DelegateProxy<MyClass, MyDelegate> {
         return RxMyDelegateProxy.proxy(for: base)
     }
-    
-    var nums: Observable<Int>{
+
+    var nums: Observable<Int> {
         return RxMyDelegateProxy.proxy(for: base).nums.asObservable()
     }
-    
-    //非必须实现的协议
-    var strs: Observable<String>{
+
+    // 非必须实现的协议
+    var strs: Observable<String> {
         return delegate.methodInvoked(#selector(MyDelegate.printStr(str:))).map {
             return $0[0] as! String
         }

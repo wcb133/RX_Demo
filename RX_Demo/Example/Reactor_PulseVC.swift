@@ -64,11 +64,11 @@ class Reactor_PulseVC: UIViewController {
          .disposed(by: disposeBag)
          */
         reactor.pulse(\.$messages)
-        .subscribe(onNext: { messages in
-            print("文字信息 ======= \(messages)")
-        })
-        .disposed(by: disposeBag)
-        
+            .subscribe(onNext: { messages in
+                print("文字信息 ======= \(messages)")
+            })
+            .disposed(by: disposeBag)
+
         // Cases
         reactor.action.onNext(.alert("Hello")) // showAlert() is called with `Hello`
 

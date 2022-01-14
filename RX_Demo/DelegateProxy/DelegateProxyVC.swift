@@ -12,21 +12,20 @@ import RxSwift
 import RxCocoa
 
 class DelegateProxyVC: UIViewController {
-    let my: MyClass = MyClass()
+    let my: MyClass = .init()
     let disposeBag = DisposeBag()
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = .white
-        
+        view.backgroundColor = .white
+
         my.start()
-        my.rx.nums.subscribe(onNext: { (num) in
-             print(num)
+        my.rx.nums.subscribe(onNext: { num in
+            print(num)
         }).disposed(by: disposeBag)
 
-        my.rx.strs.subscribe(onNext: { (str) in
-             print(str)
+        my.rx.strs.subscribe(onNext: { str in
+            print(str)
         }).disposed(by: disposeBag)
     }
-
 }

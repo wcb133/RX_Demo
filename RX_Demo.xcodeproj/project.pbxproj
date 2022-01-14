@@ -20,6 +20,9 @@
 		0B99AE5D23A8ADFD00B18546 /* TransformingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B99AE5C23A8ADFD00B18546 /* TransformingVC.swift */; };
 		0B99AE5F23A8C26D00B18546 /* DriverVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B99AE5E23A8C26D00B18546 /* DriverVC.swift */; };
 		144A2750B053E4DC7A1BC78E /* Pods_RX_Demo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5A9D09FB9F085FC0974332C /* Pods_RX_Demo.framework */; };
+		E54B4A1C27912D48002D3F73 /* SwiftCompileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54B4A1B27912D48002D3F73 /* SwiftCompileVC.swift */; };
+		E54B4A1F2791534D002D3F73 /* AppDelegateCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54B4A1E2791534D002D3F73 /* AppDelegateCommand.swift */; };
+		E54B4A212791537A002D3F73 /* StartupCommandsBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54B4A202791537A002D3F73 /* StartupCommandsBuilder.swift */; };
 		E55D9BCD2786810D0037DA45 /* ScheduleVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E55D9BCC2786810D0037DA45 /* ScheduleVC.swift */; };
 		E5622F222783E24400C2E781 /* YogaTestVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5622F212783E24400C2E781 /* YogaTestVC.swift */; };
 		E5622F242783EFC900C2E781 /* Reactor_PulseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5622F232783EFC900C2E781 /* Reactor_PulseVC.swift */; };
@@ -61,6 +64,9 @@
 		0B99AE5E23A8C26D00B18546 /* DriverVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriverVC.swift; sourceTree = "<group>"; };
 		9AAD806AC6B34BB6BC652321 /* Pods-RX_Demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RX_Demo.debug.xcconfig"; path = "Target Support Files/Pods-RX_Demo/Pods-RX_Demo.debug.xcconfig"; sourceTree = "<group>"; };
 		A5A9D09FB9F085FC0974332C /* Pods_RX_Demo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RX_Demo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E54B4A1B27912D48002D3F73 /* SwiftCompileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftCompileVC.swift; sourceTree = "<group>"; };
+		E54B4A1E2791534D002D3F73 /* AppDelegateCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegateCommand.swift; sourceTree = "<group>"; };
+		E54B4A202791537A002D3F73 /* StartupCommandsBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartupCommandsBuilder.swift; sourceTree = "<group>"; };
 		E55D9BCC2786810D0037DA45 /* ScheduleVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleVC.swift; sourceTree = "<group>"; };
 		E5622F212783E24400C2E781 /* YogaTestVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YogaTestVC.swift; sourceTree = "<group>"; };
 		E5622F232783EFC900C2E781 /* Reactor_PulseVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reactor_PulseVC.swift; sourceTree = "<group>"; };
@@ -120,6 +126,7 @@
 		0B0A33F4237E792200C1C7F3 /* RX_Demo */ = {
 			isa = PBXGroup;
 			children = (
+				E54B4A1D2791532C002D3F73 /* AppDelegate */,
 				E5DC182D27905062006CBE58 /* SwiftTipsVC */,
 				E576669B26F81C5C00571D7A /* RootVC */,
 				E565CFCC26F6188000ED6B2C /* RetryVC */,
@@ -127,7 +134,6 @@
 				E575FEFB26EF79610074F460 /* ReactorVC */,
 				E5C75C1626A2AF0A0032F11E /* RxSwift6VC */,
 				E5C75C1426A2AEC60032F11E /* Example */,
-				0B0A33F5237E792200C1C7F3 /* AppDelegate.swift */,
 				0B0A33FB237E792200C1C7F3 /* Main.storyboard */,
 				0B0A33FE237E792300C1C7F3 /* Assets.xcassets */,
 				0B0A3400237E792300C1C7F3 /* LaunchScreen.storyboard */,
@@ -144,6 +150,16 @@
 				EC0142A58305E67AD9AC244A /* Pods-RX_Demo.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		E54B4A1D2791532C002D3F73 /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				0B0A33F5237E792200C1C7F3 /* AppDelegate.swift */,
+				E54B4A1E2791534D002D3F73 /* AppDelegateCommand.swift */,
+				E54B4A202791537A002D3F73 /* StartupCommandsBuilder.swift */,
+			);
+			path = AppDelegate;
 			sourceTree = "<group>";
 		};
 		E565CFCC26F6188000ED6B2C /* RetryVC */ = {
@@ -229,6 +245,7 @@
 			isa = PBXGroup;
 			children = (
 				E5DC182B2790505C006CBE58 /* SwiftTipsVC.swift */,
+				E54B4A1B27912D48002D3F73 /* SwiftCompileVC.swift */,
 			);
 			path = SwiftTipsVC;
 			sourceTree = "<group>";
@@ -249,10 +266,10 @@
 			buildConfigurationList = 0B0A3406237E792300C1C7F3 /* Build configuration list for PBXNativeTarget "RX_Demo" */;
 			buildPhases = (
 				BBF8CAB6F3248D44C0E3AAB4 /* [CP] Check Pods Manifest.lock */,
+				E59BE798268FF0EE0086D1F5 /* ShellScript */,
 				0B0A33EE237E792200C1C7F3 /* Sources */,
 				0B0A33EF237E792200C1C7F3 /* Frameworks */,
 				0B0A33F0237E792200C1C7F3 /* Resources */,
-				E59BE798268FF0EE0086D1F5 /* ShellScript */,
 				0D7E883FD977876A8DA155D7 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
@@ -368,7 +385,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n";
+			shellScript = "if [ \"${CONFIGURATION}\" = \"Debug\" ]; then\n# swiftFormat代码格式化\n\"${PODS_ROOT}/SwiftFormat/CommandLineTool/swiftformat\" --disable markTypes,isEmpty,preferKeyPath,redundantVoidReturnType,sortedImports,sortedSwitchCases,spaceAroundBrackets,trailingCommas,unusedArguments,wrapAttributes,wrapEnumCases,wrapMultilineStatementBraces,wrapSwitchCases,redundantFileprivate --ranges nospace --wraparguments after-first --swiftversion \"5.0\" \"${SRCROOT}/RX_Demo/\"\n\necho \"format debug build swift code\"\n\nelse\n\necho \"Not Debug Env, skip format\"\n\nfi\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -380,6 +397,7 @@
 				E575FEFF26EF7B7B0074F460 /* ReactorCell.swift in Sources */,
 				E5A9F0F126F0F359004FA7A4 /* DelegateProxyVC.swift in Sources */,
 				E5C75C2026A2AF880032F11E /* RxSwift6VC.swift in Sources */,
+				E54B4A212791537A002D3F73 /* StartupCommandsBuilder.swift in Sources */,
 				0B99AE5923A77EFD00B18546 /* SubjectsVC.swift in Sources */,
 				0B2FC1D423B054A600BDF76E /* CollectionViewVC.swift in Sources */,
 				E565CFCF26F6188A00ED6B2C /* RetryVC.swift in Sources */,
@@ -399,7 +417,9 @@
 				E5622F262783FA2900C2E781 /* FoilVC.swift in Sources */,
 				E576669D26F81C9E00571D7A /* RootReactor.swift in Sources */,
 				0B2FC1D623B0A5BF00BDF76E /* TableViewVC(自带的SectionModel).swift in Sources */,
+				E54B4A1C27912D48002D3F73 /* SwiftCompileVC.swift in Sources */,
 				E57666A426F8810300571D7A /* Observable+Ex.swift in Sources */,
+				E54B4A1F2791534D002D3F73 /* AppDelegateCommand.swift in Sources */,
 				E575FF0126EF7BA70074F460 /* MainReactor.swift in Sources */,
 				0B99AE5F23A8C26D00B18546 /* DriverVC.swift in Sources */,
 				E5A9F0F526F0F5B4004FA7A4 /* MyClass.swift in Sources */,

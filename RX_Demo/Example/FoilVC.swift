@@ -22,38 +22,33 @@ final class AppSettings {
     var timestamp: Date?
 }
 
-
 @dynamicMemberLookup
 struct CBRxPerson {
-  subscript(dynamicMember member: String) -> String {
-    let properties = ["name": "Leon", "city": "Shanghai"]
-    return properties[member, default: "null"]
-  }
+    let age = 0
 
-  subscript<T,U>(dynamicMember member: WritableKeyPath<T, U>) -> Int {
-    return 32
-  }
-    
+    subscript(dynamicMember member: String) -> String {
+        let properties = ["name": "Leon", "city": "Shanghai"]
+        return properties[member, default: "null"]
+    }
+
+    subscript<T, U>(dynamicMember member: WritableKeyPath<T, U>) -> Int {
+        return 32
+    }
 }
-
 
 class FoilVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
-        
+
         let p = CBRxPerson()
 //        let age: Int = p.city // 32
         let name: String = p.name // Leon
-        
-        
     }
-    
+
     func test() {
         print(" ========== \(String(describing: AppSettings.shared.timestamp))")
         AppSettings.shared.flagEnabled = true
         print(" ========== \(String(describing: AppSettings.shared.flagEnabled))")
     }
 }
-
-

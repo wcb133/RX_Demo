@@ -11,7 +11,7 @@ import RxSwift
 import ReactorKit
 
 extension ObservableType {
-    func mapThenUntilChanged<Result>(_ transform: @escaping (Self.Element) throws -> Result) -> RxSwift.Observable<Result>  where Result : Equatable {
+    func mapThenUntilChanged<Result>(_ transform: @escaping (Self.Element) throws -> Result) -> RxSwift.Observable<Result> where Result: Equatable {
         return map(transform).distinctUntilChanged()
     }
 }

@@ -14,18 +14,17 @@ enum RetryError: Error {
 }
 
 class RetryVC: UIViewController {
-
-    @IBOutlet weak var btn: UIButton!
+    @IBOutlet var btn: UIButton!
     let bag = DisposeBag()
-    
-    var count:Int = 0
-    
-    private var retryCount = 1           // 当前重试次数
-    private let maxRetryCount = 5        // 最多重试次数
-    private let retryDelay: Int = 3   // 多少秒重试一次
-    
+
+    var count: Int = 0
+
+    private var retryCount = 1 // 当前重试次数
+    private let maxRetryCount = 5 // 最多重试次数
+    private let retryDelay: Int = 3 // 多少秒重试一次
+
     func test() {
-        let get5 = Single<Bool>.create(subscribe: {[weak self] single in
+        let get5 = Single<Bool>.create(subscribe: { [weak self] single in
             guard let self = self else { return Disposables.create() }
             if self.retryCount == self.maxRetryCount {
                 self.retryCount = 1
@@ -37,22 +36,22 @@ class RetryVC: UIViewController {
             }
             return Disposables.create()
         })
-        
+
         get5.asObservable()
             .observe(on: MainScheduler.asyncInstance)
-            .retry {[weak self] (error) -> Observable<Int> in//这里不加weak self，会循环引用
-                return error.flatMap( { (er) -> Observable<Int> in
+            .retry { [weak self] error -> Observable<Int> in // 这里不加weak self，会循环引用
+                error.flatMap { er -> Observable<Int> in
                     guard let self = self else { return Observable.error(er) }
-                    guard self.retryCount < self.maxRetryCount+1 else {
+                    guard self.retryCount < self.maxRetryCount + 1 else {
                         return Observable.error(er)
                     }
                     return Observable.timer(.seconds(self.retryDelay), scheduler: MainScheduler.asyncInstance)
-                })
+                }
             }
             .subscribe(onNext: { bool in
                 print("bool =", bool)
             }, onError: { error in
-                switch (error as! RetryError) {
+                switch error as! RetryError {
                 case .errorNumber:
                     print("number error")
                 }
@@ -61,61 +60,56 @@ class RetryVC: UIViewController {
             })
             .disposed(by: bag)
     }
-    
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
-         test()
+        test()
 //        testRetry()
     }
-    
+
     deinit {
         print(" ====== deinit")
     }
-    
-    
-    func testRetry()  {
-        let retry = btn.rx.tap.flatMap { _->Observable<Int> in
-            return .create { ob in
+
+    func testRetry() {
+        let retry = btn.rx.tap.flatMap { _ -> Observable<Int> in
+            .create { ob in
                 if self.count < 3 {
-                let err = NSError(domain: "测试", code: 20, userInfo: ["key":"userInfo"])
+                    let err = NSError(domain: "测试", code: 20, userInfo: ["key": "userInfo"])
                     ob.onError(err)
-                }else{
+                } else {
                     ob.onNext(self.count)
                 }
                 return Disposables.create()
             }
         }
-        
-        //这个retry没成功,原因未知(上面的btn.rx.tap改成Observable.just(1)后，会成功)
+
+        // 这个retry没成功,原因未知(上面的btn.rx.tap改成Observable.just(1)后，会成功)
         retry.retry(when: { errOb in
-            return errOb.flatMap { err -> Observable<Int> in
+            errOb.flatMap { err -> Observable<Int> in
                 print("错误 ======== \(err)")
                 return Observable.timer(RxTimeInterval.seconds(3), scheduler: MainScheduler.asyncInstance)
             }
-        }).subscribe(onNext:{ count in
+        }).subscribe(onNext: { count in
             print(" ======== \(count)")
         }).disposed(by: bag)
-        
-        
+
 //        retry.subscribe(onNext:{ count in
 //            print(" ======== \(count)")
 //
 //        }).disposed(by: bag)
-        
 
-        //重试
+        // 重试
 //        btn.rx.tap.subscribe(onNext:{ _ in
 //            Self.test()
 //        }).disposed(by: bag)
 
-        
-        //延时
+        // 延时
 //        btn.rx.tap.delay(5, scheduler: MainScheduler.asyncInstance
 //        ).subscribe(onNext:{ _ in
 //            print(" ======= ")
 //        }).disposed(by: bag)
-        //失败重试
+        // 失败重试
 //        btn.rx.tap.flatMap({ [unowned self] _  in
 //            self.request().asObservable().flatMap({ code -> Observable<Int> in
 //                if code == 1 {
@@ -134,19 +128,16 @@ class RetryVC: UIViewController {
 //            print(" ======= 重试测试\(ti)")
 //        }).disposed(by: bag)
     }
-    
-    
+
     func request() -> Single<Int> {
         return .create { ob in
             if self.count < 3 {
                 self.count += 1
                 ob(.success(1))
-            }else{
+            } else {
                 ob(.success(2))
             }
             return Disposables.create()
         }
     }
-    
-    
 }

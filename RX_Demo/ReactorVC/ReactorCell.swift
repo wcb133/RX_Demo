@@ -10,12 +10,12 @@ import UIKit
 
 class ReactorCell: ASCellNode {
     let textNode = ASButtonNode()
-    init(title:String) {
+    init(title: String) {
         super.init()
-        self.addSubnode(textNode)
+        addSubnode(textNode)
         textNode.setTitle(title, with: .systemFont(ofSize: 15), with: .green, for: .normal)
     }
-    
+
     override func layoutSpecThatFits(_ constrainedSize: ASSizeRange) -> ASLayoutSpec {
         textNode.style.height = ASDimensionMake(50)
         return ASInsetLayoutSpec(insets: .zero, child: textNode)

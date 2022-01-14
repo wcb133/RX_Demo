@@ -11,6 +11,7 @@ import RxCocoa
 import RxSwift
 import RxSwiftExt
 import UIKit
+import NSObject_Rx
 
 class Person: NSObject {
     var name = ""
@@ -21,18 +22,16 @@ extension ViewController {
     func testThread() {}
 }
 
-
-
 class ViewController: UIViewController {
     let disposeBag = DisposeBag()
     var persons: [Person] = []
-    
+
     var per = Person()
-    
+
     weak var weakPerson: Person?
-    
-    var testArray:[Person] = []
-    
+
+    var testArray: [Person] = []
+
 //    var textArr:[String] {
 //        set{
 //            self.testArray = newValue
@@ -41,24 +40,65 @@ class ViewController: UIViewController {
 //            return self.testArray
 //        }
 //    }
-    
-    
-    
+
+//    private let semaphore = DispatchSemaphore(value: 1)
+
+    // 最大并发数
+    private let operationQueue = OperationQueue().then { op in
+        op.maxConcurrentOperationCount = 1
+    }
+
+    func testOb(element: String) -> Observable<String> {
+        Observable<String>.create { ob in
+            print(" ====== \(Thread.current)")
+            let semaphoreT = DispatchSemaphore(value: 0)
+            defer {
+                semaphoreT.wait()
+            }
+
+            DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+                semaphoreT.signal()
+                ob.onCompleted()
+            }
+            return Disposables.create {
+                print(" ====== 释放了")
+            }
+        }
+    }
+
+    func testDefer() -> String {
+        defer {
+            print("===== 测试defer")
+        }
+        return "defer"
+    }
+
     override func viewDidLoad() {
         view.backgroundColor = .white
-        
+
+        let res = testDefer()
+        print("defer ====== \(res) ==== \(self)")
+
+        Observable.from(["1", "3", "6", "8", "3", "6", "8"]).flatMap { [unowned self] element in
+            self.testOb(element: element).subscribe(on: OperationQueueScheduler(operationQueue: operationQueue))
+        }.toArray().subscribe(onSuccess: { [unowned self] array in
+            print("回调 ======== \(array)")
+        }).disposed(by: rx.disposeBag)
+
+//        return
+
         let p1 = Person()
         let p2 = Person()
         let p3 = Person()
         let array1 = [p1, p2]
         let array2 = [p1, p3]
-        
+
         testArray = []
-                
+
         print(" ======= \(array1 == array2)")
 //        testArray.append("9")
 //        print(String(format: " ======= %p", textArr))
-    
+
 //           let weakP = Person()
 //           weakPerson = weakP
 //
@@ -80,7 +120,7 @@ class ViewController: UIViewController {
 //               per = p
 //              p.name = "名字测试\(i)"
 //           }
-           
+
 //           class Car {
 //               var name: String = ""
 //           }
@@ -92,11 +132,11 @@ class ViewController: UIViewController {
 //           car = Car()
 //           car.name = "雅迪"
 //           block()
-           
-        return
-        
+
+//        return
+
         var p: [Person] = []
-        for i in 0 ..< 3 {
+        for i in 0..<3 {
             let model = Person()
             model.name = "名字\(i)"
             p.append(model)
@@ -104,9 +144,10 @@ class ViewController: UIViewController {
         print(String(format: "前地址%p", persons))
         persons = p
         print(String(format: "后地址%p===%p", persons, p))
-           
+
         let model = persons[2]
-        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+        let delay: TimeInterval = 2.0
+        DispatchQueue.main.asyncAfter(deadline: .now() + delay) {
             DispatchQueue.global().async {
 //                   let num = model.nums[3]
 //                   print(String.init(format: " ====== %p", self.persons))
@@ -114,12 +155,12 @@ class ViewController: UIViewController {
                 print("======\(UIScreen.main.scale)")
             }
         }
-           
+
         persons = []
-           
+
 //           let model2 = self.persons[2]
 //           model2.nums = []
-           
+
 //           var p2:[Person] = []
 //           for i in 0..<2 {
 //               let model = Person()
@@ -131,13 +172,13 @@ class ViewController: UIViewController {
 //           persons = p2
 //
 //           print(String.init(format: "删除后地址%p", persons))
-           
+
 //           for i in 0..<3 {
 //               let model = Person()
 //               model.name = "名字\(i)"
 //               persons.append(model)
 //           }
-           
+
         rx.methodInvoked(#selector(ViewController.viewWillAppear(_:))).subscribe(onNext: { animate in
             print("数据 ========= \(animate)")
         }).disposed(by: disposeBag)
@@ -147,20 +188,20 @@ class ViewController: UIViewController {
         view.addSubview(lab)
         lab.textColor = .red
         lab.frame = CGRect(x: 0, y: 100, width: 200, height: 20)
-        
+
         // 测试takeUntil
 //        takeUntilTest()
-        
+
 //           //Observable序列（每隔1秒钟发出一个索引数）
 //        let observableTi = Observable<Int>.interval(1, scheduler: MainScheduler.instance)
 //       let observableMap = observable.map { "当前索引数：\($0 )" }
 //        observableMap.bind { print("当前索引数：\($0  )") }.disposed(by: disposeBag)
-        
+
         let ob1: Observable<String> = Observable.just("")
         let ob2 = Observable.just("")
-        
+
         let observable2 = Observable.of(ob1, ob2)
-        
+
 //        observable.composeMa
         // 订阅1
 //        observable2.subscribe { event in
@@ -168,15 +209,15 @@ class ViewController: UIViewController {
 //            print("数据======= \(event.element)")
 //
 //        }.disposed(by: disposeBag)
-        
+
 //        let p = Person()
-        
+
 //        Observable.from([p]).mapAt(\.name).subscribe(onNext: { name in
 //            print("数组 ======== \(name)")
 //        }, onError: nil, onCompleted: nil, onDisposed: nil)
-        
+
         observable2.subscribe { _ in
-            
+
         } onError: { _ in
             print("数据======= onError")
         } onCompleted: {
@@ -186,7 +227,7 @@ class ViewController: UIViewController {
         }.disposed(by: disposeBag)
 
         let observable = Observable.of("", "")
-        
+
         // 订阅2
         observable.subscribe(onNext: { text in
             print(text)
@@ -197,12 +238,12 @@ class ViewController: UIViewController {
         }) {
             print("dispose")
         }.disposed(by: disposeBag)
-        
+
         // 订阅3
         observable.subscribe(onNext: { text in
             print("订阅3" + text)
         }).disposed(by: disposeBag)
-        
+
         // 订阅4,观察者observer，结合bind使用
         let observer: AnyObserver<String> = AnyObserver { event in
             switch event {
@@ -221,11 +262,11 @@ class ViewController: UIViewController {
             label.text = text
         }
         observableTi.map { "计算\($0)" }.bind(to: binderObserver).disposed(by: disposeBag)
-        
+
         // 自定义可绑属性，其实RxSwift已经写有，label.rx.fontSize
 //        observableTi.map { CGFloat($0) }.bind(to: lab.fontSize).disposed(by: disposeBag)
     }
-    
+
     func takeUntilTest() {
         let source = Observable<String>.create { ob -> Disposable in
             Observable<Int>.interval(RxTimeInterval.seconds(5), scheduler: MainScheduler.instance).subscribe(onNext: { _ in
@@ -234,9 +275,9 @@ class ViewController: UIViewController {
             return Disposables.create()
         }
         let notifier = PublishSubject<String>()
-        
+
         let source2 = PublishSubject<String>()
-        
+
         // 效果应该是和flatMapLatest一样的
         let source3 = source.flatMap {
             ob(text: $0).takeUntil(notifier)
@@ -244,11 +285,11 @@ class ViewController: UIViewController {
 //        let source3 = source.flatMapLatest {
 //            ob(text: $0)
 //        }.share(replay: 1)
-        
+
         source3.subscribe(onNext: { text in
             print("=========== \(text)")
         }).disposed(by: disposeBag)
-        
+
         func ob(text: String) -> Observable<Int> {
             return Observable.of(123)
         }

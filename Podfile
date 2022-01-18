@@ -9,11 +9,16 @@ def test_pods
     pod 'RxTest'
     pod 'RxBlocking'
     pod 'Nimble'
+    pod 'Quick'
 end
+
+target 'RX_DemoTests' do
+  test_pods
+end
+
 
 target 'RX_Demo' do
   # Comment the next line if you don't want to use dynamic frameworks
-#test_pods
   
 pod 'RxSwift', '~> 6'
 pod 'RxCocoa', '~> 6'

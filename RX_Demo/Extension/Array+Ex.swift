@@ -12,6 +12,7 @@ extension Array {
     // 防止数组越界
     subscript(safe index: Int) -> Element? {
         if count > index {
+            print(" -===== ")
             return self[index]
         }
         return nil

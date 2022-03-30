@@ -14,6 +14,7 @@ public class Banana {
     public init() {}
 
     public func peel() {
+        print(" ====== ")
         isPeeled = true
     }
 

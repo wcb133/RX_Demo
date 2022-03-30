@@ -19,6 +19,7 @@ public class Banana {
     }
 
     public var isEdible: Bool {
+        print(" ===== 12")
         return isPeeled
     }
 }

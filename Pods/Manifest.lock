@@ -23,6 +23,7 @@ PODS:
   - ReactorKit (3.1.0):
     - RxSwift (~> 6.0)
     - WeakMapTable (~> 1.1)
+  - Resolver (1.0.7)
   - RxBlocking (6.2.0):
     - RxSwift (= 6.2.0)
   - RxCocoa (6.2.0):
@@ -79,6 +80,7 @@ DEPENDENCIES:
   - "NSObject+Rx"
   - Quick
   - ReactorKit (~> 3.1.0)
+  - Resolver
   - RxBlocking
   - RxCocoa (~> 6)
   - RxDataSources
@@ -102,6 +104,7 @@ SPEC REPOS:
     - PINRemoteImage
     - Quick
     - ReactorKit
+    - Resolver
     - RxBlocking
     - RxCocoa
     - RxDataSources
@@ -127,6 +130,7 @@ SPEC CHECKSUMS:
   PINRemoteImage: f1295b29f8c5e640e25335a1b2bd9d805171bd01
   Quick: 6473349e43b9271a8d43839d9ba1c442ed1b7ac4
   ReactorKit: a06dd2a5c9339287aedf3dc821cfab6347eca106
+  Resolver: da30396fcabb46790959209430a4a0a9e6e39849
   RxBlocking: 0b29f7d2079109a8de49c411381bed7c33ef1eeb
   RxCocoa: 4baf94bb35f2c0ab31bc0cb9f1900155f646ba42
   RxDataSources: aa47cc1ed6c500fa0dfecac5c979b723542d79cf
@@ -142,6 +146,6 @@ SPEC CHECKSUMS:
   Yoga: cff67a400f6b74dc38eb0bad4f156673d9aa980c
   YogaKit: f782866e155069a2cca2517aafea43200b01fd5a
 
-PODFILE CHECKSUM: 3087d95e4ccab969b67193b60251abd8abdc2fc0
+PODFILE CHECKSUM: 49816d74db57e4048a3e02a68b5faa22c12e8293
 
 COCOAPODS: 1.11.2

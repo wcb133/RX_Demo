@@ -55,6 +55,7 @@
 		E576669F26F843CD00571D7A /* TableViewOneSectionVC(简单基本使用).swift in Sources */ = {isa = PBXBuildFile; fileRef = E576669E26F843CD00571D7A /* TableViewOneSectionVC(简单基本使用).swift */; };
 		E57666A226F8696900571D7A /* Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E57666A126F8696900571D7A /* Reusable.swift */; };
 		E57666A426F8810300571D7A /* Observable+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = E57666A326F8810300571D7A /* Observable+Ex.swift */; };
+		E5A9151A27FBF7FF00A50827 /* ResolverTestVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5A9151927FBF7FF00A50827 /* ResolverTestVC.swift */; };
 		E5A9F0F126F0F359004FA7A4 /* DelegateProxyVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5A9F0F026F0F359004FA7A4 /* DelegateProxyVC.swift */; };
 		E5A9F0F326F0F3EE004FA7A4 /* RxMyDelegateProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5A9F0F226F0F3EE004FA7A4 /* RxMyDelegateProxy.swift */; };
 		E5A9F0F526F0F5B4004FA7A4 /* MyClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5A9F0F426F0F5B4004FA7A4 /* MyClass.swift */; };
@@ -138,6 +139,7 @@
 		E576669E26F843CD00571D7A /* TableViewOneSectionVC(简单基本使用).swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TableViewOneSectionVC(简单基本使用).swift"; sourceTree = "<group>"; };
 		E57666A126F8696900571D7A /* Reusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reusable.swift; sourceTree = "<group>"; };
 		E57666A326F8810300571D7A /* Observable+Ex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Observable+Ex.swift"; sourceTree = "<group>"; };
+		E5A9151927FBF7FF00A50827 /* ResolverTestVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResolverTestVC.swift; sourceTree = "<group>"; };
 		E5A9F0F026F0F359004FA7A4 /* DelegateProxyVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DelegateProxyVC.swift; sourceTree = "<group>"; };
 		E5A9F0F226F0F3EE004FA7A4 /* RxMyDelegateProxy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxMyDelegateProxy.swift; sourceTree = "<group>"; };
 		E5A9F0F426F0F5B4004FA7A4 /* MyClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyClass.swift; sourceTree = "<group>"; };
@@ -202,6 +204,7 @@
 		0B0A33F4237E792200C1C7F3 /* RX_Demo */ = {
 			isa = PBXGroup;
 			children = (
+				E5A9151827FBF7CD00A50827 /* Resolver_DI */,
 				E539E67F27C33ECE001C7071 /* Extension */,
 				E54505DD279663F100F4A305 /* DemoTest */,
 				E54B4A1D2791532C002D3F73 /* AppDelegate */,
@@ -324,6 +327,14 @@
 				E57666A126F8696900571D7A /* Reusable.swift */,
 			);
 			path = TableView;
+			sourceTree = "<group>";
+		};
+		E5A9151827FBF7CD00A50827 /* Resolver_DI */ = {
+			isa = PBXGroup;
+			children = (
+				E5A9151927FBF7FF00A50827 /* ResolverTestVC.swift */,
+			);
+			path = Resolver_DI;
 			sourceTree = "<group>";
 		};
 		E5A9F0EF26F0F336004FA7A4 /* DelegateProxy */ = {
@@ -629,6 +640,7 @@
 				0B2FC1D423B054A600BDF76E /* CollectionViewVC.swift in Sources */,
 				E565CFCF26F6188A00ED6B2C /* RetryVC.swift in Sources */,
 				E5622F242783EFC900C2E781 /* Reactor_PulseVC.swift in Sources */,
+				E5A9151A27FBF7FF00A50827 /* ResolverTestVC.swift in Sources */,
 				0B99AE5D23A8ADFD00B18546 /* TransformingVC.swift in Sources */,
 				E5622F282783FFA000C2E781 /* KeyPathVC.swift in Sources */,
 				E54505EB279666B700F4A305 /* Cod.swift in Sources */,

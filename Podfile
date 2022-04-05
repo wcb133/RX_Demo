@@ -35,4 +35,7 @@ pod 'NSObject+Rx' #提供rx_disposeBag
 # 代码格式化
 pod 'SwiftFormat/CLI', '0.49.1', :configurations => ['Debug']
 
+# 依赖注入框架
+pod "Resolver"
+
 end

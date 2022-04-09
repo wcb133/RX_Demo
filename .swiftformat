@@ -1,4 +1,4 @@
- --disable markTypes,isEmpty,preferKeyPath,redundantVoidReturnType,sortedImports,sortedSwitchCases,spaceAroundBrackets,trailingCommas,unusedArguments,wrapAttributes,wrapEnumCases,wrapMultilineStatementBraces,wrapSwitchCases,redundantFileprivate 
+ --disable markTypes,isEmpty,preferKeyPath,redundantVoidReturnType,sortedImports,sortedSwitchCases,spaceAroundBrackets,trailingCommas,wrapAttributes,wrapEnumCases,wrapMultilineStatementBraces,wrapSwitchCases,redundantFileprivate 
  --ranges nospace 
  --wraparguments after-first 
  --swiftversion "5.0"

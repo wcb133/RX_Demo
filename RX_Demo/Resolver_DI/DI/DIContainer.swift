@@ -31,11 +31,11 @@ final class DIContainer {
     private let _container = Container()
 
     private func configureContainer() {
-        _container.register(AnimalType.self) { res in
+        _container.register(AnimalType.self) { _ in
             Cat(name: "Nimo")
         }
 
-        _container.register(PersonSwinject.self) { r in
+        _container.register(PersonSwinject.self) { _ in
             PersonSwinject()
         }
     }
@@ -43,7 +43,7 @@ final class DIContainer {
     /// 设置是否是单元测试
     /// - Parameter isUnitTest: 是否是单元测试
     func setupIsUnitTest(isUnitTest: Bool = false) {
-        _container.register(Bool.self, name: isUnitTestName) { resolver in
+        _container.register(Bool.self, name: isUnitTestName) { _ in
             isUnitTest
         }
     }

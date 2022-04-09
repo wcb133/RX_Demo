@@ -13,7 +13,7 @@ class Asynchronous: QuickSpec {
     override func spec() {
         it("异步测试") {
             // Swift
-            var ocean:Array = []
+            var ocean:Array<String> = []
             DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
                 ocean.append("dolphins")
                 ocean.append("whales")

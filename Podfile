@@ -1,6 +1,6 @@
 source 'git@gitee.com:mirrors/CocoaPods-Specs.git'
 
-platform :ios, '9.0'
+platform :ios, '10.0'
 #不显示警告
 inhibit_all_warnings!
 use_frameworks!
@@ -36,6 +36,9 @@ pod 'NSObject+Rx' #提供rx_disposeBag
 pod 'SwiftFormat/CLI', '0.49.1', :configurations => ['Debug']
 
 # 依赖注入框架
-pod "Resolver"
+#pod "Resolver"
+
+#pod 'Swinject'
+pod 'SwinjectAutoregistration',:git=>'git@github.com:wcb133/SwinjectAutoregistration.git', :tag => '2.8.2'
 
 end

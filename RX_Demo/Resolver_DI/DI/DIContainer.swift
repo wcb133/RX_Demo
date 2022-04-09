@@ -13,7 +13,7 @@ let unitTestName = "unitTest"
 
 @propertyWrapper
 final class Inject<T> {
-    //这里用let，被包裹的属性就是只读属性了，不能再次赋值
+    // 这里用let，被包裹的属性就是只读属性了，不能再次赋值
     let wrappedValue: T
     init() {
         let isUnitTest: Bool = DIContainer.shared.resolve(name: isUnitTestName)
@@ -31,17 +31,15 @@ final class DIContainer {
     private let _container = Container()
 
     private func configureContainer() {
-
-        _container.register(AnimalType.self) { _ in
+        _container.register(AnimalType.self) { res in
             Cat(name: "Nimo")
         }
 
         _container.register(PersonSwinject.self) { r in
             PersonSwinject()
         }
-        
     }
-    
+
     /// 设置是否是单元测试
     /// - Parameter isUnitTest: 是否是单元测试
     func setupIsUnitTest(isUnitTest: Bool = false) {
@@ -49,7 +47,7 @@ final class DIContainer {
             isUnitTest
         }
     }
-    
+
     @discardableResult
     public func register<Service>(
         _ serviceType: Service.Type,
@@ -65,5 +63,4 @@ final class DIContainer {
         }
         return inject
     }
-    
 }

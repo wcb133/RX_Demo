@@ -18,9 +18,7 @@ class ResolverTestVC: UIViewController {
         container.register(AnimalType.self) { _ in
             Dog(name: "狗")
         }
-        let per: PersonSwinject = PersonSwinject()
-//        per.pet = Cat(name: "直接赋值猫")
+        let per = PersonSwinject()
         print(per.play())
-
     }
 }

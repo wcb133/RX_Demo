@@ -16,7 +16,7 @@ class ResolverTestVC: UIViewController {
 
         view.backgroundColor = .white
 
-        container.register(AnimalType.self) { _ in
+        container.register(AnimalType.self) { rel in
             Dog(name: "狗")
         }
         let per = PersonSwinject()

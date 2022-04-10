@@ -13,6 +13,7 @@ class ResolverTestVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
         view.backgroundColor = .white
 
         container.register(AnimalType.self) { _ in

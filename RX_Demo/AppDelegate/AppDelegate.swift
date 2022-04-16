@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FLEX
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -25,6 +26,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             .setKeyWindow(window!)
             .build()
             .forEach { $0.execute() }
+
+        // Swift
+        FLEXManager.shared.showExplorer()
+
         return true
     }
 }

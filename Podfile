@@ -41,4 +41,14 @@ pod 'SwiftFormat/CLI', '0.49.1', :configurations => ['Debug']
 #pod 'Swinject'
 pod 'SwinjectAutoregistration',:git=>'git@github.com:wcb133/SwinjectAutoregistration.git', :tag => '2.8.2'
 
+pod 'FLEX', :configurations => ['Debug']  # https://github.com/Flipboard/FLEX
+
+pod 'DeviceKit', '~> 4.0'
+
+# 无用代码检测工具
+pod 'Periphery'
+
+# swift的扩展
+pod 'SwifterSwift'
+
 end

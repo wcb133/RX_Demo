@@ -1,9 +1,12 @@
 PODS:
+  - DeviceKit (4.6.0)
   - Differentiator (5.0.0)
+  - FLEX (4.6.1)
   - Foil (2.0.0)
   - Nimble (9.2.1)
   - "NSObject+Rx (5.2.2)":
     - RxSwift (~> 6.2)
+  - Periphery (2.8.6)
   - PINCache (3.0.3):
     - PINCache/Arc-exception-safe (= 3.0.3)
     - PINCache/Core (= 3.0.3)
@@ -46,6 +49,31 @@ PODS:
   - RxTest (6.5.0):
     - RxSwift (= 6.5.0)
   - SnapKit (5.0.1)
+  - SwifterSwift (5.2.0):
+    - SwifterSwift/AppKit (= 5.2.0)
+    - SwifterSwift/CoreAnimation (= 5.2.0)
+    - SwifterSwift/CoreGraphics (= 5.2.0)
+    - SwifterSwift/CoreLocation (= 5.2.0)
+    - SwifterSwift/Dispatch (= 5.2.0)
+    - SwifterSwift/Foundation (= 5.2.0)
+    - SwifterSwift/MapKit (= 5.2.0)
+    - SwifterSwift/SceneKit (= 5.2.0)
+    - SwifterSwift/SpriteKit (= 5.2.0)
+    - SwifterSwift/StoreKit (= 5.2.0)
+    - SwifterSwift/SwiftStdlib (= 5.2.0)
+    - SwifterSwift/UIKit (= 5.2.0)
+  - SwifterSwift/AppKit (5.2.0)
+  - SwifterSwift/CoreAnimation (5.2.0)
+  - SwifterSwift/CoreGraphics (5.2.0)
+  - SwifterSwift/CoreLocation (5.2.0)
+  - SwifterSwift/Dispatch (5.2.0)
+  - SwifterSwift/Foundation (5.2.0)
+  - SwifterSwift/MapKit (5.2.0)
+  - SwifterSwift/SceneKit (5.2.0)
+  - SwifterSwift/SpriteKit (5.2.0)
+  - SwifterSwift/StoreKit (5.2.0)
+  - SwifterSwift/SwiftStdlib (5.2.0)
+  - SwifterSwift/UIKit (5.2.0)
   - SwiftFormat/CLI (0.49.1)
   - Swinject (2.8.1)
   - SwinjectAutoregistration (2.8.2):
@@ -77,9 +105,12 @@ PODS:
     - Yoga (~> 1.14)
 
 DEPENDENCIES:
+  - DeviceKit (~> 4.0)
+  - FLEX
   - Foil (~> 2.0.0)
   - Nimble
   - "NSObject+Rx"
+  - Periphery
   - Quick
   - ReactorKit (~> 3.1.0)
   - RxBlocking
@@ -89,6 +120,7 @@ DEPENDENCIES:
   - RxSwiftExt
   - RxTest
   - SnapKit
+  - SwifterSwift
   - SwiftFormat/CLI (= 0.49.1)
   - "SwinjectAutoregistration (from `git@github.com:wcb133/SwinjectAutoregistration.git`, tag `2.8.2`)"
   - Texture
@@ -97,10 +129,13 @@ DEPENDENCIES:
 
 SPEC REPOS:
   "git@gitee.com:mirrors/CocoaPods-Specs.git":
+    - DeviceKit
     - Differentiator
+    - FLEX
     - Foil
     - Nimble
     - "NSObject+Rx"
+    - Periphery
     - PINCache
     - PINOperation
     - PINRemoteImage
@@ -114,6 +149,7 @@ SPEC REPOS:
     - RxSwiftExt
     - RxTest
     - SnapKit
+    - SwifterSwift
     - SwiftFormat
     - Swinject
     - Texture
@@ -133,10 +169,13 @@ CHECKOUT OPTIONS:
     :tag: 2.8.2
 
 SPEC CHECKSUMS:
+  DeviceKit: 834dd8aa1be53cd85364d8f49aa5d98bfac397c4
   Differentiator: e8497ceab83c1b10ca233716d547b9af21b9344d
+  FLEX: bbc55d197f87d7cde2454c3981aa47069b694144
   Foil: bf7e166dfcf589f3b29d01f87080fd5ea3e5d98f
   Nimble: e7e615c0335ee4bf5b0d786685451e62746117d5
   "NSObject+Rx": 61cf1f7306a73dcef8b36649198af0813ec18dfd
+  Periphery: 2b693a570f0878ccc825728e7dbf31934f7a5aee
   PINCache: 7a8fc1a691173d21dbddbf86cd515de6efa55086
   PINOperation: 00c935935f1e8cf0d1e2d6b542e75b88fc3e5e20
   PINRemoteImage: f1295b29f8c5e640e25335a1b2bd9d805171bd01
@@ -150,6 +189,7 @@ SPEC CHECKSUMS:
   RxSwiftExt: d61c4b9b06e0a448041b1c659e0f1b5c5a035afc
   RxTest: eb2d23adefc5a5ebf5779c7792fa3edfe6ebcc17
   SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
+  SwifterSwift: 334181863c416882d97b7a60c05054d9e4d799e2
   SwiftFormat: 16b41f3229f5e7edb130ac4cd631cceed7af7d5e
   Swinject: 97112918bd7e0785dc2df7036213f3c8cbba6586
   SwinjectAutoregistration: a308071e730e955108ee15a17e2a3547efe0b98d
@@ -159,6 +199,6 @@ SPEC CHECKSUMS:
   Yoga: cff67a400f6b74dc38eb0bad4f156673d9aa980c
   YogaKit: f782866e155069a2cca2517aafea43200b01fd5a
 
-PODFILE CHECKSUM: d891ece7f9028ac55dcfda1a5afa221ae7cccbbd
+PODFILE CHECKSUM: 4e2736179f1df53bd9d261d2ad37707e9d56c22e
 
 COCOAPODS: 1.11.2

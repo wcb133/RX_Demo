@@ -63,6 +63,8 @@
 		E5A9F0F326F0F3EE004FA7A4 /* RxMyDelegateProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5A9F0F226F0F3EE004FA7A4 /* RxMyDelegateProxy.swift */; };
 		E5A9F0F526F0F5B4004FA7A4 /* MyClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5A9F0F426F0F5B4004FA7A4 /* MyClass.swift */; };
 		E5A9F0F726F0F5D7004FA7A4 /* MyClass+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5A9F0F626F0F5D7004FA7A4 /* MyClass+Rx.swift */; };
+		E5C39131280B00710070D63C /* SwiftDateVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5C39130280B00710070D63C /* SwiftDateVC.swift */; };
+		E5C39134280B04250070D63C /* WhatsNewKitVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5C39133280B04250070D63C /* WhatsNewKitVC.swift */; };
 		E5C75C2026A2AF880032F11E /* RxSwift6VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5C75C1E26A2AF880032F11E /* RxSwift6VC.swift */; };
 		E5C75C2126A2AF880032F11E /* RxSwift6VC.xib in Resources */ = {isa = PBXBuildFile; fileRef = E5C75C1F26A2AF880032F11E /* RxSwift6VC.xib */; };
 		E5C75C8226A2FD500032F11E /* RootVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5C75C8126A2FD500032F11E /* RootVC.swift */; };
@@ -152,6 +154,8 @@
 		E5A9F0F226F0F3EE004FA7A4 /* RxMyDelegateProxy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxMyDelegateProxy.swift; sourceTree = "<group>"; };
 		E5A9F0F426F0F5B4004FA7A4 /* MyClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyClass.swift; sourceTree = "<group>"; };
 		E5A9F0F626F0F5D7004FA7A4 /* MyClass+Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MyClass+Rx.swift"; sourceTree = "<group>"; };
+		E5C39130280B00710070D63C /* SwiftDateVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftDateVC.swift; sourceTree = "<group>"; };
+		E5C39133280B04250070D63C /* WhatsNewKitVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhatsNewKitVC.swift; sourceTree = "<group>"; };
 		E5C75C1E26A2AF880032F11E /* RxSwift6VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxSwift6VC.swift; sourceTree = "<group>"; };
 		E5C75C1F26A2AF880032F11E /* RxSwift6VC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RxSwift6VC.xib; sourceTree = "<group>"; };
 		E5C75C8126A2FD500032F11E /* RootVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootVC.swift; sourceTree = "<group>"; };
@@ -212,6 +216,8 @@
 		0B0A33F4237E792200C1C7F3 /* RX_Demo */ = {
 			isa = PBXGroup;
 			children = (
+				E5C39135280B042B0070D63C /* WhatsNewKit */,
+				E5C39132280B00760070D63C /* SwiftDate */,
 				E5A31694280A6E3800EAEAC9 /* DeviceKit */,
 				E5A9151827FBF7CD00A50827 /* Resolver_DI */,
 				E539E67F27C33ECE001C7071 /* Extension */,
@@ -375,6 +381,22 @@
 				E5A9F0F626F0F5D7004FA7A4 /* MyClass+Rx.swift */,
 			);
 			path = DelegateProxy;
+			sourceTree = "<group>";
+		};
+		E5C39132280B00760070D63C /* SwiftDate */ = {
+			isa = PBXGroup;
+			children = (
+				E5C39130280B00710070D63C /* SwiftDateVC.swift */,
+			);
+			path = SwiftDate;
+			sourceTree = "<group>";
+		};
+		E5C39135280B042B0070D63C /* WhatsNewKit */ = {
+			isa = PBXGroup;
+			children = (
+				E5C39133280B04250070D63C /* WhatsNewKitVC.swift */,
+			);
+			path = WhatsNewKit;
 			sourceTree = "<group>";
 		};
 		E5C75C1426A2AEC60032F11E /* Example */ = {
@@ -662,6 +684,7 @@
 				E539E68127C33EEE001C7071 /* Array+Ex.swift in Sources */,
 				0B0A33F6237E792200C1C7F3 /* AppDelegate.swift in Sources */,
 				E575FEFD26EF797A0074F460 /* ReactorVC.swift in Sources */,
+				E5C39134280B04250070D63C /* WhatsNewKitVC.swift in Sources */,
 				E576669F26F843CD00571D7A /* TableViewOneSectionVC(简单基本使用).swift in Sources */,
 				E54505E9279666A600F4A305 /* Mackerel.swift in Sources */,
 				E5622F222783E24400C2E781 /* YogaTestVC.swift in Sources */,
@@ -671,6 +694,7 @@
 				E5DC182C2790505C006CBE58 /* SwiftTipsVC.swift in Sources */,
 				E57666A226F8696900571D7A /* Reusable.swift in Sources */,
 				E5C75C8226A2FD500032F11E /* RootVC.swift in Sources */,
+				E5C39131280B00710070D63C /* SwiftDateVC.swift in Sources */,
 				E54505E12796665E00F4A305 /* Offer.swift in Sources */,
 				E5622F262783FA2900C2E781 /* FoilVC.swift in Sources */,
 				E576669D26F81C9E00571D7A /* RootReactor.swift in Sources */,

@@ -48,7 +48,16 @@ pod 'DeviceKit', '~> 4.0'
 # 无用代码检测工具
 pod 'Periphery'
 
-# swift的扩展
+# swift的扩展（可学习）
 pod 'SwifterSwift'
+
+pod 'IQKeyboardManagerSwift'
+
+# 日期控件 https://github.com/malcommac/SwiftDate
+ pod 'SwiftDate'
+ 
+ # 最新版的是swiftUI了
+ pod 'WhatsNewKit'
+ 
 
 end

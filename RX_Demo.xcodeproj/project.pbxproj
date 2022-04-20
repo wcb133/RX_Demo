@@ -57,6 +57,9 @@
 		E576669F26F843CD00571D7A /* TableViewOneSectionVC(简单基本使用).swift in Sources */ = {isa = PBXBuildFile; fileRef = E576669E26F843CD00571D7A /* TableViewOneSectionVC(简单基本使用).swift */; };
 		E57666A226F8696900571D7A /* Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E57666A126F8696900571D7A /* Reusable.swift */; };
 		E57666A426F8810300571D7A /* Observable+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = E57666A326F8810300571D7A /* Observable+Ex.swift */; };
+		E59B88EC2810478C007CAA51 /* SkeletonViewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E59B88EA2810478C007CAA51 /* SkeletonViewVC.swift */; };
+		E59B88EF281047B5007CAA51 /* SkeletonViewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E59B88EE281047B5007CAA51 /* SkeletonViewView.swift */; };
+		E59B88F1281047CA007CAA51 /* SkeletonViewView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E59B88F0281047CA007CAA51 /* SkeletonViewView.xib */; };
 		E5A31696280A6E5300EAEAC9 /* DeviceKitVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5A31695280A6E5300EAEAC9 /* DeviceKitVC.swift */; };
 		E5A9151A27FBF7FF00A50827 /* ResolverTestVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5A9151927FBF7FF00A50827 /* ResolverTestVC.swift */; };
 		E5A9F0F126F0F359004FA7A4 /* DelegateProxyVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5A9F0F026F0F359004FA7A4 /* DelegateProxyVC.swift */; };
@@ -148,6 +151,9 @@
 		E576669E26F843CD00571D7A /* TableViewOneSectionVC(简单基本使用).swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TableViewOneSectionVC(简单基本使用).swift"; sourceTree = "<group>"; };
 		E57666A126F8696900571D7A /* Reusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reusable.swift; sourceTree = "<group>"; };
 		E57666A326F8810300571D7A /* Observable+Ex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Observable+Ex.swift"; sourceTree = "<group>"; };
+		E59B88EA2810478C007CAA51 /* SkeletonViewVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkeletonViewVC.swift; sourceTree = "<group>"; };
+		E59B88EE281047B5007CAA51 /* SkeletonViewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkeletonViewView.swift; sourceTree = "<group>"; };
+		E59B88F0281047CA007CAA51 /* SkeletonViewView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SkeletonViewView.xib; sourceTree = "<group>"; };
 		E5A31695280A6E5300EAEAC9 /* DeviceKitVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceKitVC.swift; sourceTree = "<group>"; };
 		E5A9151927FBF7FF00A50827 /* ResolverTestVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResolverTestVC.swift; sourceTree = "<group>"; };
 		E5A9F0F026F0F359004FA7A4 /* DelegateProxyVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DelegateProxyVC.swift; sourceTree = "<group>"; };
@@ -216,6 +222,7 @@
 		0B0A33F4237E792200C1C7F3 /* RX_Demo */ = {
 			isa = PBXGroup;
 			children = (
+				E59B88E928104775007CAA51 /* SkeletonView */,
 				E5C39135280B042B0070D63C /* WhatsNewKit */,
 				E5C39132280B00760070D63C /* SwiftDate */,
 				E5A31694280A6E3800EAEAC9 /* DeviceKit */,
@@ -352,6 +359,16 @@
 				E57666A126F8696900571D7A /* Reusable.swift */,
 			);
 			path = TableView;
+			sourceTree = "<group>";
+		};
+		E59B88E928104775007CAA51 /* SkeletonView */ = {
+			isa = PBXGroup;
+			children = (
+				E59B88EA2810478C007CAA51 /* SkeletonViewVC.swift */,
+				E59B88EE281047B5007CAA51 /* SkeletonViewView.swift */,
+				E59B88F0281047CA007CAA51 /* SkeletonViewView.xib */,
+			);
+			path = SkeletonView;
 			sourceTree = "<group>";
 		};
 		E5A31694280A6E3800EAEAC9 /* DeviceKit */ = {
@@ -555,6 +572,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E59B88F1281047CA007CAA51 /* SkeletonViewView.xib in Resources */,
 				E5C75C2126A2AF880032F11E /* RxSwift6VC.xib in Resources */,
 				0B0A3402237E792300C1C7F3 /* LaunchScreen.storyboard in Resources */,
 				E565CFD026F6188A00ED6B2C /* RetryVC.xib in Resources */,
@@ -667,12 +685,14 @@
 			files = (
 				E575FEFF26EF7B7B0074F460 /* ReactorCell.swift in Sources */,
 				E5A9F0F126F0F359004FA7A4 /* DelegateProxyVC.swift in Sources */,
+				E59B88EF281047B5007CAA51 /* SkeletonViewView.swift in Sources */,
 				E5C75C2026A2AF880032F11E /* RxSwift6VC.swift in Sources */,
 				E54B4A212791537A002D3F73 /* StartupCommandsBuilder.swift in Sources */,
 				0B99AE5923A77EFD00B18546 /* SubjectsVC.swift in Sources */,
 				0B2FC1D423B054A600BDF76E /* CollectionViewVC.swift in Sources */,
 				E565CFCF26F6188A00ED6B2C /* RetryVC.swift in Sources */,
 				E5622F242783EFC900C2E781 /* Reactor_PulseVC.swift in Sources */,
+				E59B88EC2810478C007CAA51 /* SkeletonViewVC.swift in Sources */,
 				E5A9151A27FBF7FF00A50827 /* ResolverTestVC.swift in Sources */,
 				E5700CDB28010A8E002A26E9 /* PersonSwinject.swift in Sources */,
 				0B99AE5D23A8ADFD00B18546 /* TransformingVC.swift in Sources */,

@@ -45,7 +45,7 @@ pod 'RxDataSources'
 pod 'RxSwiftExt'
 pod 'Texture'
 pod 'Then'
-pod 'ReactorKit', '~> 3.1.0'
+pod 'ReactorKit'
 pod 'YogaKit', '~> 1.18'
 pod 'Foil', '~> 2.0.0'
 pod 'NSObject+Rx' #提供rx_disposeBag
@@ -76,6 +76,13 @@ pod 'IQKeyboardManagerSwift'
  
  # 最新版的是swiftUI了
  pod 'WhatsNewKit'
+ 
+ pod 'SkeletonView'
+ 
+ 
+ 
+ 
+
  
 
  

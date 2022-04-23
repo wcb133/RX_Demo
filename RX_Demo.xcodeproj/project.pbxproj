@@ -21,6 +21,11 @@
 		0B99AE5F23A8C26D00B18546 /* DriverVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B99AE5E23A8C26D00B18546 /* DriverVC.swift */; };
 		101AC87CAB290AC86B65FB57 /* Pods_RX_DemoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76E77B7F41B447F0F23FB628 /* Pods_RX_DemoTests.framework */; };
 		144A2750B053E4DC7A1BC78E /* Pods_RX_Demo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5A9D09FB9F085FC0974332C /* Pods_RX_Demo.framework */; };
+		E532B0432813AEA5004CE024 /* RxUIVIewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E532B0422813AEA5004CE024 /* RxUIVIewController.swift */; };
+		E532B0452813AEF1004CE024 /* RxThen.swift in Sources */ = {isa = PBXBuildFile; fileRef = E532B0442813AEF1004CE024 /* RxThen.swift */; };
+		E532B0482813B3EE004CE024 /* CTMediatorHomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E532B0472813B3EE004CE024 /* CTMediatorHomeVC.swift */; };
+		E532B04A2813B50C004CE024 /* SecondVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E532B0492813B50C004CE024 /* SecondVC.swift */; };
+		E532B04C2813B631004CE024 /* SecondVC+CTMediator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E532B04B2813B631004CE024 /* SecondVC+CTMediator.swift */; };
 		E539E68127C33EEE001C7071 /* Array+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = E539E68027C33EEE001C7071 /* Array+Ex.swift */; };
 		E54505DF2796664800F4A305 /* Banana.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54505DE2796664800F4A305 /* Banana.swift */; };
 		E54505E12796665E00F4A305 /* Offer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54505E02796665E00F4A305 /* Offer.swift */; };
@@ -67,7 +72,6 @@
 		E5A9F0F526F0F5B4004FA7A4 /* MyClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5A9F0F426F0F5B4004FA7A4 /* MyClass.swift */; };
 		E5A9F0F726F0F5D7004FA7A4 /* MyClass+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5A9F0F626F0F5D7004FA7A4 /* MyClass+Rx.swift */; };
 		E5C39131280B00710070D63C /* SwiftDateVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5C39130280B00710070D63C /* SwiftDateVC.swift */; };
-		E5C39134280B04250070D63C /* WhatsNewKitVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5C39133280B04250070D63C /* WhatsNewKitVC.swift */; };
 		E5C75C2026A2AF880032F11E /* RxSwift6VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5C75C1E26A2AF880032F11E /* RxSwift6VC.swift */; };
 		E5C75C2126A2AF880032F11E /* RxSwift6VC.xib in Resources */ = {isa = PBXBuildFile; fileRef = E5C75C1F26A2AF880032F11E /* RxSwift6VC.xib */; };
 		E5C75C8226A2FD500032F11E /* RootVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5C75C8126A2FD500032F11E /* RootVC.swift */; };
@@ -112,6 +116,11 @@
 		9AAD806AC6B34BB6BC652321 /* Pods-RX_Demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RX_Demo.debug.xcconfig"; path = "Target Support Files/Pods-RX_Demo/Pods-RX_Demo.debug.xcconfig"; sourceTree = "<group>"; };
 		A4D8B5CBFDBF85357DA46968 /* Pods-RX_DemoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RX_DemoTests.debug.xcconfig"; path = "Target Support Files/Pods-RX_DemoTests/Pods-RX_DemoTests.debug.xcconfig"; sourceTree = "<group>"; };
 		A5A9D09FB9F085FC0974332C /* Pods_RX_Demo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RX_Demo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E532B0422813AEA5004CE024 /* RxUIVIewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxUIVIewController.swift; sourceTree = "<group>"; };
+		E532B0442813AEF1004CE024 /* RxThen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxThen.swift; sourceTree = "<group>"; };
+		E532B0472813B3EE004CE024 /* CTMediatorHomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CTMediatorHomeVC.swift; sourceTree = "<group>"; };
+		E532B0492813B50C004CE024 /* SecondVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondVC.swift; sourceTree = "<group>"; };
+		E532B04B2813B631004CE024 /* SecondVC+CTMediator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SecondVC+CTMediator.swift"; sourceTree = "<group>"; };
 		E539E68027C33EEE001C7071 /* Array+Ex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Ex.swift"; sourceTree = "<group>"; };
 		E54505D42796637F00F4A305 /* RX_DemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RX_DemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E54505DE2796664800F4A305 /* Banana.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Banana.swift; sourceTree = "<group>"; };
@@ -161,7 +170,6 @@
 		E5A9F0F426F0F5B4004FA7A4 /* MyClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyClass.swift; sourceTree = "<group>"; };
 		E5A9F0F626F0F5D7004FA7A4 /* MyClass+Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MyClass+Rx.swift"; sourceTree = "<group>"; };
 		E5C39130280B00710070D63C /* SwiftDateVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftDateVC.swift; sourceTree = "<group>"; };
-		E5C39133280B04250070D63C /* WhatsNewKitVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhatsNewKitVC.swift; sourceTree = "<group>"; };
 		E5C75C1E26A2AF880032F11E /* RxSwift6VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxSwift6VC.swift; sourceTree = "<group>"; };
 		E5C75C1F26A2AF880032F11E /* RxSwift6VC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RxSwift6VC.xib; sourceTree = "<group>"; };
 		E5C75C8126A2FD500032F11E /* RootVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootVC.swift; sourceTree = "<group>"; };
@@ -222,8 +230,8 @@
 		0B0A33F4237E792200C1C7F3 /* RX_Demo */ = {
 			isa = PBXGroup;
 			children = (
+				E532B0462813B3C2004CE024 /* CTMediatorDemo */,
 				E59B88E928104775007CAA51 /* SkeletonView */,
-				E5C39135280B042B0070D63C /* WhatsNewKit */,
 				E5C39132280B00760070D63C /* SwiftDate */,
 				E5A31694280A6E3800EAEAC9 /* DeviceKit */,
 				E5A9151827FBF7CD00A50827 /* Resolver_DI */,
@@ -231,13 +239,13 @@
 				E54505DD279663F100F4A305 /* DemoTest */,
 				E54B4A1D2791532C002D3F73 /* AppDelegate */,
 				E5DC182D27905062006CBE58 /* SwiftTipsVC */,
-				E576669B26F81C5C00571D7A /* RootVC */,
 				E565CFCC26F6188000ED6B2C /* RetryVC */,
 				E5A9F0EF26F0F336004FA7A4 /* DelegateProxy */,
 				E575FEFB26EF79610074F460 /* ReactorVC */,
 				E5C75C1626A2AF0A0032F11E /* RxSwift6VC */,
 				E5C75C1426A2AEC60032F11E /* Example */,
 				0B0A33FB237E792200C1C7F3 /* Main.storyboard */,
+				E576669B26F81C5C00571D7A /* RootVC */,
 				0B0A33FE237E792300C1C7F3 /* Assets.xcassets */,
 				0B0A3400237E792300C1C7F3 /* LaunchScreen.storyboard */,
 				0B0A3403237E792300C1C7F3 /* Info.plist */,
@@ -259,9 +267,29 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		E532B0412813AE82004CE024 /* RxExtension */ = {
+			isa = PBXGroup;
+			children = (
+				E532B0422813AEA5004CE024 /* RxUIVIewController.swift */,
+				E532B0442813AEF1004CE024 /* RxThen.swift */,
+			);
+			path = RxExtension;
+			sourceTree = "<group>";
+		};
+		E532B0462813B3C2004CE024 /* CTMediatorDemo */ = {
+			isa = PBXGroup;
+			children = (
+				E532B0472813B3EE004CE024 /* CTMediatorHomeVC.swift */,
+				E532B0492813B50C004CE024 /* SecondVC.swift */,
+				E532B04B2813B631004CE024 /* SecondVC+CTMediator.swift */,
+			);
+			path = CTMediatorDemo;
+			sourceTree = "<group>";
+		};
 		E539E67F27C33ECE001C7071 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				E532B0412813AE82004CE024 /* RxExtension */,
 				E539E68027C33EEE001C7071 /* Array+Ex.swift */,
 			);
 			path = Extension;
@@ -406,14 +434,6 @@
 				E5C39130280B00710070D63C /* SwiftDateVC.swift */,
 			);
 			path = SwiftDate;
-			sourceTree = "<group>";
-		};
-		E5C39135280B042B0070D63C /* WhatsNewKit */ = {
-			isa = PBXGroup;
-			children = (
-				E5C39133280B04250070D63C /* WhatsNewKitVC.swift */,
-			);
-			path = WhatsNewKit;
 			sourceTree = "<group>";
 		};
 		E5C75C1426A2AEC60032F11E /* Example */ = {
@@ -697,6 +717,7 @@
 				E5700CDB28010A8E002A26E9 /* PersonSwinject.swift in Sources */,
 				0B99AE5D23A8ADFD00B18546 /* TransformingVC.swift in Sources */,
 				E5622F282783FFA000C2E781 /* KeyPathVC.swift in Sources */,
+				E532B04A2813B50C004CE024 /* SecondVC.swift in Sources */,
 				E5A31696280A6E5300EAEAC9 /* DeviceKitVC.swift in Sources */,
 				E54505EB279666B700F4A305 /* Cod.swift in Sources */,
 				0B39115423AC7F1D006DB334 /* ShareReplayVC.swift in Sources */,
@@ -704,25 +725,28 @@
 				E539E68127C33EEE001C7071 /* Array+Ex.swift in Sources */,
 				0B0A33F6237E792200C1C7F3 /* AppDelegate.swift in Sources */,
 				E575FEFD26EF797A0074F460 /* ReactorVC.swift in Sources */,
-				E5C39134280B04250070D63C /* WhatsNewKitVC.swift in Sources */,
 				E576669F26F843CD00571D7A /* TableViewOneSectionVC(简单基本使用).swift in Sources */,
 				E54505E9279666A600F4A305 /* Mackerel.swift in Sources */,
 				E5622F222783E24400C2E781 /* YogaTestVC.swift in Sources */,
 				E54505ED279666C600F4A305 /* EventProtocol.swift in Sources */,
 				E55D9BCD2786810D0037DA45 /* ScheduleVC.swift in Sources */,
 				E54505E72796669700F4A305 /* Dolphin.swift in Sources */,
+				E532B04C2813B631004CE024 /* SecondVC+CTMediator.swift in Sources */,
 				E5DC182C2790505C006CBE58 /* SwiftTipsVC.swift in Sources */,
 				E57666A226F8696900571D7A /* Reusable.swift in Sources */,
 				E5C75C8226A2FD500032F11E /* RootVC.swift in Sources */,
 				E5C39131280B00710070D63C /* SwiftDateVC.swift in Sources */,
 				E54505E12796665E00F4A305 /* Offer.swift in Sources */,
+				E532B0482813B3EE004CE024 /* CTMediatorHomeVC.swift in Sources */,
 				E5622F262783FA2900C2E781 /* FoilVC.swift in Sources */,
 				E576669D26F81C9E00571D7A /* RootReactor.swift in Sources */,
 				0B2FC1D623B0A5BF00BDF76E /* TableViewVC(自带的SectionModel).swift in Sources */,
+				E532B0432813AEA5004CE024 /* RxUIVIewController.swift in Sources */,
 				E54B4A1C27912D48002D3F73 /* SwiftCompileVC.swift in Sources */,
 				E57666A426F8810300571D7A /* Observable+Ex.swift in Sources */,
 				E54505DF2796664800F4A305 /* Banana.swift in Sources */,
 				E54505E52796668500F4A305 /* SilliestMonkey.swift in Sources */,
+				E532B0452813AEF1004CE024 /* RxThen.swift in Sources */,
 				E569018728003CB200311AC1 /* DIContainer.swift in Sources */,
 				E54B4A1F2791534D002D3F73 /* AppDelegateCommand.swift in Sources */,
 				E575FF0126EF7BA70074F460 /* MainReactor.swift in Sources */,

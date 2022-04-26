@@ -18,6 +18,15 @@ source 'git@gitee.com:mirrors/CocoaPods-Specs.git'
 #
 # pod 'AFNetworking',  :path => '../AFNetworking'  //指定本地库
 
+# git提交规范
+# feat：新功能（feature）
+# fix：修补bug
+# docs：文档（documentation）
+# style： 格式（不影响代码运行的变动）
+# refactor：重构（即不是新增功能，也不是修改bug的代码变动）
+# test：增加测试
+# chore：构建过程或辅助工具的变动
+
 platform :ios, '10.0'
 #不显示警告
 inhibit_all_warnings!
@@ -43,12 +52,19 @@ pod 'RxCocoa', '~> 6'
 pod 'SnapKit'
 pod 'RxDataSources'
 pod 'RxSwiftExt'
+
+pod 'RxOptional'
+pod 'RxSwiftNotifications' #https://github.com/leandromperez/rxswift-notifications
+pod 'RxUIAlert' #https://github.com/RxSwiftCommunity/RxAlert
+
 pod 'Texture'
 pod 'Then'
 pod 'ReactorKit'
 pod 'YogaKit', '~> 1.18'
 pod 'Foil', '~> 2.0.0'
 pod 'NSObject+Rx' #提供rx_disposeBag
+
+pod 'HandyJSON'
 
 # 代码格式化
 pod 'SwiftFormat/CLI', '0.49.1', :configurations => ['Debug']
@@ -64,10 +80,15 @@ pod 'FLEX', :configurations => ['Debug']  # https://github.com/Flipboard/FLEX
 pod 'DeviceKit', '~> 4.0'
 
 # 无用代码检测工具
-pod 'Periphery'
+pod 'Periphery', :configurations => ['Debug']
 
 # swift的扩展（可学习）
 pod 'SwifterSwift'
+
+# 元编程，自动生成模板代码
+pod 'Sourcery', :configurations => ['Debug']
+
+
 
 pod 'IQKeyboardManagerSwift'
 

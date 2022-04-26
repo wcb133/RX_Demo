@@ -27,6 +27,7 @@
 		E532B04A2813B50C004CE024 /* SecondVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E532B0492813B50C004CE024 /* SecondVC.swift */; };
 		E532B04C2813B631004CE024 /* SecondVC+CTMediator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E532B04B2813B631004CE024 /* SecondVC+CTMediator.swift */; };
 		E539E68127C33EEE001C7071 /* Array+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = E539E68027C33EEE001C7071 /* Array+Ex.swift */; };
+		E5406105281BD4D300751F3C /* CBPersonModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5406104281BD4D300751F3C /* CBPersonModel.swift */; };
 		E54505DF2796664800F4A305 /* Banana.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54505DE2796664800F4A305 /* Banana.swift */; };
 		E54505E12796665E00F4A305 /* Offer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54505E02796665E00F4A305 /* Offer.swift */; };
 		E54505E32796666F00F4A305 /* Monkey.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54505E22796666F00F4A305 /* Monkey.swift */; };
@@ -76,6 +77,7 @@
 		E5C75C2126A2AF880032F11E /* RxSwift6VC.xib in Resources */ = {isa = PBXBuildFile; fileRef = E5C75C1F26A2AF880032F11E /* RxSwift6VC.xib */; };
 		E5C75C8226A2FD500032F11E /* RootVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5C75C8126A2FD500032F11E /* RootVC.swift */; };
 		E5DC182C2790505C006CBE58 /* SwiftTipsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5DC182B2790505C006CBE58 /* SwiftTipsVC.swift */; };
+		E5FCA4D5281CECFB007D31D1 /* CodableDemoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5FCA4D4281CECFB007D31D1 /* CodableDemoVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -122,6 +124,8 @@
 		E532B0492813B50C004CE024 /* SecondVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondVC.swift; sourceTree = "<group>"; };
 		E532B04B2813B631004CE024 /* SecondVC+CTMediator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SecondVC+CTMediator.swift"; sourceTree = "<group>"; };
 		E539E68027C33EEE001C7071 /* Array+Ex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Ex.swift"; sourceTree = "<group>"; };
+		E5406104281BD4D300751F3C /* CBPersonModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CBPersonModel.swift; sourceTree = "<group>"; };
+		E540610E281BDA8C00751F3C /* AutoCodable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutoCodable.swift; sourceTree = "<group>"; };
 		E54505D42796637F00F4A305 /* RX_DemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RX_DemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E54505DE2796664800F4A305 /* Banana.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Banana.swift; sourceTree = "<group>"; };
 		E54505E02796665E00F4A305 /* Offer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Offer.swift; sourceTree = "<group>"; };
@@ -174,6 +178,7 @@
 		E5C75C1F26A2AF880032F11E /* RxSwift6VC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RxSwift6VC.xib; sourceTree = "<group>"; };
 		E5C75C8126A2FD500032F11E /* RootVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootVC.swift; sourceTree = "<group>"; };
 		E5DC182B2790505C006CBE58 /* SwiftTipsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftTipsVC.swift; sourceTree = "<group>"; };
+		E5FCA4D4281CECFB007D31D1 /* CodableDemoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodableDemoVC.swift; sourceTree = "<group>"; };
 		EC0142A58305E67AD9AC244A /* Pods-RX_Demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RX_Demo.release.xcconfig"; path = "Target Support Files/Pods-RX_Demo/Pods-RX_Demo.release.xcconfig"; sourceTree = "<group>"; };
 		F2D9C6CE45F6B0632CAFEDC5 /* Pods-RX_DemoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RX_DemoTests.release.xcconfig"; path = "Target Support Files/Pods-RX_DemoTests/Pods-RX_DemoTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -230,6 +235,7 @@
 		0B0A33F4237E792200C1C7F3 /* RX_Demo */ = {
 			isa = PBXGroup;
 			children = (
+				E5406103281BD48500751F3C /* Sourcery */,
 				E532B0462813B3C2004CE024 /* CTMediatorDemo */,
 				E59B88E928104775007CAA51 /* SkeletonView */,
 				E5C39132280B00760070D63C /* SwiftDate */,
@@ -294,6 +300,25 @@
 			);
 			path = Extension;
 			sourceTree = "<group>";
+		};
+		E5406103281BD48500751F3C /* Sourcery */ = {
+			isa = PBXGroup;
+			children = (
+				E540610D281BDA8C00751F3C /* CodeGenerated */,
+				E5406104281BD4D300751F3C /* CBPersonModel.swift */,
+				E5FCA4D4281CECFB007D31D1 /* CodableDemoVC.swift */,
+			);
+			path = Sourcery;
+			sourceTree = "<group>";
+		};
+		E540610D281BDA8C00751F3C /* CodeGenerated */ = {
+			isa = PBXGroup;
+			children = (
+				E540610E281BDA8C00751F3C /* AutoCodable.swift */,
+			);
+			name = CodeGenerated;
+			path = RX_Demo/CodeGenerated;
+			sourceTree = SOURCE_ROOT;
 		};
 		E54505D52796637F00F4A305 /* RX_DemoTests */ = {
 			isa = PBXGroup;
@@ -491,6 +516,7 @@
 			buildConfigurationList = 0B0A3406237E792300C1C7F3 /* Build configuration list for PBXNativeTarget "RX_Demo" */;
 			buildPhases = (
 				BBF8CAB6F3248D44C0E3AAB4 /* [CP] Check Pods Manifest.lock */,
+				E5406106281BD6EE00751F3C /* ShellScript */,
 				0B0A33EE237E792200C1C7F3 /* Sources */,
 				0B0A33EF237E792200C1C7F3 /* Frameworks */,
 				0B0A33F0237E792200C1C7F3 /* Resources */,
@@ -696,6 +722,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		E5406106281BD6EE00751F3C /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n$PODS_ROOT/Sourcery/bin/sourcery\n";
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -721,7 +764,9 @@
 				E5A31696280A6E5300EAEAC9 /* DeviceKitVC.swift in Sources */,
 				E54505EB279666B700F4A305 /* Cod.swift in Sources */,
 				0B39115423AC7F1D006DB334 /* ShareReplayVC.swift in Sources */,
+				E5FCA4D5281CECFB007D31D1 /* CodableDemoVC.swift in Sources */,
 				0B0A33FA237E792200C1C7F3 /* ViewController.swift in Sources */,
+				E5406105281BD4D300751F3C /* CBPersonModel.swift in Sources */,
 				E539E68127C33EEE001C7071 /* Array+Ex.swift in Sources */,
 				0B0A33F6237E792200C1C7F3 /* AppDelegate.swift in Sources */,
 				E575FEFD26EF797A0074F460 /* ReactorVC.swift in Sources */,

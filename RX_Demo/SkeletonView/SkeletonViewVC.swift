@@ -9,6 +9,8 @@
 import UIKit
 import SnapKit
 import SkeletonView
+import RxUIAlert
+import NSObject_Rx
 
 class SkeletonViewVC: UIViewController {
 
@@ -31,7 +33,16 @@ class SkeletonViewVC: UIViewController {
         }
         
 
-        // Do any additional setup after loading the view.
+        rx.alert(title: "RxAlert",
+                 message: "We have made it easy to implement UIAlertController using RxSwift.",
+                 actions: [AlertAction(title: "OK", type: 0, style: .default),
+                           AlertAction(textField: UITextField(), placeholder: "user name"),
+                           AlertAction(textField: UITextField(), placeholder: "password")])
+            .subscribe(onNext: { (output) in
+                output.textFields?.forEach {
+                    print ($0.text as? String?)
+                }})
+            .disposed(by: rx.disposeBag)
     }
 
 

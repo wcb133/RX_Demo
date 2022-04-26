@@ -1,0 +1,53 @@
+
+{# 学习实例 #}
+{# 找到所有实现了 DictionaryConvertible 的类型 #}
+{% for t in types.implementing.DictionaryConvertible %}
+{# 为该类型 t 创建 extension #}
+// MARK: - {{ t.name }} DictionaryConvertible
+extension {{ t.name }} {
+    var value: [String: Any] {
+        var dicValue: [String: Any] = [String: Any]()
+
+        {# 对类型中的所有存储属性迭代，并跳过不需要转换的属性 #}
+        {% for val in t.storedVariables where val|!annotated:"skipConvertDic" %}
+        {# 非可选值 #}
+        {% if not val.typeName.isOptional %}
+        {% if val.isArray %} {# 如果变量是数组，map 其中的值进行嵌套 #}
+        dicValue["{{val.name}}"] = {{val.name}}.map { $0.value }
+        {% elif val.isDictionary %} {# 如果变量是字典，mapValues 字典值进行嵌套 #}
+        dicValue["{{val.name}}"] = {{val.name}}.mapValues { $0.value }
+        {% else %} {# 非容器类型，如果是其他的 DictionaryConvertible，则调用 value, 否则直接使用变量即可 #}
+        dicValue["{{val.name}}"] = {% if val.type.implements.DictionaryConvertible %}{{val.name}}.value{% else %}{{val.name}}{% endif %}
+        {% endif%}
+        {% else %}
+
+        if let {{val.name}} = {{val.name}} {
+            {% if val.isArray %} {# 如果变量是数组，map 其中的值进行嵌套 #}
+            dicValue["{{val.name}}"] = {{val.name}}.map { $0.value }
+            {% elif val.isDictionary %} {# 如果变量是字典，mapValues 字典值进行嵌套 #}
+            dicValue["{{val.name}}"] = {{val.name}}.mapValues { $0.value }
+            {% else %} {# 非容器类型，如果是其他的 DictionaryConvertible，则调用 value, 否则直接使用变量即可 #}
+            dicValue["{{val.name}}"] = {% if val.type.implements.DictionaryConvertible %}{{val.name}}.value{% else %}{{val.name}}{% endif %}
+            {% endif%}
+        }
+        {% endif %}
+        {% endfor %}
+
+        return dicValue
+    }
+}
+
+{# 对Array进行扩展 #}
+extension Array where Element == {{ t.name }} {
+    var value: [Any] {
+        return map { $0.value }
+    }
+}
+
+{% endfor %}
+
+
+
+
+
+            

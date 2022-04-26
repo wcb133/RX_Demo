@@ -1,0 +1,22 @@
+
+{# 
+{{ ... }}：变量语法，将中间的部分作为变量（或变量的表达式）来解析，解析后的值会作为结果插入到模板中的相应位置上。
+{% ... %}：标签语法（Tag），标签用来表示一些具有特殊功能的语法，比如用来实现判断的if和循环的for。
+#}
+
+import HandyJSON
+
+{# HandyJSONMapper函数实现 #}
+{% for type in types.implementing.AutoHandyJSONMapper %}
+extension {{type.name}} {
+    override  func mapping(mapper: HelpingMapper) {
+        super.mapping(mapper: mapper)
+    {% for var in type.storedVariables %}
+        {% if var|annotated:"key" %}
+        mapper <<<
+        {{var.name}} <-- "{{var.annotations.key}}"
+    {% endif %}
+    {%endfor%}
+    }
+}
+{% endfor %}

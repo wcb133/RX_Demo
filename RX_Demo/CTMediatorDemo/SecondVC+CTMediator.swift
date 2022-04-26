@@ -10,25 +10,22 @@ import Foundation
 import CTMediator
 import UIKit
 
-
 // 参考文章 https://juejin.cn/post/7028469469013868552
 
 /// 获取命名空间
-let NAME_SPACE: String = {() -> String in
-    return Bundle.main.object(forInfoDictionaryKey: "CFBundleExecutable") as! String
+let NAME_SPACE: String = { () -> String in
+    Bundle.main.object(forInfoDictionaryKey: "CFBundleExecutable") as! String
 }()
 
-
-//提供该扩展给宿主工程调用
+// 提供该扩展给宿主工程调用
 extension CTMediator {
-    func getSecondVC(title:String) -> UIViewController? {
-        //swift的命名空间要加上
-        let param = ["title":title,kCTMediatorParamsKeySwiftTargetModuleName:NAME_SPACE] as [AnyHashable : Any]
-        let vc = self.performTarget(String(describing: SecondVC.self), action: "Extension_SecondVC", params: param, shouldCacheTarget: false) as? UIViewController
+    func getSecondVC(title: String) -> UIViewController? {
+        // swift的命名空间要加上
+        let param = ["title": title, kCTMediatorParamsKeySwiftTargetModuleName: NAME_SPACE] as [AnyHashable: Any]
+        let vc = performTarget(String(describing: SecondVC.self), action: "Extension_SecondVC", params: param, shouldCacheTarget: false) as? UIViewController
         return vc
     }
 }
-
 
 /*
  注意点
@@ -37,10 +34,9 @@ extension CTMediator {
  3.Action方法第一个参数不能有Argument Label
  */
 class Target_SecondVC: NSObject {
-    // 坑点，必须加 @objc，否则调用不到,参数前面需要加下划线，否则也是调用不到这个方法
-    @objc func Action_Extension_SecondVC(_ param:NSDictionary) -> UIViewController? {
+    // 坑点，必须加 @objc，否则调用不到,第一个参数前面需要加下划线，否则也是调用不到这个方法
+    @objc func Action_Extension_SecondVC(_ param: NSDictionary) -> UIViewController? {
         guard let title = param["title"] as? String else { return nil }
         return SecondVC(title: title)
     }
 }
-

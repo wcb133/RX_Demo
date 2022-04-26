@@ -10,7 +10,6 @@ import UIKit
 import CTMediator
 
 class CTMediatorHomeVC: UIViewController {
-    
     let btn = UIButton().then {
         $0.setTitle("测试跳转", for: .normal)
         $0.setTitleColor(.white, for: .normal)
@@ -20,7 +19,7 @@ class CTMediatorHomeVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
-        
+
         view.addSubview(btn)
         btn.snp.makeConstraints { make in
             make.left.equalTo(100)
@@ -28,13 +27,9 @@ class CTMediatorHomeVC: UIViewController {
             make.width.equalTo(100)
             make.height.equalTo(50)
         }
-        
-        
+
         if let vc = CTMediator.sharedInstance().getSecondVC(title: "二级界面") {
-            btn.rx.tap.bind(to: rx.pushViewController(vc)).disposed(by: rx.disposeBag)
+            btn.rx.tap.bind(to: rx.pushViewController(vc, animated: false)).disposed(by: rx.disposeBag)
         }
-        
-        
     }
-    
 }

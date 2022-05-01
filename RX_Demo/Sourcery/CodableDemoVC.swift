@@ -16,7 +16,7 @@ struct CBSuperPerson: AutoCodable {
     var age: Int
     var isMale: Bool
     var description: String = "person"
-    var isSuper: Bool? // 铁定不会进行编码
+    var isSuper: Bool? // 铁定不会进行编码~
 
 //    enum CodingKeys: String, CodingKey {
 //        // 不在这个枚举值内的key，也不会进行编码,如果来自服务器的数据没对应的key，会崩溃，例如没有“姓名”字段，会崩溃
@@ -28,7 +28,7 @@ struct CBSuperPerson: AutoCodable {
 //    }
 }
 
-// MARK: - CBSuperPerson Codable
+// MARK: - CBSuperPerson Codable~~
 
 extension CBSuperPerson {
     enum CodingKeys: String, CodingKey {

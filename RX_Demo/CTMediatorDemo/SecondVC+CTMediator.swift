@@ -34,7 +34,7 @@ extension CTMediator {
  3.Action方法第一个参数不能有Argument Label
  */
 class Target_SecondVC: NSObject {
-    // 坑点，必须加 @objc，否则调用不到,第一个参数前面需要加下划线，否则也是调用不到这个方法
+    // 坑点，必须加 @objc，否则调用不到,第一个参数前面需要加下划线，否则也是调用不到这个方法~
     @objc func Action_Extension_SecondVC(_ param: NSDictionary) -> UIViewController? {
         guard let title = param["title"] as? String else { return nil }
         return SecondVC(title: title)

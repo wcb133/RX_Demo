@@ -99,6 +99,7 @@ pod 'IQKeyboardManagerSwift'
  
  pod 'CTMediator'
  
+ pod 'IGListKit'
  
  
 

@@ -26,7 +26,7 @@ class RootReactor: Reactor {
         let vcs: [UIViewController.Type] = [ReactorVC.self, RxSwift6VC.self, ViewController.self,
                                             SubjectsVC.self, KVOVC.self, TransformingVC.self,
                                             DriverVC.self, ShareReplayVC.self, CollectionViewVC.self,
-                                            TableViewVC.self, DelegateProxyVC.self, RetryVC.self, TableViewOneSectionVC.self, YogaTestVC.self, FoilVC.self, KeyPathVC.self, ScheduleVC.self, SwiftTipsVC.self, SwiftCompileVC.self,
+                                            TableViewVC.self, DelegateProxyVC.self, RetryVC.self, TableViewOneSectionVC.self, YogaTestVC.self, DynamicMemberLookupVC.self, KeyPathVC.self, ScheduleVC.self, SwiftTipsVC.self, SwiftCompileVC.self,
                                             ResolverTestVC.self, DeviceKitVC.self, SwiftDateVC.self, SkeletonViewVC.self, CTMediatorHomeVC.self, CodableDemoVC.self]
 
         var tableData: [TBSectionModel] = []

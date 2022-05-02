@@ -45,11 +45,11 @@ class RxSwift6VC: UIViewController {
             // withUnretained(self)
             ob2Btn.rx.tap.withUnretained(self).subscribe(onNext: { weakSelf, _ in
                 print(" ======= \(weakSelf)")
-            }, onError: nil, onCompleted: nil, onDisposed: nil)
+            })
 
             ob3Btn.rx.tap.withUnretained(self).subscribe(onNext: { weakSelf, _ in
                 print(" ======= \(weakSelf)")
-            }, onError: nil, onCompleted: nil, onDisposed: nil)
+            })
 
             // distinctUntilChange(at:)、dynamicMemberLookup和keyPath
             Observable.just(CBPerson(name: "标题", age: 18)).distinctUntilChanged(at: \.age).map(\.name).bind(to: testView.rx.title)
@@ -62,7 +62,7 @@ class RxSwift6VC: UIViewController {
         return Observable.create { [unowned self] ob -> Disposable in
             self.inputText.rx.text.orEmpty.subscribe(onNext: { text in
                 ob.onNext(text)
-            }, onError: nil, onCompleted: nil, onDisposed: nil).disposed(by: self.bag)
+            }).disposed(by: self.bag)
             return Disposables.create()
         }
     }

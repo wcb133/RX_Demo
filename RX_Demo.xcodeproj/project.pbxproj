@@ -47,7 +47,7 @@
 		E55D9BCD2786810D0037DA45 /* ScheduleVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E55D9BCC2786810D0037DA45 /* ScheduleVC.swift */; };
 		E5622F222783E24400C2E781 /* YogaTestVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5622F212783E24400C2E781 /* YogaTestVC.swift */; };
 		E5622F242783EFC900C2E781 /* Reactor_PulseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5622F232783EFC900C2E781 /* Reactor_PulseVC.swift */; };
-		E5622F262783FA2900C2E781 /* FoilVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5622F252783FA2900C2E781 /* FoilVC.swift */; };
+		E5622F262783FA2900C2E781 /* DynamicMemberLookupVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5622F252783FA2900C2E781 /* DynamicMemberLookupVC.swift */; };
 		E5622F282783FFA000C2E781 /* KeyPathVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5622F272783FFA000C2E781 /* KeyPathVC.swift */; };
 		E565CFCF26F6188A00ED6B2C /* RetryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E565CFCD26F6188A00ED6B2C /* RetryVC.swift */; };
 		E565CFD026F6188A00ED6B2C /* RetryVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = E565CFCE26F6188A00ED6B2C /* RetryVC.xib */; };
@@ -67,6 +67,7 @@
 		E59B88EF281047B5007CAA51 /* SkeletonViewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E59B88EE281047B5007CAA51 /* SkeletonViewView.swift */; };
 		E59B88F1281047CA007CAA51 /* SkeletonViewView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E59B88F0281047CA007CAA51 /* SkeletonViewView.xib */; };
 		E5A31696280A6E5300EAEAC9 /* DeviceKitVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5A31695280A6E5300EAEAC9 /* DeviceKitVC.swift */; };
+		E5A86B11281FFD1300885318 /* ChainWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5A86B10281FFD1300885318 /* ChainWrapper.swift */; };
 		E5A9151A27FBF7FF00A50827 /* ResolverTestVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5A9151927FBF7FF00A50827 /* ResolverTestVC.swift */; };
 		E5A9F0F126F0F359004FA7A4 /* DelegateProxyVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5A9F0F026F0F359004FA7A4 /* DelegateProxyVC.swift */; };
 		E5A9F0F326F0F3EE004FA7A4 /* RxMyDelegateProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5A9F0F226F0F3EE004FA7A4 /* RxMyDelegateProxy.swift */; };
@@ -146,7 +147,7 @@
 		E55D9BCC2786810D0037DA45 /* ScheduleVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleVC.swift; sourceTree = "<group>"; };
 		E5622F212783E24400C2E781 /* YogaTestVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YogaTestVC.swift; sourceTree = "<group>"; };
 		E5622F232783EFC900C2E781 /* Reactor_PulseVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reactor_PulseVC.swift; sourceTree = "<group>"; };
-		E5622F252783FA2900C2E781 /* FoilVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoilVC.swift; sourceTree = "<group>"; };
+		E5622F252783FA2900C2E781 /* DynamicMemberLookupVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicMemberLookupVC.swift; sourceTree = "<group>"; };
 		E5622F272783FFA000C2E781 /* KeyPathVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyPathVC.swift; sourceTree = "<group>"; };
 		E565CFCD26F6188A00ED6B2C /* RetryVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RetryVC.swift; sourceTree = "<group>"; };
 		E565CFCE26F6188A00ED6B2C /* RetryVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RetryVC.xib; sourceTree = "<group>"; };
@@ -168,6 +169,7 @@
 		E59B88EE281047B5007CAA51 /* SkeletonViewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkeletonViewView.swift; sourceTree = "<group>"; };
 		E59B88F0281047CA007CAA51 /* SkeletonViewView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SkeletonViewView.xib; sourceTree = "<group>"; };
 		E5A31695280A6E5300EAEAC9 /* DeviceKitVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceKitVC.swift; sourceTree = "<group>"; };
+		E5A86B10281FFD1300885318 /* ChainWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChainWrapper.swift; sourceTree = "<group>"; };
 		E5A9151927FBF7FF00A50827 /* ResolverTestVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResolverTestVC.swift; sourceTree = "<group>"; };
 		E5A9F0F026F0F359004FA7A4 /* DelegateProxyVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DelegateProxyVC.swift; sourceTree = "<group>"; };
 		E5A9F0F226F0F3EE004FA7A4 /* RxMyDelegateProxy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxMyDelegateProxy.swift; sourceTree = "<group>"; };
@@ -474,9 +476,10 @@
 				0B2FC1D323B054A600BDF76E /* CollectionViewVC.swift */,
 				E5622F212783E24400C2E781 /* YogaTestVC.swift */,
 				E5622F232783EFC900C2E781 /* Reactor_PulseVC.swift */,
-				E5622F252783FA2900C2E781 /* FoilVC.swift */,
+				E5622F252783FA2900C2E781 /* DynamicMemberLookupVC.swift */,
 				E5622F272783FFA000C2E781 /* KeyPathVC.swift */,
 				E55D9BCC2786810D0037DA45 /* ScheduleVC.swift */,
+				E5A86B10281FFD1300885318 /* ChainWrapper.swift */,
 			);
 			path = Example;
 			sourceTree = "<group>";
@@ -753,6 +756,7 @@
 				E54B4A212791537A002D3F73 /* StartupCommandsBuilder.swift in Sources */,
 				0B99AE5923A77EFD00B18546 /* SubjectsVC.swift in Sources */,
 				0B2FC1D423B054A600BDF76E /* CollectionViewVC.swift in Sources */,
+				E5A86B11281FFD1300885318 /* ChainWrapper.swift in Sources */,
 				E565CFCF26F6188A00ED6B2C /* RetryVC.swift in Sources */,
 				E5622F242783EFC900C2E781 /* Reactor_PulseVC.swift in Sources */,
 				E59B88EC2810478C007CAA51 /* SkeletonViewVC.swift in Sources */,
@@ -783,7 +787,7 @@
 				E5C39131280B00710070D63C /* SwiftDateVC.swift in Sources */,
 				E54505E12796665E00F4A305 /* Offer.swift in Sources */,
 				E532B0482813B3EE004CE024 /* CTMediatorHomeVC.swift in Sources */,
-				E5622F262783FA2900C2E781 /* FoilVC.swift in Sources */,
+				E5622F262783FA2900C2E781 /* DynamicMemberLookupVC.swift in Sources */,
 				E576669D26F81C9E00571D7A /* RootReactor.swift in Sources */,
 				0B2FC1D623B0A5BF00BDF76E /* TableViewVC(自带的SectionModel).swift in Sources */,
 				E532B0432813AEA5004CE024 /* RxUIVIewController.swift in Sources */,

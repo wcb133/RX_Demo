@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 protocol AutoCodable: Codable {}
 
@@ -61,6 +62,7 @@ extension CBSuperPerson {
 class CodableDemoVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
+        UIView().ch.backgroundColor(.red).contentMode(.scaleAspectFill)
 
         let tim = CBSuperPerson(id: 3, name: "tim", age: 10, isMale: true, description: "")
         if let timData = try? JSONEncoder().encode(tim) {

@@ -10,3 +10,17 @@ extension CBPersonModel {
             name <-- "nameString"
     }
 }
+
+extension CBPersonModel {
+    @discardableResult
+    func name(_ name: String) -> Self {
+        self.name = name
+        return self
+    }
+
+    @discardableResult
+    func age(_ age: Int) -> Self {
+        self.age = age
+        return self
+    }
+}

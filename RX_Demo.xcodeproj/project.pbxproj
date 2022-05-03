@@ -63,6 +63,8 @@
 		E576669F26F843CD00571D7A /* TableViewOneSectionVC(简单基本使用).swift in Sources */ = {isa = PBXBuildFile; fileRef = E576669E26F843CD00571D7A /* TableViewOneSectionVC(简单基本使用).swift */; };
 		E57666A226F8696900571D7A /* Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E57666A126F8696900571D7A /* Reusable.swift */; };
 		E57666A426F8810300571D7A /* Observable+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = E57666A326F8810300571D7A /* Observable+Ex.swift */; };
+		E57CD7B928217E0100238072 /* ASDisplayNode+Chain.swift in Sources */ = {isa = PBXBuildFile; fileRef = E57CD7B728217E0100238072 /* ASDisplayNode+Chain.swift */; };
+		E57CD7BA28217E0100238072 /* ASButtonNode+Chain.swift in Sources */ = {isa = PBXBuildFile; fileRef = E57CD7B828217E0100238072 /* ASButtonNode+Chain.swift */; };
 		E59B88EC2810478C007CAA51 /* SkeletonViewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E59B88EA2810478C007CAA51 /* SkeletonViewVC.swift */; };
 		E59B88EF281047B5007CAA51 /* SkeletonViewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E59B88EE281047B5007CAA51 /* SkeletonViewView.swift */; };
 		E59B88F1281047CA007CAA51 /* SkeletonViewView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E59B88F0281047CA007CAA51 /* SkeletonViewView.xib */; };
@@ -165,6 +167,8 @@
 		E576669E26F843CD00571D7A /* TableViewOneSectionVC(简单基本使用).swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TableViewOneSectionVC(简单基本使用).swift"; sourceTree = "<group>"; };
 		E57666A126F8696900571D7A /* Reusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reusable.swift; sourceTree = "<group>"; };
 		E57666A326F8810300571D7A /* Observable+Ex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Observable+Ex.swift"; sourceTree = "<group>"; };
+		E57CD7B728217E0100238072 /* ASDisplayNode+Chain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ASDisplayNode+Chain.swift"; sourceTree = "<group>"; };
+		E57CD7B828217E0100238072 /* ASButtonNode+Chain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ASButtonNode+Chain.swift"; sourceTree = "<group>"; };
 		E59B88EA2810478C007CAA51 /* SkeletonViewVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkeletonViewVC.swift; sourceTree = "<group>"; };
 		E59B88EE281047B5007CAA51 /* SkeletonViewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkeletonViewView.swift; sourceTree = "<group>"; };
 		E59B88F0281047CA007CAA51 /* SkeletonViewView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SkeletonViewView.xib; sourceTree = "<group>"; };
@@ -237,6 +241,7 @@
 		0B0A33F4237E792200C1C7F3 /* RX_Demo */ = {
 			isa = PBXGroup;
 			children = (
+				E57CD7B628217DF700238072 /* ChainWrapper */,
 				E5406103281BD48500751F3C /* Sourcery */,
 				E532B0462813B3C2004CE024 /* CTMediatorDemo */,
 				E59B88E928104775007CAA51 /* SkeletonView */,
@@ -416,6 +421,16 @@
 			path = TableView;
 			sourceTree = "<group>";
 		};
+		E57CD7B628217DF700238072 /* ChainWrapper */ = {
+			isa = PBXGroup;
+			children = (
+				E5A86B10281FFD1300885318 /* ChainWrapper.swift */,
+				E57CD7B828217E0100238072 /* ASButtonNode+Chain.swift */,
+				E57CD7B728217E0100238072 /* ASDisplayNode+Chain.swift */,
+			);
+			path = ChainWrapper;
+			sourceTree = "<group>";
+		};
 		E59B88E928104775007CAA51 /* SkeletonView */ = {
 			isa = PBXGroup;
 			children = (
@@ -479,7 +494,6 @@
 				E5622F252783FA2900C2E781 /* DynamicMemberLookupVC.swift */,
 				E5622F272783FFA000C2E781 /* KeyPathVC.swift */,
 				E55D9BCC2786810D0037DA45 /* ScheduleVC.swift */,
-				E5A86B10281FFD1300885318 /* ChainWrapper.swift */,
 			);
 			path = Example;
 			sourceTree = "<group>";
@@ -772,6 +786,7 @@
 				0B0A33FA237E792200C1C7F3 /* ViewController.swift in Sources */,
 				E5406105281BD4D300751F3C /* CBPersonModel.swift in Sources */,
 				E539E68127C33EEE001C7071 /* Array+Ex.swift in Sources */,
+				E57CD7BA28217E0100238072 /* ASButtonNode+Chain.swift in Sources */,
 				0B0A33F6237E792200C1C7F3 /* AppDelegate.swift in Sources */,
 				E575FEFD26EF797A0074F460 /* ReactorVC.swift in Sources */,
 				E576669F26F843CD00571D7A /* TableViewOneSectionVC(简单基本使用).swift in Sources */,
@@ -801,6 +816,7 @@
 				E575FF0126EF7BA70074F460 /* MainReactor.swift in Sources */,
 				0B99AE5F23A8C26D00B18546 /* DriverVC.swift in Sources */,
 				E5A9F0F526F0F5B4004FA7A4 /* MyClass.swift in Sources */,
+				E57CD7B928217E0100238072 /* ASDisplayNode+Chain.swift in Sources */,
 				0B99AE5B23A8863500B18546 /* KVOVC.swift in Sources */,
 				E5A9F0F726F0F5D7004FA7A4 /* MyClass+Rx.swift in Sources */,
 				E5A9F0F326F0F3EE004FA7A4 /* RxMyDelegateProxy.swift in Sources */,

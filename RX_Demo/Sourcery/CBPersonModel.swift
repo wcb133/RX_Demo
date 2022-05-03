@@ -13,9 +13,9 @@ protocol AutoEquatable {}
 
 protocol AutoHandyJSONMapper {}
 
-protocol AutoHashable {}
-
 protocol DictionaryConvertible {}
+
+protocol AutoChainSwift {}
 
 extension Int { var value: Int { return self } }
 extension String { var value: String { return self } }
@@ -40,4 +40,4 @@ class CBPersonModel: BaseModel {
     var age: Int = 0
 }
 
-extension CBPersonModel: AutoEquatable, AutoHandyJSONMapper, DictionaryConvertible, AutoHashable {}
+extension CBPersonModel: AutoEquatable, AutoHandyJSONMapper, DictionaryConvertible, AutoChainSwift {}

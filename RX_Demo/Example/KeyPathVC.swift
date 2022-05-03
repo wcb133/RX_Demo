@@ -7,9 +7,6 @@
 //
 
 import UIKit
-import RxSwift
-import RxCocoa
-import RxSwiftExt
 
 struct CBPerson {
     var name: String

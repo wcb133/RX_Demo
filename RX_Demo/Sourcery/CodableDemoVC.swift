@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import Hue
 
 protocol AutoCodable: Codable {}
 
@@ -62,7 +63,8 @@ extension CBSuperPerson {
 class CodableDemoVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
-        UIView().ch.backgroundColor(.red).contentMode(.scaleAspectFill)
+        // TODO: 测试
+        UIView().ch.backgroundColor(.init(hex: "#ffffff")).contentMode(.scaleAspectFill)
 
         let tim = CBSuperPerson(id: 3, name: "tim", age: 10, isMale: true, description: "")
         if let timData = try? JSONEncoder().encode(tim) {

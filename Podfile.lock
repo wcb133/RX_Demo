@@ -5,6 +5,7 @@ PODS:
   - FLEX (4.6.1)
   - Foil (2.0.0)
   - HandyJSON (5.0.2)
+  - Hue (5.0.0)
   - IGListDiffKit (4.0.0)
   - IGListKit (4.0.0):
     - IGListDiffKit (= 4.0.0)
@@ -130,6 +131,7 @@ DEPENDENCIES:
   - FLEX
   - Foil (~> 2.0.0)
   - HandyJSON
+  - Hue
   - IGListKit
   - IQKeyboardManagerSwift
   - Nimble
@@ -165,6 +167,7 @@ SPEC REPOS:
     - FLEX
     - Foil
     - HandyJSON
+    - Hue
     - IGListDiffKit
     - IGListKit
     - IQKeyboardManagerSwift
@@ -216,6 +219,7 @@ SPEC CHECKSUMS:
   FLEX: bbc55d197f87d7cde2454c3981aa47069b694144
   Foil: bf7e166dfcf589f3b29d01f87080fd5ea3e5d98f
   HandyJSON: 9e4e236f5d2dbefad5155a77417bbea438201c03
+  Hue: c129cb67be7d093a82bbbc30ce8a96757bf6f37a
   IGListDiffKit: 665d6cf43ce726e676013db9c7d6c4294259b6b2
   IGListKit: fd5a5d21935298f5849fa49d426843cff97b77c7
   IQKeyboardManagerSwift: 6e839c575c4aa1078d58a596e41244e77abe918f
@@ -251,6 +255,6 @@ SPEC CHECKSUMS:
   Yoga: cff67a400f6b74dc38eb0bad4f156673d9aa980c
   YogaKit: f782866e155069a2cca2517aafea43200b01fd5a
 
-PODFILE CHECKSUM: f4f8f0005c0e010f351810eb1c353e547a440cb0
+PODFILE CHECKSUM: caa0e43f50812fdf1e1d3c9187808b8c89a3fa92
 
 COCOAPODS: 1.11.3

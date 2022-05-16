@@ -68,6 +68,7 @@
 		E59B88EC2810478C007CAA51 /* SkeletonViewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E59B88EA2810478C007CAA51 /* SkeletonViewVC.swift */; };
 		E59B88EF281047B5007CAA51 /* SkeletonViewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E59B88EE281047B5007CAA51 /* SkeletonViewView.swift */; };
 		E59B88F1281047CA007CAA51 /* SkeletonViewView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E59B88F0281047CA007CAA51 /* SkeletonViewView.xib */; };
+		E59F6D722823AD23008D0AFC /* blockVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E59F6D712823AD23008D0AFC /* blockVC.swift */; };
 		E5A31696280A6E5300EAEAC9 /* DeviceKitVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5A31695280A6E5300EAEAC9 /* DeviceKitVC.swift */; };
 		E5A86B11281FFD1300885318 /* ChainWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5A86B10281FFD1300885318 /* ChainWrapper.swift */; };
 		E5A9151A27FBF7FF00A50827 /* ResolverTestVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5A9151927FBF7FF00A50827 /* ResolverTestVC.swift */; };
@@ -172,6 +173,7 @@
 		E59B88EA2810478C007CAA51 /* SkeletonViewVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkeletonViewVC.swift; sourceTree = "<group>"; };
 		E59B88EE281047B5007CAA51 /* SkeletonViewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkeletonViewView.swift; sourceTree = "<group>"; };
 		E59B88F0281047CA007CAA51 /* SkeletonViewView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SkeletonViewView.xib; sourceTree = "<group>"; };
+		E59F6D712823AD23008D0AFC /* blockVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = blockVC.swift; sourceTree = "<group>"; };
 		E5A31695280A6E5300EAEAC9 /* DeviceKitVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceKitVC.swift; sourceTree = "<group>"; };
 		E5A86B10281FFD1300885318 /* ChainWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChainWrapper.swift; sourceTree = "<group>"; };
 		E5A9151927FBF7FF00A50827 /* ResolverTestVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResolverTestVC.swift; sourceTree = "<group>"; };
@@ -241,6 +243,7 @@
 		0B0A33F4237E792200C1C7F3 /* RX_Demo */ = {
 			isa = PBXGroup;
 			children = (
+				E59F6D702823ACED008D0AFC /* block */,
 				E57CD7B628217DF700238072 /* ChainWrapper */,
 				E5406103281BD48500751F3C /* Sourcery */,
 				E532B0462813B3C2004CE024 /* CTMediatorDemo */,
@@ -439,6 +442,14 @@
 				E59B88F0281047CA007CAA51 /* SkeletonViewView.xib */,
 			);
 			path = SkeletonView;
+			sourceTree = "<group>";
+		};
+		E59F6D702823ACED008D0AFC /* block */ = {
+			isa = PBXGroup;
+			children = (
+				E59F6D712823AD23008D0AFC /* blockVC.swift */,
+			);
+			path = block;
 			sourceTree = "<group>";
 		};
 		E5A31694280A6E3800EAEAC9 /* DeviceKit */ = {
@@ -785,6 +796,7 @@
 				E5FCA4D5281CECFB007D31D1 /* CodableDemoVC.swift in Sources */,
 				0B0A33FA237E792200C1C7F3 /* ViewController.swift in Sources */,
 				E5406105281BD4D300751F3C /* CBPersonModel.swift in Sources */,
+				E59F6D722823AD23008D0AFC /* blockVC.swift in Sources */,
 				E539E68127C33EEE001C7071 /* Array+Ex.swift in Sources */,
 				E57CD7BA28217E0100238072 /* ASButtonNode+Chain.swift in Sources */,
 				0B0A33F6237E792200C1C7F3 /* AppDelegate.swift in Sources */,

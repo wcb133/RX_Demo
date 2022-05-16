@@ -20,14 +20,16 @@ class ScheduleVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        test()
-        return
-
         let tis: [Float] = [3, 5, 7, 10]
+        // 队列 let queue = ConcurrentDispatchQueueScheduler.init(qos: .userInteractive)
+        // 优先级（时效高到底） userInteractive、userInitiated、default、utility、background
 
         tis.forEach { ti in
 
-            Observable<Float>.just(ti).flatMap { time in
+            Observable<Float>.just(ti).flatMap { time -> Observable<Float> in
+                print("第一个订阅 === \(Thread.current) ==\(ti)")
+                return Observable.just(time)
+            }.flatMap { time in
                 self.testLoadData(ti: time)
             }.subscribe(on: OperationQueueScheduler(operationQueue: op)).subscribe(onNext: { time in
                 print("回调 ===== \(time)")
@@ -43,7 +45,7 @@ class ScheduleVC: UIViewController {
         }
 
         return .create { ob in
-//            print("当前线程 ====== \(Thread.current)")
+            print("最里面的当前线程 ====== \(Thread.current)")
             if ti == 7 {
                 DispatchQueue.main.asyncAfter(deadline: .now() + 10) {
 //                    ob(.success("延迟 ====== \(ti)"))
@@ -54,40 +56,6 @@ class ScheduleVC: UIViewController {
 
             return Disposables.create()
         }
-    }
-
-    func test() {
-        let opblock = BlockOperation {
-//            print("当前线程1 ====== \(Thread.current)")
-            Thread.sleep(forTimeInterval: 5)
-            print("恢复")
-        }
-
-        let opblock2 = BlockOperation {
-            Thread.sleep(forTimeInterval: 5)
-            print("当前线程2 ====== \(Thread.current)")
-        }
-
-        let opblock3 = BlockOperation {
-//            Thread.sleep(forTimeInterval: 5)
-            self.testDelay { string in
-                print(" ======= \(string)")
-            }
-            print("当前线程3 ====== \(Thread.current)")
-        }
-
-        let opblock4 = BlockOperation {
-            print("当前线程4 ====== \(Thread.current)")
-        }
-        let opblock5 = BlockOperation {
-            print("当前线程5 ====== \(Thread.current)")
-        }
-
-        op.addOperation(opblock)
-        op.addOperation(opblock2)
-        op.addOperation(opblock3)
-        op.addOperation(opblock4)
-        op.addOperation(opblock5)
     }
 
     func testDelay(handle: @escaping (String) -> Void) {

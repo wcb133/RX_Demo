@@ -16,6 +16,8 @@ public struct ChainWrapper<T> {
         self.object = object
     }
 
+//    var block:()
+
     public subscript<E>(
         dynamicMember keyPath: WritableKeyPath<T, E>
     ) -> ((E) -> ChainWrapper<T>) {

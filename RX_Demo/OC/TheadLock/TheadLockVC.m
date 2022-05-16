@@ -191,7 +191,7 @@
 //
 
 
-#import "ViewController.h"
+#import "TheadLockVC.h"
 //test-click-delegate
 @protocol TestClickHelperDelegate <NSObject>
 - (void)didEnd;
@@ -214,12 +214,12 @@
 @end
 
 
-@interface ViewController ()<TestClickHelperDelegate>
+@interface TheadLockVC ()<TestClickHelperDelegate>
 @property (nonatomic) TestClickHelper *helper;
 @end
 
 
-@implementation ViewController
+@implementation TheadLockVC
 - (void)viewDidLoad {
     [super viewDidLoad];
     _helper = TestClickHelper.new;

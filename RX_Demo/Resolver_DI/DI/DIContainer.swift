@@ -59,7 +59,7 @@ final class DIContainer {
 
     func resolve<T>(name: String? = nil) -> T {
         guard let inject = _container.resolve(T.self, name: name) else {
-            fatalError("未注册对应类 ====  \(T.self) Error")
+            fatalError("未注册对应类 ======  \(T.self) Error")
         }
         return inject
     }

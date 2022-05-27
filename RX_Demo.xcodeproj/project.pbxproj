@@ -76,7 +76,7 @@
 		E5A9F0F326F0F3EE004FA7A4 /* RxMyDelegateProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5A9F0F226F0F3EE004FA7A4 /* RxMyDelegateProxy.swift */; };
 		E5A9F0F526F0F5B4004FA7A4 /* MyClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5A9F0F426F0F5B4004FA7A4 /* MyClass.swift */; };
 		E5A9F0F726F0F5D7004FA7A4 /* MyClass+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5A9F0F626F0F5D7004FA7A4 /* MyClass+Rx.swift */; };
-		E5B29D33284127F9002CE829 /* TheadLockVC.m in Sources */ = {isa = PBXBuildFile; fileRef = E5B29D31284127F9002CE829 /* TheadLockVC.m */; };
+		E5B29D372841287D002CE829 /* TheadLockVC.m in Sources */ = {isa = PBXBuildFile; fileRef = E5B29D352841287D002CE829 /* TheadLockVC.m */; };
 		E5C39131280B00710070D63C /* SwiftDateVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5C39130280B00710070D63C /* SwiftDateVC.swift */; };
 		E5C75C2026A2AF880032F11E /* RxSwift6VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5C75C1E26A2AF880032F11E /* RxSwift6VC.swift */; };
 		E5C75C2126A2AF880032F11E /* RxSwift6VC.xib in Resources */ = {isa = PBXBuildFile; fileRef = E5C75C1F26A2AF880032F11E /* RxSwift6VC.xib */; };
@@ -184,8 +184,8 @@
 		E5A9F0F226F0F3EE004FA7A4 /* RxMyDelegateProxy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxMyDelegateProxy.swift; sourceTree = "<group>"; };
 		E5A9F0F426F0F5B4004FA7A4 /* MyClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyClass.swift; sourceTree = "<group>"; };
 		E5A9F0F626F0F5D7004FA7A4 /* MyClass+Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MyClass+Rx.swift"; sourceTree = "<group>"; };
-		E5B29D31284127F9002CE829 /* TheadLockVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TheadLockVC.m; sourceTree = "<group>"; };
-		E5B29D32284127F9002CE829 /* TheadLockVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TheadLockVC.h; sourceTree = "<group>"; };
+		E5B29D352841287D002CE829 /* TheadLockVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TheadLockVC.m; sourceTree = "<group>"; };
+		E5B29D362841287D002CE829 /* TheadLockVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TheadLockVC.h; sourceTree = "<group>"; };
 		E5C39130280B00710070D63C /* SwiftDateVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftDateVC.swift; sourceTree = "<group>"; };
 		E5C75C1E26A2AF880032F11E /* RxSwift6VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxSwift6VC.swift; sourceTree = "<group>"; };
 		E5C75C1F26A2AF880032F11E /* RxSwift6VC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RxSwift6VC.xib; sourceTree = "<group>"; };
@@ -491,14 +491,14 @@
 			path = DelegateProxy;
 			sourceTree = "<group>";
 		};
-		E5B29D30284127F9002CE829 /* TheadLock */ = {
+		E5B29D342841287D002CE829 /* TheadLock */ = {
 			isa = PBXGroup;
 			children = (
-				E5B29D31284127F9002CE829 /* TheadLockVC.m */,
-				E5B29D32284127F9002CE829 /* TheadLockVC.h */,
+				E5B29D352841287D002CE829 /* TheadLockVC.m */,
+				E5B29D362841287D002CE829 /* TheadLockVC.h */,
 			);
 			name = TheadLock;
-			path = ../../../OC/TheadLock;
+			path = ../../../../.Trash/OC/TheadLock;
 			sourceTree = "<group>";
 		};
 		E5C39132280B00760070D63C /* SwiftDate */ = {
@@ -561,7 +561,7 @@
 		E5FD84D8283289B800A11315 /* OC */ = {
 			isa = PBXGroup;
 			children = (
-				E5B29D30284127F9002CE829 /* TheadLock */,
+				E5B29D342841287D002CE829 /* TheadLock */,
 				E5FD84D128327E1F00A11315 /* CoreAnimation */,
 			);
 			path = OC;
@@ -820,7 +820,7 @@
 				E5C75C2026A2AF880032F11E /* RxSwift6VC.swift in Sources */,
 				E54B4A212791537A002D3F73 /* StartupCommandsBuilder.swift in Sources */,
 				0B99AE5923A77EFD00B18546 /* SubjectsVC.swift in Sources */,
-				E5B29D33284127F9002CE829 /* TheadLockVC.m in Sources */,
+				E5B29D372841287D002CE829 /* TheadLockVC.m in Sources */,
 				0B2FC1D423B054A600BDF76E /* CollectionViewVC.swift in Sources */,
 				E5A86B11281FFD1300885318 /* ChainWrapper.swift in Sources */,
 				E565CFCF26F6188A00ED6B2C /* RetryVC.swift in Sources */,

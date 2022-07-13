@@ -21,7 +21,6 @@ class blockVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
-        view.ch.backgroundColor(.red).clipsToBounds(true).tintColor(.white)
 //        test1()
 //        test2()
 //        test3()
@@ -63,10 +62,10 @@ class blockVC: UIViewController {
         block()
     }
 
-    func test4() { // 打印的是大D，闭包里面捕获的是之前的car,这里的前后两个car对象，都是在函数执行完之后才释放
+    func test4() { // 打印的是大D，闭包里面捕获的是之前的car,这里的前后两个car对象，都是在函数执行完之后才释放,
         var car = Car()
         car.name = "大D"
-        let block = { [car] in
+        let block = { [car] in // 相当于临时建了一个同名变量来存储外部的car
             print("我开\(car.name)")
         }
         car = Car()

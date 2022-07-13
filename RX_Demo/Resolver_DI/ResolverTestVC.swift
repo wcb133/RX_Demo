@@ -14,6 +14,21 @@ class ResolverTestVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        var buff: [CBPerson] = []
+
+        let vc = CABasicAnimationVC()
+        vc.view.backgroundColor = .red
+//        for i in 0...1024 * 1024000 {
+//            let p = CBPerson(name: "123", age: 1024 * 1024)
+//            buff.append(p)
+//        }
+
+//        let s = MemoryLayout<CBPerson>.stride
+//        let s1 = MemoryLayout<CBPerson>.size
+//        let s2 = MemoryLayout<CBPerson>.alignment
+
+//        print(" ===== \(s) =  \(s1) === \(s2)")
+
         view.backgroundColor = .white
 
         container.register(AnimalType.self) { rel in

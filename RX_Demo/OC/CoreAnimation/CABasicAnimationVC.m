@@ -16,6 +16,11 @@
 @implementation CABasicAnimationVC
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    // 这段代码栈溢出了
+//    NSInteger buf[1024*1024] = {0};
+//    NSLog(@" ===== %s",buf);
+    
     self.aniLayer = [[CALayer alloc] init];
     _aniLayer.bounds = CGRectMake(0, 0, 100, 100);
     _aniLayer.position = self.view.center;

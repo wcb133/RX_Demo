@@ -27,7 +27,7 @@ class RootReactor: Reactor {
                                             SubjectsVC.self, KVOVC.self, TransformingVC.self,
                                             DriverVC.self, ShareReplayVC.self, CollectionViewVC.self,
                                             TableViewVC.self, DelegateProxyVC.self, RetryVC.self, TableViewOneSectionVC.self, YogaTestVC.self, DynamicMemberLookupVC.self, KeyPathVC.self, ScheduleVC.self, SwiftTipsVC.self, SwiftCompileVC.self,
-                                            ResolverTestVC.self, DeviceKitVC.self, SwiftDateVC.self, SkeletonViewVC.self, CTMediatorHomeVC.self, CodableDemoVC.self, blockVC.self, VarIsOrNotThreadSafeVC.self]
+                                            ResolverTestVC.self, DeviceKitVC.self, SwiftDateVC.self, SkeletonViewVC.self, CTMediatorHomeVC.self, CodableDemoVC.self, blockVC.self, VarIsOrNotThreadSafeVC.self, RefCountTestVC.self]
 
         var tableData: [TBSectionModel] = []
     }

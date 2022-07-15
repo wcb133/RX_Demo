@@ -51,6 +51,7 @@
 		E5622F282783FFA000C2E781 /* KeyPathVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5622F272783FFA000C2E781 /* KeyPathVC.swift */; };
 		E565CFCF26F6188A00ED6B2C /* RetryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E565CFCD26F6188A00ED6B2C /* RetryVC.swift */; };
 		E565CFD026F6188A00ED6B2C /* RetryVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = E565CFCE26F6188A00ED6B2C /* RetryVC.xib */; };
+		E567742F288108A900A74985 /* RefCountTestVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E567742E288108A900A74985 /* RefCountTestVC.swift */; };
 		E56813FF2800885200C5D4FF /* DITestSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56813FE2800885200C5D4FF /* DITestSpec.swift */; };
 		E569018728003CB200311AC1 /* DIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E569018628003CB200311AC1 /* DIContainer.swift */; };
 		E5700CDB28010A8E002A26E9 /* PersonSwinject.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5700CDA28010A8E002A26E9 /* PersonSwinject.swift */; };
@@ -157,6 +158,7 @@
 		E5622F272783FFA000C2E781 /* KeyPathVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyPathVC.swift; sourceTree = "<group>"; };
 		E565CFCD26F6188A00ED6B2C /* RetryVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RetryVC.swift; sourceTree = "<group>"; };
 		E565CFCE26F6188A00ED6B2C /* RetryVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RetryVC.xib; sourceTree = "<group>"; };
+		E567742E288108A900A74985 /* RefCountTestVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefCountTestVC.swift; sourceTree = "<group>"; };
 		E56813FE2800885200C5D4FF /* DITestSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DITestSpec.swift; sourceTree = "<group>"; };
 		E569018628003CB200311AC1 /* DIContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DIContainer.swift; sourceTree = "<group>"; };
 		E5700CDA28010A8E002A26E9 /* PersonSwinject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonSwinject.swift; sourceTree = "<group>"; };
@@ -251,6 +253,7 @@
 		0B0A33F4237E792200C1C7F3 /* RX_Demo */ = {
 			isa = PBXGroup;
 			children = (
+				E567742D2881089200A74985 /* RefCountTestVC */,
 				E585C167287E63F400ED2EC8 /* VarIsOrNotThreadSafe */,
 				E59F6D702823ACED008D0AFC /* Block */,
 				E5FD84D8283289B800A11315 /* OC */,
@@ -385,6 +388,14 @@
 				E565CFCE26F6188A00ED6B2C /* RetryVC.xib */,
 			);
 			path = RetryVC;
+			sourceTree = "<group>";
+		};
+		E567742D2881089200A74985 /* RefCountTestVC */ = {
+			isa = PBXGroup;
+			children = (
+				E567742E288108A900A74985 /* RefCountTestVC.swift */,
+			);
+			path = RefCountTestVC;
 			sourceTree = "<group>";
 		};
 		E569018528003CB200311AC1 /* DI */ = {
@@ -828,6 +839,7 @@
 				E5622F282783FFA000C2E781 /* KeyPathVC.swift in Sources */,
 				E532B04A2813B50C004CE024 /* SecondVC.swift in Sources */,
 				E5A31696280A6E5300EAEAC9 /* DeviceKitVC.swift in Sources */,
+				E567742F288108A900A74985 /* RefCountTestVC.swift in Sources */,
 				E54505EB279666B700F4A305 /* Cod.swift in Sources */,
 				0B39115423AC7F1D006DB334 /* ShareReplayVC.swift in Sources */,
 				E5FCA4D5281CECFB007D31D1 /* CodableDemoVC.swift in Sources */,

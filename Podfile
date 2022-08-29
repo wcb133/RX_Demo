@@ -90,6 +90,9 @@ pod 'SwiftMessages'
 # 元编程，自动生成模板代码
 pod 'Sourcery', :configurations => ['Debug']
 
+#无用代码检测(通过periphery scan --setup 进行检测设置,periphery scan开始检测)
+pod 'Periphery'
+
 
 
 pod 'IQKeyboardManagerSwift'

@@ -305,10 +305,11 @@ class ViewController: UIViewController {
 extension ViewController {
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         let view = MessageView.viewFromNib(layout: .cardView)
-        view.configureTheme(.success)
+//        view.configureTheme(.success)
         view.configureDropShadow()
         let iconText = ["🤔", "😳", "🙄", "😶"].randomElement()!
-        view.configureContent(title: "Warning", body: "Consider yourself warned.", iconText: iconText)
+        view.configureContent(title: "Warning", body: "Consider yourself warned.", iconImage: UIImage(named: "shareThumb")!)
+        view.button?.isHidden = true
         view.layoutMarginAdditions = UIEdgeInsets(top: 20, left: 20, bottom: 20, right: 20)
         (view.backgroundView as? CornerRoundingView)?.cornerRadius = 10
         SwiftMessages.show(view: view)

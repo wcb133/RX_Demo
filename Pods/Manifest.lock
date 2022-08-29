@@ -96,6 +96,9 @@ PODS:
   - SwifterSwift/SwiftStdlib (5.2.0)
   - SwifterSwift/UIKit (5.2.0)
   - SwiftFormat/CLI (0.49.1)
+  - SwiftMessages (9.0.6):
+    - SwiftMessages/App (= 9.0.6)
+  - SwiftMessages/App (9.0.6)
   - Swinject (2.8.1)
   - SwinjectAutoregistration (2.8.2):
     - Swinject (~> 2.8.1)
@@ -154,6 +157,7 @@ DEPENDENCIES:
   - SwiftDate
   - SwifterSwift
   - SwiftFormat/CLI (= 0.49.1)
+  - SwiftMessages
   - "SwinjectAutoregistration (from `git@github.com:wcb133/SwinjectAutoregistration.git`, tag `2.8.2`)"
   - Texture
   - Then
@@ -195,6 +199,7 @@ SPEC REPOS:
     - SwiftDate
     - SwifterSwift
     - SwiftFormat
+    - SwiftMessages
     - Swinject
     - Texture
     - Then
@@ -247,6 +252,7 @@ SPEC CHECKSUMS:
   SwiftDate: 72d28954e8e1c6c1c0f917ccc8005e4f83c7d4b2
   SwifterSwift: 334181863c416882d97b7a60c05054d9e4d799e2
   SwiftFormat: 16b41f3229f5e7edb130ac4cd631cceed7af7d5e
+  SwiftMessages: f0c7ef4705a570ad6c5e208b611f4333e660ed92
   Swinject: 97112918bd7e0785dc2df7036213f3c8cbba6586
   SwinjectAutoregistration: a308071e730e955108ee15a17e2a3547efe0b98d
   Texture: 2e8ab2519452515f7f5a520f5a8f7e0a413abfa3
@@ -255,6 +261,6 @@ SPEC CHECKSUMS:
   Yoga: cff67a400f6b74dc38eb0bad4f156673d9aa980c
   YogaKit: f782866e155069a2cca2517aafea43200b01fd5a
 
-PODFILE CHECKSUM: caa0e43f50812fdf1e1d3c9187808b8c89a3fa92
+PODFILE CHECKSUM: 655a908035557061e4c4321eff290eed1bc3fadb
 
 COCOAPODS: 1.11.3

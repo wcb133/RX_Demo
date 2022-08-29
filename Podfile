@@ -85,6 +85,8 @@ pod 'Periphery', :configurations => ['Debug']
 # swift的扩展（可学习）
 pod 'SwifterSwift'
 
+pod 'SwiftMessages'
+
 # 元编程，自动生成模板代码
 pod 'Sourcery', :configurations => ['Debug']
 

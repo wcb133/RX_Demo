@@ -53,6 +53,7 @@
 		E565CFD026F6188A00ED6B2C /* RetryVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = E565CFCE26F6188A00ED6B2C /* RetryVC.xib */; };
 		E567742F288108A900A74985 /* RefCountTestVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E567742E288108A900A74985 /* RefCountTestVC.swift */; };
 		E56813FF2800885200C5D4FF /* DITestSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56813FE2800885200C5D4FF /* DITestSpec.swift */; };
+		E5681E8F2898DA6500AA0CDF /* TbaleViewTestVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5681E8E2898DA6500AA0CDF /* TbaleViewTestVC.swift */; };
 		E569018728003CB200311AC1 /* DIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E569018628003CB200311AC1 /* DIContainer.swift */; };
 		E5700CDB28010A8E002A26E9 /* PersonSwinject.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5700CDA28010A8E002A26E9 /* PersonSwinject.swift */; };
 		E571D0A32794FDEB0002769B /* RX_DemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E571D0A22794FDEB0002769B /* RX_DemoUITests.swift */; };
@@ -160,6 +161,7 @@
 		E565CFCE26F6188A00ED6B2C /* RetryVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RetryVC.xib; sourceTree = "<group>"; };
 		E567742E288108A900A74985 /* RefCountTestVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefCountTestVC.swift; sourceTree = "<group>"; };
 		E56813FE2800885200C5D4FF /* DITestSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DITestSpec.swift; sourceTree = "<group>"; };
+		E5681E8E2898DA6500AA0CDF /* TbaleViewTestVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TbaleViewTestVC.swift; sourceTree = "<group>"; };
 		E569018628003CB200311AC1 /* DIContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DIContainer.swift; sourceTree = "<group>"; };
 		E5700CDA28010A8E002A26E9 /* PersonSwinject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonSwinject.swift; sourceTree = "<group>"; };
 		E571D0A02794FDEB0002769B /* RX_DemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RX_DemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -253,6 +255,7 @@
 		0B0A33F4237E792200C1C7F3 /* RX_Demo */ = {
 			isa = PBXGroup;
 			children = (
+				E5681E8D2898DA4200AA0CDF /* TbaleViewTest */,
 				E567742D2881089200A74985 /* RefCountTestVC */,
 				E585C167287E63F400ED2EC8 /* VarIsOrNotThreadSafe */,
 				E59F6D702823ACED008D0AFC /* Block */,
@@ -396,6 +399,14 @@
 				E567742E288108A900A74985 /* RefCountTestVC.swift */,
 			);
 			path = RefCountTestVC;
+			sourceTree = "<group>";
+		};
+		E5681E8D2898DA4200AA0CDF /* TbaleViewTest */ = {
+			isa = PBXGroup;
+			children = (
+				E5681E8E2898DA6500AA0CDF /* TbaleViewTestVC.swift */,
+			);
+			path = TbaleViewTest;
 			sourceTree = "<group>";
 		};
 		E569018528003CB200311AC1 /* DI */ = {
@@ -866,6 +877,7 @@
 				E54505E12796665E00F4A305 /* Offer.swift in Sources */,
 				E532B0482813B3EE004CE024 /* CTMediatorHomeVC.swift in Sources */,
 				E5622F262783FA2900C2E781 /* DynamicMemberLookupVC.swift in Sources */,
+				E5681E8F2898DA6500AA0CDF /* TbaleViewTestVC.swift in Sources */,
 				E576669D26F81C9E00571D7A /* RootReactor.swift in Sources */,
 				0B2FC1D623B0A5BF00BDF76E /* TableViewVC(自带的SectionModel).swift in Sources */,
 				E532B0432813AEA5004CE024 /* RxUIVIewController.swift in Sources */,

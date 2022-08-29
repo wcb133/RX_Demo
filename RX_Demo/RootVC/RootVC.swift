@@ -42,7 +42,7 @@ class RootVC: UIViewController, View {
     override func viewDidLoad() {
         super.viewDidLoad()
         reactor = RootReactor()
-
+        print(" ======= viewDidLoad")
         // 设置代理
 //         tab.rx.setDelegate(self)
 //             .disposed(by: bag)

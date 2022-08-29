@@ -8,6 +8,13 @@
 
 import UIKit
 
+class CBNavigationController: UINavigationController {
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        print(" ======= CBNavigationController.viewDidLoad")
+    }
+}
+
 protocol Command {
     func execute()
 }
@@ -23,7 +30,7 @@ struct InitialViewControllerCommand: Command {
     func execute() {
         // 根控制器设置代码
         let vc = RootVC()
-        let nav = UINavigationController(rootViewController: vc)
+        let nav = CBNavigationController(rootViewController: vc)
         keyWindow.rootViewController = nav
     }
 }

@@ -13,6 +13,7 @@ import RxSwiftExt
 import UIKit
 import NSObject_Rx
 import SwiftMessages
+import WidgetKit
 
 class Person: NSObject {
     var name = ""
@@ -76,6 +77,18 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         view.backgroundColor = .white
+        
+        let btn = UIButton()
+        btn.frame = CGRect(x: 100, y: 200, width: 100, height: 50)
+        btn.setTitleColor(.red, for: .normal)
+        btn.setTitle("刷新小组件", for: .normal)
+        view.addSubview(btn)
+        
+        btn.rx.tap.subscribe(onNext:{ [unowned self] in
+            if #available(iOS 14.0, *) {
+            WidgetCenter.shared.reloadTimelines(ofKind: "RxDemoWidget")
+            }
+        }).disposed(by: rx.disposeBag)
 
         let res = testDefer()
         print("defer ====== \(res) ==== \(self)")

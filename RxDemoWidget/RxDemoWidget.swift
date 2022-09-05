@@ -11,32 +11,54 @@ import SwiftUI
 
 struct Provider: TimelineProvider {
     func placeholder(in context: Context) -> SimpleEntry {
-        SimpleEntry(date: Date())
+        let item = SimpleModel(name: "张全蛋", age: 19)
+        return SimpleEntry(date: Date(), model: item)
     }
 
     func getSnapshot(in context: Context, completion: @escaping (SimpleEntry) -> Void) {
-        let entry = SimpleEntry(date: Date())
+        let item = SimpleModel(name: "李小龙", age: 25)
+        let entry = SimpleEntry(date: Date(), model: item)
         completion(entry)
     }
 
     func getTimeline(in context: Context, completion: @escaping (Timeline<Entry>) -> Void) {
         var entries: [SimpleEntry] = []
-
-        // Generate a timeline consisting of five entries an hour apart, starting from the current date.
         let currentDate = Date()
-        for hourOffset in 0..<5 {
-            let entryDate = Calendar.current.date(byAdding: .hour, value: hourOffset, to: currentDate)!
-            let entry = SimpleEntry(date: entryDate)
+        for k in 1..<50 {
+            let entryDate = Calendar.current.date(byAdding: .second, value: k, to: currentDate)!
+            let item = SimpleModel(name: "李小龙", age: 25 + k)
+            let entry = SimpleEntry(date: entryDate, model: item)
             entries.append(entry)
         }
-
+        // atEnd：所有entries显示完之后才刷新
+        // after(date)：指定刷新时间
+        // never：不刷新
         let timeline = Timeline(entries: entries, policy: .atEnd)
         completion(timeline)
+        
+//        let currentDate = Date()
+//        let entryDate = Calendar.current.date(byAdding: .second, value: 5, to: currentDate)!
+//        //模拟网络请求，如果第一次网络请求时间太长，组件会空白一段时间
+//        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+//           let item = SimpleModel(name: "李小龙-网络", age: 55)
+//           let entry = SimpleEntry(date: entryDate, model: item)
+//            let timeLine = Timeline(entries: [entry], policy: .after(entryDate))
+//            completion(timeLine)
+//        }
+        
+        
+        
     }
 }
 
 struct SimpleEntry: TimelineEntry {
     let date: Date
+    let model:SimpleModel
+}
+
+struct SimpleModel {
+    var name:String
+    var age:Int
 }
 
 struct RxDemoWidgetEntryView: View {
@@ -46,6 +68,8 @@ struct RxDemoWidgetEntryView: View {
         Link(destination: URL(string: "跳转url") ?? URL(string: "www.baidu.com")!) {
             Text(entry.date, style: .time)
         }
+        
+        Text("\(entry.model.name) + \(entry.model.age)")
     }
 }
 
@@ -64,7 +88,8 @@ struct RxDemoWidget: Widget {
 
 struct RxDemoWidget_Previews: PreviewProvider {
     static var previews: some View {
-        RxDemoWidgetEntryView(entry: SimpleEntry(date: Date()))
+        let item = SimpleModel(name: "李小龙", age: 25)
+        RxDemoWidgetEntryView(entry: SimpleEntry(date: Date(), model: item))
             .previewContext(WidgetPreviewContext(family: .systemSmall))
     }
 }

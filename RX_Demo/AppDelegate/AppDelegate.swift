@@ -30,3 +30,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return true
     }
 }
+
+extension AppDelegate {
+    func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey: Any] = [:]) -> Bool {
+        print("跳转链接🔗🔗🔗：  \(url.absoluteURL) --- \(String(describing: url.scheme)) -- \(url.relativeString)")
+
+        return true
+    }
+
+    func application(_ application: UIApplication, open url: URL, sourceApplication: String?, annotation: Any) -> Bool {
+        print("跳转链接🔗🔗🔗：  \(url.absoluteURL) --- \(String(describing: url.scheme)) -- \(url.relativeString)")
+        return true
+    }
+}

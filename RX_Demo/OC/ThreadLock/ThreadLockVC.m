@@ -207,7 +207,7 @@
 @implementation TestClickHelper
 - (void)start {
     NSLog(@"===== %@",self);
-    // 加下面这句就能解决外部置为nil之后的崩溃问题，定义一个局部变量，使这个对象入栈，同时也是指向self的，避免self过早释放
+    // 加下面这句就能解决外部置为nil之后的崩溃问题，定义一个局部变量，使该对象引用计数+1，避免self过早释放
 //    TestClickHelper *helper = self;
     if (self.delegate) {
         [self.delegate didEnd];
@@ -233,8 +233,8 @@
     [super viewDidLoad];
     _helper = TestClickHelper.new;
     _helper.delegate = self;
-//    [self performSelector:@selector(start) withObject:nil afterDelay:3];
-    [self start];
+    [self performSelector:@selector(start) withObject:nil afterDelay:3];
+//    [self start];
 }
 - (void)start {
     [_helper start];

@@ -75,20 +75,35 @@ class ViewController: UIViewController {
         return "defer"
     }
 
+    func testFunc() {
+        let x = 1.5
+        let y = 1.4
+        let z = 1.8
+        print(" ===== \(x.rounded())= \(y.rounded())= \(z.rounded())")
+
+        var dict: [String: Any?] = ["name": "小明", "age": 12, "num": nil]
+        print("字典值 ======= \(dict)")
+        // 赋值为nil就被移除了
+        dict["age"] = nil
+        print("新的字典值 ======= \(dict)")
+    }
+
     override func viewDidLoad() {
         view.backgroundColor = .white
-        
+
         let btn = UIButton()
         btn.frame = CGRect(x: 100, y: 200, width: 100, height: 50)
         btn.setTitleColor(.red, for: .normal)
         btn.setTitle("刷新小组件", for: .normal)
         view.addSubview(btn)
-        
-        btn.rx.tap.subscribe(onNext:{ [unowned self] in
+
+        btn.rx.tap.subscribe(onNext: { _ in
             if #available(iOS 14.0, *) {
-            WidgetCenter.shared.reloadTimelines(ofKind: "RxDemoWidget")
+                WidgetCenter.shared.reloadTimelines(ofKind: "RxDemoWidget")
             }
         }).disposed(by: rx.disposeBag)
+
+        testFunc()
 
         let res = testDefer()
         print("defer ====== \(res) ==== \(self)")

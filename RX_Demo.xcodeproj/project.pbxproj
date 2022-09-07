@@ -58,7 +58,6 @@
 		E565CFD026F6188A00ED6B2C /* RetryVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = E565CFCE26F6188A00ED6B2C /* RetryVC.xib */; };
 		E567742F288108A900A74985 /* RefCountTestVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E567742E288108A900A74985 /* RefCountTestVC.swift */; };
 		E56813FF2800885200C5D4FF /* DITestSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56813FE2800885200C5D4FF /* DITestSpec.swift */; };
-		E5681E8F2898DA6500AA0CDF /* TbaleViewTestVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5681E8E2898DA6500AA0CDF /* TbaleViewTestVC.swift */; };
 		E569018728003CB200311AC1 /* DIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E569018628003CB200311AC1 /* DIContainer.swift */; };
 		E5700CDB28010A8E002A26E9 /* PersonSwinject.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5700CDA28010A8E002A26E9 /* PersonSwinject.swift */; };
 		E571D0A32794FDEB0002769B /* RX_DemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E571D0A22794FDEB0002769B /* RX_DemoUITests.swift */; };
@@ -73,6 +72,7 @@
 		E57CD7B928217E0100238072 /* ASDisplayNode+Chain.swift in Sources */ = {isa = PBXBuildFile; fileRef = E57CD7B728217E0100238072 /* ASDisplayNode+Chain.swift */; };
 		E57CD7BA28217E0100238072 /* ASButtonNode+Chain.swift in Sources */ = {isa = PBXBuildFile; fileRef = E57CD7B828217E0100238072 /* ASButtonNode+Chain.swift */; };
 		E585C169287E643500ED2EC8 /* VarIsOrNotThreadSafeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E585C168287E643500ED2EC8 /* VarIsOrNotThreadSafeVC.swift */; };
+		E598F3D128C870CF00C29389 /* ThreadLockVC.m in Sources */ = {isa = PBXBuildFile; fileRef = E598F3D028C870CF00C29389 /* ThreadLockVC.m */; };
 		E59B88EC2810478C007CAA51 /* SkeletonViewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E59B88EA2810478C007CAA51 /* SkeletonViewVC.swift */; };
 		E59B88EF281047B5007CAA51 /* SkeletonViewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E59B88EE281047B5007CAA51 /* SkeletonViewView.swift */; };
 		E59B88F1281047CA007CAA51 /* SkeletonViewView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E59B88F0281047CA007CAA51 /* SkeletonViewView.xib */; };
@@ -193,7 +193,6 @@
 		E565CFCE26F6188A00ED6B2C /* RetryVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RetryVC.xib; sourceTree = "<group>"; };
 		E567742E288108A900A74985 /* RefCountTestVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefCountTestVC.swift; sourceTree = "<group>"; };
 		E56813FE2800885200C5D4FF /* DITestSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DITestSpec.swift; sourceTree = "<group>"; };
-		E5681E8E2898DA6500AA0CDF /* TbaleViewTestVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TbaleViewTestVC.swift; sourceTree = "<group>"; };
 		E569018628003CB200311AC1 /* DIContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DIContainer.swift; sourceTree = "<group>"; };
 		E5700CDA28010A8E002A26E9 /* PersonSwinject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonSwinject.swift; sourceTree = "<group>"; };
 		E571D0A02794FDEB0002769B /* RX_DemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RX_DemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -210,6 +209,8 @@
 		E57CD7B728217E0100238072 /* ASDisplayNode+Chain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ASDisplayNode+Chain.swift"; sourceTree = "<group>"; };
 		E57CD7B828217E0100238072 /* ASButtonNode+Chain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ASButtonNode+Chain.swift"; sourceTree = "<group>"; };
 		E585C168287E643500ED2EC8 /* VarIsOrNotThreadSafeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VarIsOrNotThreadSafeVC.swift; sourceTree = "<group>"; };
+		E598F3CF28C870CF00C29389 /* ThreadLockVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThreadLockVC.h; sourceTree = "<group>"; };
+		E598F3D028C870CF00C29389 /* ThreadLockVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThreadLockVC.m; sourceTree = "<group>"; };
 		E59B88EA2810478C007CAA51 /* SkeletonViewVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkeletonViewVC.swift; sourceTree = "<group>"; };
 		E59B88EE281047B5007CAA51 /* SkeletonViewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkeletonViewView.swift; sourceTree = "<group>"; };
 		E59B88F0281047CA007CAA51 /* SkeletonViewView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SkeletonViewView.xib; sourceTree = "<group>"; };
@@ -298,7 +299,6 @@
 		0B0A33F4237E792200C1C7F3 /* RX_Demo */ = {
 			isa = PBXGroup;
 			children = (
-				E5681E8D2898DA4200AA0CDF /* TbaleViewTest */,
 				E567742D2881089200A74985 /* RefCountTestVC */,
 				E585C167287E63F400ED2EC8 /* VarIsOrNotThreadSafe */,
 				E59F6D702823ACED008D0AFC /* Block */,
@@ -454,14 +454,6 @@
 			path = RefCountTestVC;
 			sourceTree = "<group>";
 		};
-		E5681E8D2898DA4200AA0CDF /* TbaleViewTest */ = {
-			isa = PBXGroup;
-			children = (
-				E5681E8E2898DA6500AA0CDF /* TbaleViewTestVC.swift */,
-			);
-			path = TbaleViewTest;
-			sourceTree = "<group>";
-		};
 		E569018528003CB200311AC1 /* DI */ = {
 			isa = PBXGroup;
 			children = (
@@ -525,6 +517,15 @@
 				E585C168287E643500ED2EC8 /* VarIsOrNotThreadSafeVC.swift */,
 			);
 			path = VarIsOrNotThreadSafe;
+			sourceTree = "<group>";
+		};
+		E598F3CE28C870B600C29389 /* ThreadLock */ = {
+			isa = PBXGroup;
+			children = (
+				E598F3CF28C870CF00C29389 /* ThreadLockVC.h */,
+				E598F3D028C870CF00C29389 /* ThreadLockVC.m */,
+			);
+			path = ThreadLock;
 			sourceTree = "<group>";
 		};
 		E59B88E928104775007CAA51 /* SkeletonView */ = {
@@ -634,6 +635,7 @@
 		E5FD84D8283289B800A11315 /* OC */ = {
 			isa = PBXGroup;
 			children = (
+				E598F3CE28C870B600C29389 /* ThreadLock */,
 				E5FD84D128327E1F00A11315 /* CoreAnimation */,
 			);
 			path = OC;
@@ -961,9 +963,9 @@
 				E5C75C8226A2FD500032F11E /* RootVC.swift in Sources */,
 				E5C39131280B00710070D63C /* SwiftDateVC.swift in Sources */,
 				E54505E12796665E00F4A305 /* Offer.swift in Sources */,
+				E598F3D128C870CF00C29389 /* ThreadLockVC.m in Sources */,
 				E532B0482813B3EE004CE024 /* CTMediatorHomeVC.swift in Sources */,
 				E5622F262783FA2900C2E781 /* DynamicMemberLookupVC.swift in Sources */,
-				E5681E8F2898DA6500AA0CDF /* TbaleViewTestVC.swift in Sources */,
 				E576669D26F81C9E00571D7A /* RootReactor.swift in Sources */,
 				0B2FC1D623B0A5BF00BDF76E /* TableViewVC(自带的SectionModel).swift in Sources */,
 				E532B0432813AEA5004CE024 /* RxUIVIewController.swift in Sources */,
@@ -1177,6 +1179,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = WX972HMPDB;
 				INFOPLIST_FILE = RX_Demo/Info.plist;
@@ -1186,6 +1189,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "weicb.RX-Demo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "RX_Demo/RX_Demo-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
@@ -1200,6 +1204,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = WX972HMPDB;
 				INFOPLIST_FILE = RX_Demo/Info.plist;
@@ -1209,6 +1214,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "weicb.RX-Demo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "RX_Demo/RX_Demo-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1268,6 +1274,7 @@
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
 				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = WX972HMPDB;
@@ -1284,6 +1291,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "weicb.RX-Demo.RxDemoWidget";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -1298,6 +1306,7 @@
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
 				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = WX972HMPDB;
@@ -1314,6 +1323,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "weicb.RX-Demo.RxDemoWidget";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;

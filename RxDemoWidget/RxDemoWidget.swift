@@ -11,12 +11,12 @@ import SwiftUI
 
 struct Provider: TimelineProvider {
     func placeholder(in context: Context) -> SimpleEntry {
-        let item = SimpleModel(name: "张全蛋", age: 19)
+        let item = SimpleModel(name: "张全蛋placeholder", age: 19)
         return SimpleEntry(date: Date(), model: item)
     }
 
     func getSnapshot(in context: Context, completion: @escaping (SimpleEntry) -> Void) {
-        let item = SimpleModel(name: "李小龙", age: 25)
+        let item = SimpleModel(name: "李小龙getSnapshot", age: 25)
         let entry = SimpleEntry(date: Date(), model: item)
         completion(entry)
     }
@@ -35,7 +35,7 @@ struct Provider: TimelineProvider {
         // never：不刷新
         let timeline = Timeline(entries: entries, policy: .atEnd)
         completion(timeline)
-        
+
 //        let currentDate = Date()
 //        let entryDate = Calendar.current.date(byAdding: .second, value: 5, to: currentDate)!
 //        //模拟网络请求，如果第一次网络请求时间太长，组件会空白一段时间
@@ -45,20 +45,17 @@ struct Provider: TimelineProvider {
 //            let timeLine = Timeline(entries: [entry], policy: .after(entryDate))
 //            completion(timeLine)
 //        }
-        
-        
-        
     }
 }
 
 struct SimpleEntry: TimelineEntry {
     let date: Date
-    let model:SimpleModel
+    let model: SimpleModel
 }
 
 struct SimpleModel {
-    var name:String
-    var age:Int
+    var name: String
+    var age: Int
 }
 
 struct RxDemoWidgetEntryView: View {
@@ -68,7 +65,7 @@ struct RxDemoWidgetEntryView: View {
         Link(destination: URL(string: "跳转url") ?? URL(string: "www.baidu.com")!) {
             Text(entry.date, style: .time)
         }
-        
+
         Text("\(entry.model.name) + \(entry.model.age)")
     }
 }

@@ -20,12 +20,31 @@ class DelegateProxyVC: UIViewController {
         view.backgroundColor = .white
 
         my.start()
+
         my.rx.nums.subscribe(onNext: { num in
-            print(num)
+            print("rx回调nums ====== \(num)")
         }).disposed(by: disposeBag)
 
         my.rx.strs.subscribe(onNext: { str in
-            print(str)
+            print("rx回调strs ====== \(str)")
         }).disposed(by: disposeBag)
+
+        my.rx.getName { age in
+            print("rx回调getName ====== \(age)")
+            return "张三"
+        }
+        // 实现了代理之后，居然不再回调rx了~~~
+        my.delegate = self
+    }
+}
+
+extension DelegateProxyVC: MyDelegate {
+    func printNum(num: Int) {
+        print(" ======= 这是代理输出")
+    }
+
+    func getName(age: Int) -> String {
+        print(" ======= 这是代理返回")
+        return "代理返回的名字========= 张三"
     }
 }

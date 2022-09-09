@@ -9,7 +9,11 @@
 import RxSwift
 import RxCocoa
 
+public typealias RxGetName = (Int) -> (String?)
+
 class RxMyDelegateProxy: DelegateProxy<MyClass, MyDelegate>, DelegateProxyType, MyDelegate {
+    public var getNameClosure: RxGetName?
+
     init(my: MyClass) {
         super.init(parentObject: my, delegateProxy: RxMyDelegateProxy.self)
     }
@@ -38,6 +42,11 @@ class RxMyDelegateProxy: DelegateProxy<MyClass, MyDelegate>, DelegateProxyType, 
     func printNum(num: Int) {
         _forwardToDelegate?.printNum(num: num)
         nums.onNext(num)
+    }
+
+    // 这种方式实现的代理hook，后面代理就不会回调这个方法了
+    func getName(age: Int) -> String {
+        return getNameClosure?(age) ?? ""
     }
 
     deinit {

@@ -9,7 +9,7 @@ import RxSwift
 import RxCocoa
 
 extension Reactive where Base: MyClass {
-    var delegate: DelegateProxy<MyClass, MyDelegate> {
+    var delegate: RxMyDelegateProxy {
         return RxMyDelegateProxy.proxy(for: base)
     }
 
@@ -22,5 +22,11 @@ extension Reactive where Base: MyClass {
         return delegate.methodInvoked(#selector(MyDelegate.printStr(str:))).map {
             return $0[0] as! String
         }
+    }
+}
+
+public extension Reactive where Base: MyClass {
+    func getName(_ closure: RxGetName?) {
+        delegate.getNameClosure = closure
     }
 }
